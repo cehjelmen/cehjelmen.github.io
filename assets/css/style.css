@@ -8,6 +8,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+table {
+	border-collapse: collapse;
+}
+table, th, td{
+	border: 1px solid black;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #4d4643;
