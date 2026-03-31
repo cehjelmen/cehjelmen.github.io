@@ -3,27 +3,25 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Research Interests</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Research Interests | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Research interests of the Hjelmen Lab at Utah Valley University — genome size evolution, sex chromosomes, underreplication, and forensic entomology.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Google Fonts: Lora for display, Source Sans 3 for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -34,319 +32,1079 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    :root {
+      --green-dark:   #1a3f26;
+      --green-main:   #275D38;
+      --green-mid:    #3a7d52;
+      --green-light:  #e8f2ec;
+      --green-border: #c3ddc9;
+      --text-body:    #2c2c2c;
+      --text-muted:   #666;
+      --bg-offwhite:  #f8faf9;
+    }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      color: var(--text-body);
+    }
+
+    /* ── Hero ───────────────────────────────────── */
+    .research-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 60%, var(--green-mid) 100%);
+      margin-top: 72px;
+      padding: 64px 0 52px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle dot-grid texture */
+    .research-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+
+    .research-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      position: relative;
+    }
+
+    .research-hero p.lead {
+      color: rgba(255,255,255,0.82);
+      font-size: 1.05rem;
+      max-width: 620px;
+      position: relative;
+    }
+
+    .undergrad-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      padding: 10px 18px;
+      color: #fff;
+      font-size: 0.88rem;
+      margin-top: 18px;
+      position: relative;
+    }
+
+    .undergrad-banner i {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    .undergrad-banner a {
+      color: #aed6bc;
+      text-decoration: underline;
+    }
+
+    /* ── Nav pills ──────────────────────────────── */
+    .research-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 28px 0 0;
+      justify-content: center;
+    }
+
+    .rnav-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: 30px;
+      border: 2px solid var(--green-border);
+      background: #fff;
+      color: var(--green-main);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.22s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .rnav-pill i {
+      font-size: 1rem;
+    }
+
+    .rnav-pill:hover,
+    .rnav-pill.active {
+      background: var(--green-main);
+      border-color: var(--green-main);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(39,93,56,0.25);
+      transform: translateY(-1px);
+    }
+
+    /* ── Research sections ──────────────────────── */
+    .research-section {
+      display: none;
+      animation: fadeSlideIn 0.35s ease forwards;
+    }
+
+    .research-section.active {
+      display: block;
+    }
+
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-wrapper {
+      padding: 52px 0 60px;
+      background: var(--bg-offwhite);
+      min-height: 60vh;
+    }
+
+    /* ── Section header strip ───────────────────── */
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--green-light);
+    }
+
+    .section-header .icon-bubble {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: var(--green-main);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(39,93,56,0.22);
+    }
+
+    .section-header h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 0 0 4px;
+      line-height: 1.25;
+    }
+
+    .section-header .section-tag {
+      display: inline-block;
+      background: var(--green-light);
+      color: var(--green-main);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+
+    /* ── Body text ──────────────────────────────── */
+    .research-body p {
+      font-size: 0.97rem;
+      line-height: 1.8;
+      color: #3a3a3a;
+      margin-bottom: 1rem;
+    }
+
+    .research-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ── Figure panel ───────────────────────────── */
+    .figure-panel {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .figure-panel img {
+      width: 100%;
+      display: block;
+    }
+
+    .figure-panel .fig-caption {
+      padding: 12px 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      border-top: 1px solid var(--green-light);
+      background: var(--bg-offwhite);
+    }
+
+    .figure-panel .fig-caption strong {
+      color: var(--green-main);
+    }
+
+    /* ── Paper cards ────────────────────────────── */
+    .papers-heading {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .paper-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-left: 4px solid var(--green-main);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 8px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+    }
+
+    .paper-card:hover {
+      box-shadow: 0 4px 16px rgba(39,93,56,0.12);
+      transform: translateX(3px);
+    }
+
+    .paper-card .pc-icon {
+      color: var(--green-main);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .paper-card .pc-body {
+      flex: 1;
+    }
+
+    .paper-card .pc-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      display: block;
+      margin-bottom: 2px;
+      line-height: 1.4;
+    }
+
+    .paper-card .pc-meta {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .paper-card .pc-pdf {
+      flex-shrink: 0;
+      background: var(--green-main);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 4px;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    /* External link cards */
+    .link-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: var(--green-light);
+      border: 1px solid var(--green-border);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .link-card:hover {
+      background: #d4ebdb;
+    }
+
+    .link-card i {
+      color: var(--green-main);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .link-card span {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--green-dark);
+    }
+
+    /* ── Key questions callout ──────────────────── */
+    .key-questions {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-main));
+      border-radius: 10px;
+      padding: 22px 24px;
+      margin-top: 24px;
+    }
+
+    .key-questions h5 {
+      font-family: 'Lora', serif;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .key-questions ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .key-questions ul li {
+      color: rgba(255,255,255,0.88);
+      font-size: 0.87rem;
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.5;
+    }
+
+    .key-questions ul li:last-child {
+      border-bottom: none;
+    }
+
+    .key-questions ul li::before {
+      content: '?';
+      color: #aed6bc;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Sticky sidebar on desktop ──────────────── */
+    .sidebar-sticky {
+      position: sticky;
+      top: 90px;
+    }
+
+    /* ── Overview cards (shown before any selection) */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+      padding: 40px 0;
+    }
+
+    .overview-card {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-top: 4px solid var(--green-main);
+      border-radius: 8px;
+      padding: 24px 20px;
+      cursor: pointer;
+      transition: all 0.22s;
+    }
+
+    .overview-card:hover {
+      box-shadow: 0 6px 20px rgba(39,93,56,0.14);
+      transform: translateY(-3px);
+      border-top-color: var(--green-dark);
+    }
+
+    .overview-card .oc-icon {
+      font-size: 2rem;
+      color: var(--green-main);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .overview-card h4 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .overview-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .overview-card .oc-arrow {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--green-main);
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ── Responsive ─────────────────────────────── */
+    @media (max-width: 991px) {
+      .research-hero h1 { font-size: 1.8rem; }
+      .sidebar-sticky { position: static; margin-top: 28px; }
+      .section-header h2 { font-size: 1.4rem; }
+    }
+
+    @media (max-width: 576px) {
+      .rnav-pill { font-size: 0.8rem; padding: 7px 13px; }
+      .research-hero { padding: 44px 0 36px; }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-     <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html">Home</a></li>
-
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-                   <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#" class="active"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#" class="active"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="researchinterests.html">Research Interests</a></li>
+              <li><a href="researchinterests.html" class="active">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-<li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
+          </li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-
+  </header>
+  <!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ======= Hero ======= -->
+    <div class="research-hero">
       <div class="container">
+        <h1><i class="bi bi-bug-fill me-2" style="font-size:1.8rem; vertical-align:middle;"></i>Research Interests</h1>
+        <p class="lead mt-2">We use insects as models to address fundamental questions about how and why genomes change — in size, organization, and structure — across the tree of life.</p>
+        <div class="undergrad-banner">
+          <i class="bi bi-people-fill"></i>
+          <span>Undergraduate researchers are central to this work. <a href="mailto:Carl.Hjelmen@uvu.edu">Reach out</a> if you're interested in joining the lab.</span>
+        </div>
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Research Interests</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Research Interests</li>
-          </ol>
+        <!-- Nav pills -->
+        <div class="research-nav" id="researchNav">
+          <button class="rnav-pill" data-target="genome-species" onclick="showSection('genome-species', this)">
+            <i class="bi bi-diagram-3"></i> Genome Size Across Species
+          </button>
+          <button class="rnav-pill" data-target="genome-within" onclick="showSection('genome-within', this)">
+            <i class="bi bi-graph-up"></i> Within-Species Variation
+          </button>
+          <button class="rnav-pill" data-target="underrep" onclick="showSection('underrep', this)">
+            <i class="bi bi-layers"></i> Underreplication &amp; Heterochromatin
+          </button>
+          <button class="rnav-pill" data-target="sexchrom" onclick="showSection('sexchrom', this)">
+            <i class="bi bi-gender-ambiguous"></i> Sex Chromosome Evolution
+          </button>
+          <button class="rnav-pill" data-target="forensic" onclick="showSection('forensic', this)">
+            <i class="bi bi-search"></i> Forensic Entomology
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- ======= Overview grid (shown when nothing is selected) ======= -->
+    <div id="overviewSection" class="container">
+      <div class="overview-grid">
+
+        <div class="overview-card" onclick="showSection('genome-species', document.querySelector('[data-target=genome-species]'))">
+          <i class="bi bi-diagram-3 oc-icon"></i>
+          <h4>Genome Size Evolution Across Species</h4>
+          <p>Why do some grasshoppers carry 7× more DNA than humans? How does genome size vary across the insect tree of life?</p>
+          <div class="oc-arrow">Explore <i class="bi bi-arrow-right"></i></div>
+        </div>
+
+        <div class="overview-card" onclick="showSection('genome-within', document.querySelector('[data-target=genome-within]'))">
+          <i class="bi bi-graph-up oc-icon"></i>
+          <h4>Within-Species Genome Size Variation</h4>
+          <p>Genome size, like any trait, varies within a species. What drives this variation and what are its phenotypic consequences?</p>
+          <div class="oc-arrow">Explore <i class="bi bi-arrow-right"></i></div>
+        </div>
+
+        <div class="overview-card" onclick="showSection('underrep', document.querySelector('[data-target=underrep]'))">
+          <i class="bi bi-layers oc-icon"></i>
+          <h4>Underreplication &amp; Heterochromatin</h4>
+          <p>Thoracic tissue in <em>Drosophila</em> stalls DNA replication before copying heterochromatin. What does this reveal about genome evolution?</p>
+          <div class="oc-arrow">Explore <i class="bi bi-arrow-right"></i></div>
+        </div>
+
+        <div class="overview-card" onclick="showSection('sexchrom', document.querySelector('[data-target=sexchrom]'))">
+          <i class="bi bi-gender-ambiguous oc-icon"></i>
+          <h4>Sex Chromosome Evolution</h4>
+          <p>Y chromosomes shrink over evolutionary time. We use genome size differences between the sexes to track this process.</p>
+          <div class="oc-arrow">Explore <i class="bi bi-arrow-right"></i></div>
+        </div>
+
+        <div class="overview-card" onclick="showSection('forensic', document.querySelector('[data-target=forensic]'))">
+          <i class="bi bi-search oc-icon"></i>
+          <h4>Forensic Entomology</h4>
+          <p>Insects are essential tools in death investigations. We study the distributions and genomics of forensically relevant flies across Utah.</p>
+          <div class="oc-arrow">Explore <i class="bi bi-arrow-right"></i></div>
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= About Us Section ======= -->
-	<p></p>     
-<div>
-	<h2 class="section-title">Research Interests
-	</div>
-	        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-<div class="resume-content">
-            <h3 class="subheading m-3">***Undergraduates in Research***</h3>
-            <div class="subheading m-3">I believe research should be understandable and attainable to all those who wish to participate. I therefore promote open access publication and collaborative work. 
-			I view students at all levels as indispensable to research. I attempt to incorporate undergraduates from diverse backgrounds in active roles in my projects. 
-			Providing opportunities to learn valuable skills, participate in data collection, analysis, and dissemination through peer reviewed publication and professional presentations.
-			<a href="mailto:Carl.Hjelmen@uvu.edu">Let me know</a> if you are interested in working with me on a project!
-			</div>
-          </div>
-          </div>
-          <div class="resume-content">
-            <h3 class="subheading m-3"> Genome Size Evolution Among Species </h3>
-            <div class="subheading m-3">The amount of DNA in organisms varies widely from species to species (Up to 7,000 fold in animals!).  However, more DNA does not make an organism more complex: 
-			Some grasshoppers have 6X the genome size as humans!  Most of this variation in DNA content is actually due to highly repetitive non-coding regions and other things 
-			like transposable elements.  So why does so much variation exists?  How does this variation come to be?  Are there adaptive patterns to any of this change? 
-			Are there consistent patterns of genome size change that exist between organisms?  I use new and old genome size estimates in conjunction with comparative phylogenetic 
-			approaches to investigate these patterns of genome size change across a range of organisms.  While most of my work has been in <i>Drosophila</i> species, 
-			I have been part of collaborative efforts to investigate these patterns of change across multiple families of beetles and other insects. I am working to sequence 
-			individuals that have unique patterns of change in order to investigate which mechanisms are driving these significant changes in size.
-			</div>
-          
-          </div>
-        </div>
-			<style>
-      .img-container {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="img-container"> <!-- Block parent element -->
-      <img src="assets/img/treefig.jpg" alt="color_phylogeny_of_insect_genome_size" style="width:400px;">
     </div>
-	<style>
-	.caption-container {
-	text-align: center;
-	}
-	</style>
-	
-	<div class="caption-container">Figure: Genome size for all available insect data from local 
-	databases and <a href="http://www.genomesize.com">genomesize.com</a> plotted in color on an insect phylogeny. Darker colors represent
-	smaller genomes</div>
-	<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-		<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Genome Size Evolution Within Species </h3>
-            <p>While genome size has been known to vary from species to species, genome size, like any other trait, can vary within a species. In fact, there was found to be about 30,000,000
-			more base pairs of DNA in the <i>Drosophila</i> DGRP with the largest genomes than the ones with the smallest!  This within species variation has been shown to be correlated 
-			to other phenotypes, such as reproductive fitness, body size, and development time. I have utilized long running phenotype selection lines to evaluate genome size change
-			in relatively short periods of time <a href="assets/publications/genes_selection_2020.pdf">(Hjelmen et al 2020)</a>. I am working to investigate the evolutionary advantages (or disadvantages) to having more or less DNA.  
-			Does certain types of DNA assist in adaptation to new environments? What amount of variation in genome size is expected within a species? What contributes to this variation? 
-			And at what point does it lead to divergence/speciation?</p>
-          
-          </div>
-        </div>
-		<style>
-      .img-container {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="img-container"> <!-- Block parent element -->
-      <img src="assets/img/withindrosophila.png" alt="scatterplot of drosophila genome size with cell count" style="width:400px;">
-    </div>
-	<div class="caption-container">Figure: <i>Drosophila</i> genome size and relative cell count ratio plotted for <i>D. melanogaster</i>
-	lines selected for large or small body size.  While genome size is not significantly different between large and smalle body sizes,
-	there is a large difference in genome size variation between these body sizes (from <a href="assets/publications/genes_selection_2020.pdf">Hjelmen et al. 2020</a>)</div>
-	<p></p>
-    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Underreplication and Heterochromatin Content of the Genome</h3>
-            <p>Underreplication is a fascinating phenomenon by which DNA replication is stalled before replicating the late replicating heterochromatin.
-			This phenomenon has been noted for decades in the polytene salivary glands of <i>Drosophila</i>, but only recently was documented in the thoracic tissue of <i> D. melanogaster</i>. Recently, we showed (with the help of some expert
-dissection skills from an undergrad!) what thoracic tissues underreplication is occuring in <a href="assets/publications/genes_UR_muscle_2020.pdf">(Johnston et al 2020)</a>. I also recently demonstrated underreplication in 132 species within the <i>Drosophila</i> genus <a href="assets/publications/URevolution2020.pdf">(Hjelmen et al. 2020)</a>! We know variation in genome size is largely
-			due to repetetive and noncoding DNA (largely heterochromatic), and we findthat more of this "unreplicated" DNA occurs in species with larger genomes.  We therefore use Underreplication to study the dynamics of
-			Heterochromatin and Euchromatin change throughout time.  We find dramatically different patterns of change between types of chromatin.  Is this dependent on what group of species we look at?  What is occuring in species that have significantly more heterochromatin?
-			Why does this partial replication occur in thoracic tissue?  And why in only <i>Drosophila</i>?  Does it have something to due with adaptation to environments?  What is the physiological benefit of more DNA in the thorax?
-			I hope to answer these questions through long read sequencing, transcriptomics, and studies of phenotypes!
-			</p>
-          
-          </div>
-        </div>
-				<style>
-      .img-container {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="img-container"> <!-- Block parent element -->
-      <img src="assets/img/underrep.png" alt="histogram of thoracic underreplication" style="width:400px;">
-    </div>
-	<div class="caption-container">Figure: Measurement of <i>D. kepuluana</i> thoracic nuclei with propidium iodide on a flow cytomter.
-	Flow cytometric analysis demonstrates three peaks in thoraces, rather than the two peaks we see in neural nuclei. 
-	The peaks include the usual 2C and 4C peaks, but also includes a peak in which replication has stalled partway.  For more information on
-	underreplication, see <a href="assets/publications/URevolution2020.pdf">Hjelmen et al. 2020</a> and <a href="assets/publications/genes_UR_muscle_2020.pdf">Johnston et al. 2020</a>.</div>
-	<p></p>
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Sex Chromosome Evolution</h3>
-            <p>Sex chromosomes are often the first thing to which biologists attribute differences between sexes.  While most of the DNA content in a genome is on the autosomes and therefore does not differ between the sexes, 
-			differences between sex chromosomes lead to highly differentiated gene expression and phenotypes between the sexes.  In the an XY sex system, as the sex chromosomes differentiate, the Y chromosome becomes more and 
-			more sparse in the case of gene content and becomes highly heterochromatized and compacted.  We have found that in many cases, not only does gene content decrease, but also the physical amount of DNA on the Y chromosome decreases
-			(<a href="assets/publications/J_hered_Hjelmen_et_al_2018.pdf">Hjelmen et al 2018</a>, <a href="assets/publications/g3_Hjelmen_et_al_2019.pdf">Hjelmen et al 2019</a>).
-			Hypothetically, the Y chromosome gets smaller and smaller throughout time, until it becomes so small it can be lost.  Here we may see sex chromosome turnover and introduction of Neo-sex systems.
-			So, how big can the differences between sexes become?  How often are males in XY systems larger than females?  Are those with larger male genomes indicative of neo-Sex chromosomes?
-			Beyond just looking at physical size, I am interested in seeing what content is found on neo-sex chromosomes and investigating whether or not specific chromosomes are more likely to be selected to become sex chromosomes. To do this, I
-			am sequencing males and females from species which I have identified as having prospective sex chromosome turnover events.
-			</p>
-          
-          </div>
-        </div>
-<style>
-      .img-container {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="img-container"> <!-- Block parent element -->
-      <img src="assets/img/ychromosome.png" alt="sex difference plot" style="width:400px;">
-    </div>
-	<div class="caption-container">Figure: Schematic of proposed sex chromosome degradation/evolution. Early in sex chromosome differentiation, it is
-	expected increased transposable element activity will actually increase the size of the Y chromosome.  Subsequent deletion bias will then
-	reduce the size of the Y chromosome.  This reduction may stall and results in equal sex chromosome sizes, continue until the Y chromosome disappears, or a neo-sex event
-	may reset the sex chromosome pathway.</div>
-	<p></p>
-<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          
-        </div>
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Forensic Entomology</h3>
-            <p>Forensic entomology is the use of insects (and related arthropods) in legal investigations. The most well known application of this work is in the medico-legal field: using insects to aid 
-            in death investigations. In order to use insects in this regard, we must have foundational information about their biology: development, occurrences, impact of abiotic, factors, etc. I have previously done work on 
-           transcriptomics of these flies (<a href="assets/publications/insects_2022_miRNA_macellaria.pdf">Hjelmen et al. 2021</a>, and <a href="assets/publications/pimsler_frontiers_2021.pdf"> Pimsler et al. 2021</a>) 
-           and other developmental applications (<a href="assets/publications/genes_selection_2020.pdf">Hjelmen et al. 2020</a>). We are now working to understand the distributions and occurrences of forensically relevant flies across
-           the ecoregions of Utah. We are also working to develop other bioinformatic and genomic applications using these important flies.  This is in collaboration with Dr. Lauren M. Weidner at ASU.
-			</p>
-          
+
+    <!-- ======= Research Sections ======= -->
+    <div class="section-wrapper" id="sectionWrapper" style="display:none;">
+      <div class="container">
+
+        <!-- ── 1. Genome Size Across Species ── -->
+        <div id="genome-species" class="research-section">
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="section-header">
+                <div class="icon-bubble"><i class="bi bi-diagram-3"></i></div>
+                <div>
+                  <span class="section-tag">Comparative Genomics</span>
+                  <h2>Genome Size Evolution Across Species</h2>
+                </div>
+              </div>
+              <div class="research-body">
+                <p>The amount of DNA in an organism's cells varies enormously across the tree of life — up to 7,000-fold in animals alone. This variation is not simply a reflection of organismal complexity: some grasshoppers carry roughly 6× more DNA than humans. Most of this variation is due to highly repetitive non-coding regions and transposable elements rather than differences in gene number.</p>
+                <p>Why does so much variation exist? How does it arise and spread? Are there consistent patterns of genome size change across lineages? I use flow cytometry-based genome size estimates combined with comparative phylogenetic approaches to investigate these patterns across a broad range of insects. While most of my work has focused on <em>Drosophila</em> species, I have also been part of collaborative efforts spanning multiple beetle families and other insects.</p>
+                <p>I am actively working to sequence individuals from species that show unusual or extreme patterns of genome size change, to identify the molecular mechanisms driving those shifts.</p>
+              </div>
+
+              <div class="key-questions mt-4">
+                <h5><i class="bi bi-lightbulb-fill"></i> Key Questions</h5>
+                <ul>
+                  <li>What evolutionary forces drive large-scale changes in genome size across lineages?</li>
+                  <li>Are there consistent patterns of change within particular insect groups?</li>
+                  <li>Which mechanisms — transposable elements, deletions, polyploidy — dominate in different clades?</li>
+                  <li>Can extreme genome sizes be explained by adaptive hypotheses?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="sidebar-sticky">
+                <div class="figure-panel mb-3">
+                  <img src="assets/img/treefig.jpg" alt="Insect genome size plotted on phylogeny">
+                  <div class="fig-caption"><strong>Figure:</strong> Genome size for all available insect data from local databases and <a href="http://www.genomesize.com" target="_blank" rel="noopener" style="color:#275D38;">genomesize.com</a>, plotted on an insect phylogeny. Darker colors represent smaller genomes.</div>
+                </div>
+
+                <p class="papers-heading">Key Publications</p>
+
+                <a href="assets/publications/g3_Hjelmen_et_al_2019.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Genome size evolution differs between <em>Drosophila</em> subgenera</span>
+                    <span class="pc-meta">Hjelmen et al. 2019 · <em>G3</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/plos_one_Hjelmen_Johnston_2017.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Mode and tempo of genome size evolution in <em>Sophophora</em></span>
+                    <span class="pc-meta">Hjelmen &amp; Johnston 2017 · <em>PLOS One</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/Hjelmen_Genetics_2024.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Genome size as a metric for assembly assessment in Eukaryota</span>
+                    <span class="pc-meta">Hjelmen 2024 · <em>Genetics</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/GBE_Lower_et_al_2017.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Genome size in North American fireflies</span>
+                    <span class="pc-meta">Lower, Johnston, Hjelmen et al. 2017 · <em>GBE</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <p class="papers-heading mt-3">Useful Resources</p>
+                <a href="http://www.genomesize.com" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-database"></i>
+                  <span>Animal Genome Size Database</span>
+                </a>
+                <a href="http://coleoguy.github.io/karyotypes/" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-table"></i>
+                  <span>Karyotype Database (Blackmon lab)</span>
+                </a>
+                <a href="gs_estimations.html" class="link-card">
+                  <i class="bi bi-droplet"></i>
+                  <span>Our Genome Size Estimation Service</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-<style>
-      .img-container {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="img-container"> <!-- Block parent element -->
-      <img src="assets/img/blow_fly_locations.jpg" alt="sex difference plot" style="width:400px;">
+        <!-- ── 2. Within-Species Variation ── -->
+        <div id="genome-within" class="research-section">
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="section-header">
+                <div class="icon-bubble"><i class="bi bi-graph-up"></i></div>
+                <div>
+                  <span class="section-tag">Intraspecific Variation</span>
+                  <h2>Within-Species Genome Size Variation</h2>
+                </div>
+              </div>
+              <div class="research-body">
+                <p>While genome size variation between species is well documented, genome size — like any other quantitative trait — also varies within a species. In the <em>Drosophila</em> Genetic Reference Panel, the largest genomes contain roughly 30,000,000 more base pairs than the smallest. This within-species variation has been shown to correlate with reproductive fitness, body size, and developmental timing.</p>
+                <p>I have used long-running phenotype selection lines to examine genome size change over relatively short evolutionary timescales. I am actively investigating the evolutionary advantages (and disadvantages) of carrying more or less DNA — whether specific types of repetitive DNA assist in environmental adaptation, and how much intraspecific variation is expected before it contributes to divergence or speciation.</p>
+              </div>
+
+              <div class="key-questions mt-4">
+                <h5><i class="bi bi-lightbulb-fill"></i> Key Questions</h5>
+                <ul>
+                  <li>What amount of within-species genome size variation is typical, and what drives it?</li>
+                  <li>Does carrying more or less DNA confer fitness advantages in particular environments?</li>
+                  <li>Does certain repetitive DNA assist in adaptation to new environments?</li>
+                  <li>At what point does intraspecific variation lead to reproductive isolation?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="sidebar-sticky">
+                <div class="figure-panel mb-3">
+                  <img src="assets/img/withindrosophila.png" alt="Within-Drosophila genome size scatter plot">
+                  <div class="fig-caption"><strong>Figure:</strong> <em>Drosophila</em> genome size and relative cell count ratio for <em>D. melanogaster</em> lines selected for large or small body size. Genome size is not significantly different between body sizes, but variation differs markedly between them (Hjelmen et al. 2020).</div>
+                </div>
+
+                <p class="papers-heading">Key Publications</p>
+
+                <a href="assets/publications/genes_selection_2020.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Effect of phenotype selection on genome size in two Diptera species</span>
+                    <span class="pc-meta">Hjelmen et al. 2020 · <em>Genes</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/ellis_et_al_2014_2.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Intrapopulation genome size variation in <em>D. melanogaster</em> DGRP lines</span>
+                    <span class="pc-meta">Ellis, Hjelmen et al. 2014 · <em>PLOS Genetics</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/roy_soc_proc_b_Arnqvist_et_al_2015.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Genome size correlates with reproductive fitness in seed beetles</span>
+                    <span class="pc-meta">Arnqvist, Hjelmen et al. 2015 · <em>Proc. R. Soc. B</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <p class="papers-heading mt-3">Useful Resources</p>
+                <a href="http://www.genomesize.com" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-database"></i>
+                  <span>Animal Genome Size Database</span>
+                </a>
+                <a href="https://www.ncbi.nlm.nih.gov/genbank/" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-hdd-stack"></i>
+                  <span>NCBI GenBank</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 3. Underreplication ── -->
+        <div id="underrep" class="research-section">
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="section-header">
+                <div class="icon-bubble"><i class="bi bi-layers"></i></div>
+                <div>
+                  <span class="section-tag">Chromatin Biology</span>
+                  <h2>Underreplication &amp; Heterochromatin Evolution</h2>
+                </div>
+              </div>
+              <div class="research-body">
+                <p>Underreplication is a fascinating phenomenon in which DNA replication stalls before copying the late-replicating heterochromatin. Long known in the polytene salivary glands of <em>Drosophila</em>, it was only recently documented in thoracic tissue. We showed — with the help of expert undergraduate dissectors — the specific thoracic tissues in which this stalling occurs, and I subsequently demonstrated underreplication in 132 species across the <em>Drosophila</em> genus.</p>
+                <p>Because genome size variation is largely due to repetitive and non-coding DNA in heterochromatic regions, underreplication offers a unique window into how heterochromatin and euchromatin evolve at different rates. We find dramatically different patterns of change between chromatin types across species. I hope to answer outstanding questions about this phenomenon through long-read sequencing, transcriptomics, and phenotypic studies.</p>
+              </div>
+
+              <div class="key-questions mt-4">
+                <h5><i class="bi bi-lightbulb-fill"></i> Key Questions</h5>
+                <ul>
+                  <li>Why does partial replication occur specifically in thoracic tissue?</li>
+                  <li>Why has underreplication only been documented in <em>Drosophila</em>?</li>
+                  <li>Is there a physiological benefit to having more DNA in thoracic tissue?</li>
+                  <li>How do patterns of heterochromatin evolution differ between species?</li>
+                  <li>Is this dependent on which clade of species we examine?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="sidebar-sticky">
+                <div class="figure-panel mb-3">
+                  <img src="assets/img/underrep.png" alt="Flow cytometry histogram showing underreplication peaks">
+                  <div class="fig-caption"><strong>Figure:</strong> Flow cytometric analysis of <em>D. kepuluana</em> thoracic nuclei showing three peaks — the expected 2C and 4C peaks, plus a third intermediate peak where replication has stalled in heterochromatin.</div>
+                </div>
+
+                <p class="papers-heading">Key Publications</p>
+
+                <a href="assets/publications/URevolution2020.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Thoracic underreplication in <em>Drosophila</em> estimates minimum genome size</span>
+                    <span class="pc-meta">Hjelmen et al. 2020 · <em>Evolution</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/genes_UR_muscle_2020.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Flying high — muscle-specific underreplication in <em>Drosophila</em></span>
+                    <span class="pc-meta">Johnston, Zapalac &amp; Hjelmen 2020 · <em>Genes</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/Protocol_Johnston_et_al_2019.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Genome size estimation and quantitative cytogenetics in insects</span>
+                    <span class="pc-meta">Johnston, Bernardini &amp; Hjelmen 2018 · <em>Methods Protocol</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <p class="papers-heading mt-3">Useful Resources</p>
+                <a href="gs_estimations.html" class="link-card">
+                  <i class="bi bi-droplet"></i>
+                  <span>Our Flow Cytometry Service</span>
+                </a>
+                <a href="https://www.ncbi.nlm.nih.gov/sra" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-hdd-stack"></i>
+                  <span>NCBI Sequence Read Archive</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 4. Sex Chromosomes ── -->
+        <div id="sexchrom" class="research-section">
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="section-header">
+                <div class="icon-bubble"><i class="bi bi-gender-ambiguous"></i></div>
+                <div>
+                  <span class="section-tag">Sex Chromosome Biology</span>
+                  <h2>Sex Chromosome Evolution</h2>
+                </div>
+              </div>
+              <div class="research-body">
+                <p>Sex chromosomes are often the first biological structure invoked to explain differences between males and females. In XY systems, as sex chromosomes differentiate over evolutionary time, the Y chromosome loses gene content and becomes increasingly heterochromatized and compacted. We have found that in many <em>Drosophila</em> species, not only does gene content decrease — the physical amount of DNA on the Y chromosome shrinks as well.</p>
+                <p>Hypothetically, the Y chromosome shrinks progressively until it becomes so small that it can be lost entirely, potentially triggering sex chromosome turnover and the emergence of neo-sex chromosome systems. I use genome size differences between males and females (measured via flow cytometry) as a proxy for Y chromosome content, allowing rapid screening across many species to identify candidates for turnover events.</p>
+                <p>Beyond physical size, I am interested in what genetic content is found on neo-sex chromosomes, and whether specific chromosomes are more likely to be recruited as sex chromosomes. I am sequencing males and females from species that I have identified as having probable sex chromosome turnover events to investigate these questions directly.</p>
+              </div>
+
+              <div class="key-questions mt-4">
+                <h5><i class="bi bi-lightbulb-fill"></i> Key Questions</h5>
+                <ul>
+                  <li>How large can the genomic size difference between sexes become?</li>
+                  <li>Are species with larger male genomes indicative of neo-sex chromosome evolution?</li>
+                  <li>Which chromosomes are preferentially recruited as new sex chromosomes?</li>
+                  <li>What content is present on neo-sex chromosomes at early stages of differentiation?</li>
+                  <li>How often do sex chromosome turnover events occur across insect lineages?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="sidebar-sticky">
+                <div class="figure-panel mb-3">
+                  <img src="assets/img/ychromosome.png" alt="Schematic of sex chromosome degradation">
+                  <div class="fig-caption"><strong>Figure:</strong> Proposed model of sex chromosome degradation. Increased transposable element activity initially expands the Y, followed by deletion bias that progressively reduces its size — eventually leading to loss, stasis, or a neo-sex event.</div>
+                </div>
+
+                <p class="papers-heading">Key Publications</p>
+
+                <a href="assets/publications/J_hered_Hjelmen_et_al_2018.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Genome size evolution within and between the sexes</span>
+                    <span class="pc-meta">Hjelmen et al. 2018 · <em>Journal of Heredity</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/g3_Hjelmen_et_al_2019.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Striking sex differences in genome size in <em>Sophophora</em></span>
+                    <span class="pc-meta">Hjelmen et al. 2019 · <em>G3</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/bioletters2020.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Probability of fusions joining sex chromosomes and autosomes</span>
+                    <span class="pc-meta">Anderson &amp; Hjelmen et al. 2020 · <em>Biology Letters</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/procB_sylvester2020.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Lineage-specific patterns of chromosome evolution in Polyneoptera</span>
+                    <span class="pc-meta">Sylvester, Hjelmen et al. 2020 · <em>Proc. R. Soc. B</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <p class="papers-heading mt-3">Useful Resources</p>
+                <a href="http://www.treeofsex.org/" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-diagram-2"></i>
+                  <span>Tree of Sex Database</span>
+                </a>
+                <a href="http://coleoguy.github.io/karyotypes/" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-table"></i>
+                  <span>Karyotype Database (Blackmon lab)</span>
+                </a>
+                <a href="http://coleoguy.github.io" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-person-lines-fill"></i>
+                  <span>Heath Blackmon Lab (collaborator)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 5. Forensic Entomology ── -->
+        <div id="forensic" class="research-section">
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="section-header">
+                <div class="icon-bubble"><i class="bi bi-search"></i></div>
+                <div>
+                  <span class="section-tag">Applied Entomology</span>
+                  <h2>Forensic Entomology</h2>
+                </div>
+              </div>
+              <div class="research-body">
+                <p>Forensic entomology is the application of insect biology to legal investigations. The most prominent application is in medico-legal death investigations, where insects colonizing remains can be used to estimate the time and circumstances of death. Underpinning this applied work is a foundation of basic biological knowledge: development, occurrence, geographic distribution, and the effects of environmental variables on insect biology.</p>
+                <p>Previous work in my lab has contributed to the transcriptomics of forensically relevant blow flies, including small RNA markers of developmental age and sex-identification approaches for immature specimens. Current efforts focus on documenting the distributions and occurrences of forensically relevant Diptera across the ecoregions of Utah, in collaboration with Dr. Lauren M. Weidner at Arizona State University. We are also developing genomic and bioinformatic pipelines for eDNA-based identification and detection of these important flies.</p>
+              </div>
+
+              <div class="key-questions mt-4">
+                <h5><i class="bi bi-lightbulb-fill"></i> Key Questions</h5>
+                <ul>
+                  <li>Which forensically relevant Diptera species occur across Utah's diverse ecoregions?</li>
+                  <li>How do abiotic factors (elevation, temperature, habitat) affect species distributions?</li>
+                  <li>Can eDNA-based methods reliably detect and identify fly species in field samples?</li>
+                  <li>What molecular markers best distinguish species and age of immature specimens?</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="sidebar-sticky">
+                <div class="figure-panel mb-3">
+                  <img src="assets/img/blow_fly_locations.jpg" alt="Proposed blow fly collection locations across Utah">
+                  <div class="fig-caption"><strong>Figure:</strong> Proposed collection sites for forensically relevant blow flies across Utah ecoregions.</div>
+                </div>
+
+                <p class="papers-heading">Key Publications</p>
+
+                <a href="assets/publications/insects_2022_miRNA_macellaria.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Small RNA markers of age in <em>Cochliomyia macellaria</em></span>
+                    <span class="pc-meta">Hjelmen et al. 2022 · <em>Insects</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/pimsler_frontiers_2021.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Sexual dimorphism in growth and gene expression in <em>Chrysomya rufifacies</em></span>
+                    <span class="pc-meta">Pimsler, Hjelmen et al. 2021 · <em>Frontiers Ecol. Evol.</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <a href="assets/publications/jonikaSexID2020.pdf" target="_blank" class="paper-card">
+                  <i class="bi bi-file-earmark-pdf pc-icon"></i>
+                  <div class="pc-body">
+                    <span class="pc-title">Differentially spliced genes as sex markers for forensic entomology</span>
+                    <span class="pc-meta">Jonika, Hjelmen et al. 2020 · <em>J. Forensic Sciences</em></span>
+                  </div>
+                  <span class="pc-pdf">PDF</span>
+                </a>
+
+                <p class="papers-heading mt-3">Useful Resources</p>
+                <a href="https://www.randymajors.org/countygmap" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-map"></i>
+                  <span>Utah County Lines Map Tool</span>
+                </a>
+                <a href="https://www.ncbi.nlm.nih.gov/genbank/" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-hdd-stack"></i>
+                  <span>NCBI GenBank</span>
+                </a>
+                <a href="https://sandbox.bio/" target="_blank" rel="noopener" class="link-card">
+                  <i class="bi bi-terminal"></i>
+                  <span>Sandbox.bio — interactive bioinformatics</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-	<div class="caption-container">Figure: Proposed locations for collecting blow flies across Utah</div>
-	<p></p>
+    <!-- End Research Sections -->
 
-		<!-- End About Us Section -->
+  </main>
+  <!-- End #main -->
 
-
-
-     
-    
-  </main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
+  <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="gs_estimations.html">Genome Size Estimations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
-  
+  </footer>
+  <!-- End Footer -->
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -354,13 +1112,48 @@ dissection skills from an undergrad!) what thoracic tissues underreplication is 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <script>
+    function showSection(id, btn) {
+      document.getElementById('overviewSection').style.display = 'none';
+      document.getElementById('sectionWrapper').style.display = 'block';
 
+      document.querySelectorAll('.research-section').forEach(function(s) {
+        s.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+
+      document.querySelectorAll('.rnav-pill').forEach(function(p) {
+        p.classList.remove('active');
+      });
+      if (btn) btn.classList.add('active');
+
+      var wrapper = document.getElementById('sectionWrapper');
+      var offset = wrapper.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+
+    function showOverview() {
+      document.getElementById('overviewSection').style.display = 'block';
+      document.getElementById('sectionWrapper').style.display = 'none';
+      document.querySelectorAll('.rnav-pill').forEach(function(p) {
+        p.classList.remove('active');
+      });
+    }
+
+    document.querySelectorAll('.rnav-pill').forEach(function(pill) {
+      pill.addEventListener('click', function(e) {
+        if (this.classList.contains('active') &&
+            document.getElementById('sectionWrapper').style.display !== 'none') {
+          e.stopPropagation();
+          showOverview();
+        }
+      });
+    });
+  </script>
+
+</body>
 </html>

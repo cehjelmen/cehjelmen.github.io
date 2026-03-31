@@ -3,27 +3,25 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Photos</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Lab Photos | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Photos from the Hjelmen Lab at UVU — conferences, outreach, lab life, and more.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -34,771 +32,1272 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    :root {
+      --green-dark:  #1a3f26;
+      --green-main:  #275D38;
+      --green-mid:   #3a7d52;
+      --green-light: #e8f2ec;
+      --green-pale:  #f4faf6;
+    }
+
+    body { font-family: 'Source Sans 3', sans-serif; }
+
+    /* ── Hero ──────────────────────────────── */
+    .photos-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 60%, var(--green-mid) 100%);
+      margin-top: 72px;
+      padding: 56px 0 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .photos-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .photos-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      position: relative;
+    }
+    .photos-hero p {
+      color: rgba(255,255,255,0.82);
+      font-size: 1rem;
+      margin: 0;
+      position: relative;
+    }
+    .photo-count-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      padding: 5px 14px;
+      color: #fff;
+      font-size: 0.82rem;
+      margin-top: 14px;
+      position: relative;
+    }
+
+    /* ── Filter bar ────────────────────────── */
+    .filter-bar {
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 18px 0;
+      position: sticky;
+      top: 70px;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+    .filter-bar .filter-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+    }
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 18px;
+      border-radius: 30px;
+      border: 2px solid #ddd;
+      background: #fff;
+      color: #555;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .filter-btn i { font-size: 0.95rem; }
+    .filter-btn:hover {
+      border-color: var(--green-main);
+      color: var(--green-main);
+    }
+    .filter-btn.active {
+      background: var(--green-main);
+      border-color: var(--green-main);
+      color: #fff;
+      box-shadow: 0 3px 10px rgba(39,93,56,0.25);
+    }
+    .result-count {
+      font-size: 0.8rem;
+      color: #999;
+      margin-left: 6px;
+      font-weight: 400;
+    }
+
+    /* ── Gallery grid ──────────────────────── */
+    .gallery-section {
+      background: var(--green-pale);
+      padding: 36px 0 60px;
+      min-height: 60vh;
+    }
+
+    /* Event group headers */
+    .event-group {
+      width: 100%;
+      margin: 32px 0 16px;
+    }
+    .event-group-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--green-light);
+    }
+    .event-group-label .event-year {
+      background: var(--green-main);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 4px;
+      font-family: 'Source Sans 3', sans-serif;
+      letter-spacing: 0.04em;
+    }
+
+    /* Masonry-style grid using CSS columns */
+    .photo-masonry {
+      columns: 3;
+      column-gap: 14px;
+    }
+    @media (max-width: 991px) { .photo-masonry { columns: 2; } }
+    @media (max-width: 576px) { .photo-masonry { columns: 1; } }
+
+    .photo-item {
+      break-inside: avoid;
+      margin-bottom: 14px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block; /* needed for isotope hidden */
+    }
+
+    /* Wide featured items span 2 cols via a wrapper trick */
+    .photo-item.featured {
+      break-inside: avoid;
+    }
+
+    .photo-item img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      transition: transform 0.4s ease;
+    }
+
+    /* Hover overlay */
+    .photo-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,63,38,0.88) 0%, rgba(26,63,38,0.2) 55%, transparent 100%);
+      border-radius: 8px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 16px;
+    }
+
+    .photo-item:hover .photo-overlay { opacity: 1; }
+    .photo-item:hover img { transform: scale(1.03); }
+
+    .photo-overlay .po-event {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 3px;
+    }
+
+    .photo-overlay .po-caption {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .photo-overlay .po-expand {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      width: fit-content;
+      transition: background 0.2s;
+    }
+    .photo-item:hover .po-expand:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* Category chip on card */
+    .photo-overlay .po-cat {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(39,93,56,0.85);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      backdrop-filter: blur(4px);
+    }
+
+    /* ── Empty state ───────────────────────── */
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      color: #aaa;
+      display: none;
+    }
+    .empty-state i { font-size: 2.5rem; margin-bottom: 12px; display: block; }
+
+    /* ── Isotope-based filtering ───────────── */
+    /* Items hidden by isotope */
+    .photo-item.hidden-item {
+      display: none;
+    }
+
+    /* ── Group visibility ──────────────────── */
+    .event-group.group-hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .photos-hero { padding: 40px 0 32px; }
+      .photos-hero h1 { font-size: 1.7rem; }
+      .filter-bar { top: 58px; }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-      <!-- ======= Header ======= -->
- <header id="header" class="fixed-top">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html">Home</a></li>
-
-          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#" class="active"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html" class="active">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
-             <ul>
-                    <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  <li><a href="lab_photos.html" class="active">Photos</a></li>
-		  <li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
-
+          </li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-
+  </header>
+  <!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ── Hero ── -->
+    <div class="photos-hero">
       <div class="container">
+        <h1><i class="bi bi-camera2 me-2" style="font-size:1.8rem; vertical-align:middle;"></i>Lab Photos</h1>
+        <p>Conferences, outreach, lab life, and the people who make it all happen.</p>
+        <div class="photo-count-badge">
+          <i class="bi bi-images"></i>
+          <span>63 photos &nbsp;·&nbsp; 2021–2025</span>
+        </div>
+      </div>
+    </div>
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Lab Photos</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Lab Photos</li>
-          </ol>
+    <!-- ── Filter bar ── -->
+    <div class="filter-bar">
+      <div class="container">
+        <div class="filter-wrap">
+          <button class="filter-btn active" data-filter="all" onclick="filterPhotos('all', this)">
+            <i class="bi bi-grid-3x3-gap"></i> All Photos
+          </button>
+          <button class="filter-btn" data-filter="presentations" onclick="filterPhotos('presentations', this)">
+            <i class="bi bi-mic"></i> Presentations
+          </button>
+          <button class="filter-btn" data-filter="lab" onclick="filterPhotos('lab', this)">
+            <i class="bi bi-binoculars"></i> Lab Work
+          </button>
+          <button class="filter-btn" data-filter="outreach" onclick="filterPhotos('outreach', this)">
+            <i class="bi bi-people"></i> Outreach
+          </button>
+          <button class="filter-btn" data-filter="social" onclick="filterPhotos('social', this)">
+            <i class="bi bi-balloon-heart"></i> Social
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Gallery ── -->
+    <section class="gallery-section">
+      <div class="container" id="galleryContainer">
+
+        <!-- ══ 2025: EntSoc ══ -->
+        <div class="event-group" data-categories="social presentations">
+          <div class="event-group-label"><span class="event-year">2025</span> Entomological Society of America — Portland, OR</div>
+        </div>
+        <div class="photo-masonry" data-group-id="entsoc2025">
+
+          <a href="assets/img/lab_photos/Lab_Dinner_EntSoc_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Lab Dinner at EntSoc 2025; description: The lab gathered for dinner at the Entomological Society of America meeting in Portland.">
+            <img src="assets/img/lab_photos/Lab_Dinner_EntSoc_2025.jpeg" alt="Lab Dinner at EntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">EntSoc 2025</span>
+              <span class="po-caption">Lab Dinner at EntSoc 2025</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Lab_Aunt.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Lab Aunt Dr. Lauren Weidner; description: Photos with our 'Lab Aunt' Dr. Lauren Weidner at EntSoc 2025.">
+            <img src="assets/img/lab_photos/Lab_Aunt.jpg" alt="Photos with Dr. Lauren Weidner" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">EntSoc 2025</span>
+              <span class="po-caption">Photos with Lab Aunt Dr. Lauren Weidner</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/UVU_Profs_Portland.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: UVU Professors Explore Portland; description: UVU professors exploring Portland, OR during the meeting.">
+            <img src="assets/img/lab_photos/UVU_Profs_Portland.jpeg" alt="UVU Professors in Portland" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">EntSoc 2025</span>
+              <span class="po-caption">UVU Professors Explore Portland</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Cyrus_EntSoc_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Cyrus Presenting at EntSoc 2025">
+            <img src="assets/img/lab_photos/Cyrus_EntSoc_2025.jpeg" alt="Cyrus presenting at EntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2025</span>
+              <span class="po-caption">Cyrus Presenting at EntSoc 2025</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Haylee_EntSoc_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Haylee Presenting at EntSoc 2025">
+            <img src="assets/img/lab_photos/Haylee_EntSoc_2025.jpeg" alt="Haylee presenting at EntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2025</span>
+              <span class="po-caption">Haylee Presenting at EntSoc 2025</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Haylee_EntSoc_Present.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Haylee at the Podium — EntSoc 2025">
+            <img src="assets/img/lab_photos/Haylee_EntSoc_Present.jpeg" alt="Haylee at the podium" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2025</span>
+              <span class="po-caption">Haylee at the Podium</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Bailey_EntSoc_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Bailey Presenting at EntSoc 2025">
+            <img src="assets/img/lab_photos/Bailey_EntSoc_2025.jpeg" alt="Bailey presenting at EntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2025</span>
+              <span class="po-caption">Bailey Presenting at EntSoc 2025</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Remington_EntSoc_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Lab Alum Remington Presenting at EntSoc 2025">
+            <img src="assets/img/lab_photos/Remington_EntSoc_2025.jpeg" alt="Remington presenting at EntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2025</span>
+              <span class="po-caption">Lab Alum Remington Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2025: Blow fly fieldwork ══ -->
+        <div class="event-group" data-categories="lab">
+          <div class="event-group-label"><span class="event-year">2025</span> Blow Fly Collections &amp; Field Work</div>
+        </div>
+        <div class="photo-masonry" data-group-id="field2025">
+
+          <a href="assets/img/lab_photos/fly_pinning_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="lab"
+             data-glightbox="title: Fly Pinning 2025; description: Photo credit: Bailey Jannuzzi">
+            <img src="assets/img/lab_photos/fly_pinning_2025.jpeg" alt="Fly pinning 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Lab Work</span>
+              <span class="po-event">Field Work 2025</span>
+              <span class="po-caption">Fly Pinning 2025 <span style="opacity:.7; font-size:.75rem;">(📷 Bailey Jannuzzi)</span></span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Tree_trap_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="lab"
+             data-glightbox="title: Trap Setup 2025; description: Photo credit: Bailey Jannuzzi">
+            <img src="assets/img/lab_photos/Tree_trap_2025.jpeg" alt="Trap setup 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Lab Work</span>
+              <span class="po-event">Field Work 2025</span>
+              <span class="po-caption">Trap Setup in the Field <span style="opacity:.7; font-size:.75rem;">(📷 Bailey Jannuzzi)</span></span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2025: Lab social / awards ══ -->
+        <div class="event-group" data-categories="social">
+          <div class="event-group-label"><span class="event-year">2025</span> Lab Outings, Awards &amp; Milestones</div>
+        </div>
+        <div class="photo-masonry" data-group-id="social2025">
+
+          <a href="assets/img/lab_photos/Group_Museum_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Lab Outing to the NHMU 2025">
+            <img src="assets/img/lab_photos/Group_Museum_2025.jpeg" alt="Lab outing NHMU 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Lab Outing 2025</span>
+              <span class="po-caption">Natural History Museum of Utah</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Graduation_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Graduation 2025; description: A great crew of students graduating!">
+            <img src="assets/img/lab_photos/Graduation_2025.jpeg" alt="Graduation 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Milestone 2025</span>
+              <span class="po-caption">Graduation 2025 🎓</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Fun_Outstanding_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Outstanding Student Awards 2025; description: Babs and Olivia winning Outstanding Student Awards!">
+            <img src="assets/img/lab_photos/Fun_Outstanding_2025.jpeg" alt="Outstanding student awards 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Awards 2025</span>
+              <span class="po-caption">Babs &amp; Olivia — Outstanding Student Awards</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Outstanding_Students_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Outstanding Student Awards 2025">
+            <img src="assets/img/lab_photos/Outstanding_Students_2025.jpeg" alt="Outstanding student awards 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Awards 2025</span>
+              <span class="po-caption">Outstanding Student Awards Ceremony</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2025: PBEntSoc ══ -->
+        <div class="event-group" data-categories="social presentations">
+          <div class="event-group-label"><span class="event-year">2025</span> Pacific Branch ESA (PBEntSoc)</div>
+        </div>
+        <div class="photo-masonry" data-group-id="pbesa2025">
+
+          <a href="assets/img/lab_photos/UVU_PBESA_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: UVU Representing at PBEntSoc 2025">
+            <img src="assets/img/lab_photos/UVU_PBESA_2025.jpeg" alt="UVU at PBEntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">PBEntSoc 2025</span>
+              <span class="po-caption">UVU Representing at the Branch Meeting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Olivia_PBESA_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Olivia Presenting at PBEntSoc 2025">
+            <img src="assets/img/lab_photos/Olivia_PBESA_2025.jpeg" alt="Olivia presenting at PBEntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">PBEntSoc 2025</span>
+              <span class="po-caption">Olivia Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Babs_PBESA_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Babs Presenting at PBEntSoc 2025">
+            <img src="assets/img/lab_photos/Babs_PBESA_2025.jpeg" alt="Babs presenting at PBEntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">PBEntSoc 2025</span>
+              <span class="po-caption">Babs Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Haylee_PBESA_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Haylee Presenting at PBEntSoc 2025">
+            <img src="assets/img/lab_photos/Haylee_PBESA_2025.jpeg" alt="Haylee presenting at PBEntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">PBEntSoc 2025</span>
+              <span class="po-caption">Haylee Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Bailey_PBESA_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Bailey Presenting at PBEntSoc 2025">
+            <img src="assets/img/lab_photos/Bailey_PBESA_2025.jpeg" alt="Bailey presenting at PBEntSoc 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">PBEntSoc 2025</span>
+              <span class="po-caption">Bailey Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2025: STEAM CON ══ -->
+        <div class="event-group" data-categories="outreach">
+          <div class="event-group-label"><span class="event-year">2025</span> STEAM CON Outreach</div>
+        </div>
+        <div class="photo-masonry" data-group-id="steam2025">
+
+          <a href="assets/img/lab_photos/Steam_con_2025.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="outreach"
+             data-glightbox="title: STEAM CON 2025; description: With Dr. Weidner and Tagg at STEAM CON 2025.">
+            <img src="assets/img/lab_photos/Steam_con_2025.jpeg" alt="STEAM CON 2025" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Outreach</span>
+              <span class="po-event">STEAM CON 2025</span>
+              <span class="po-caption">With Dr. Weidner &amp; Tagg at STEAM CON</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Steam_con_talk_2025.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="outreach"
+             data-glightbox="title: Dr. Hjelmen Talking at STEAM CON 2025">
+            <img src="assets/img/lab_photos/Steam_con_talk_2025.jpg" alt="Dr. Hjelmen at STEAM CON" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Outreach</span>
+              <span class="po-event">STEAM CON 2025</span>
+              <span class="po-caption">Dr. Hjelmen Presenting at STEAM CON</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2024: EntSoc ══ -->
+        <div class="event-group" data-categories="social presentations">
+          <div class="event-group-label"><span class="event-year">2024</span> Entomological Society of America</div>
+        </div>
+        <div class="photo-masonry" data-group-id="entsoc2024">
+
+          <a href="assets/img/lab_photos/UVU_ESA_dinner_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: UVU Student & Alumni Dinner at EntSoc 2024">
+            <img src="assets/img/lab_photos/UVU_ESA_dinner_2024.jpg" alt="UVU dinner at ESA 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">EntSoc 2024</span>
+              <span class="po-caption">UVU Student &amp; Alumni Dinner</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Hjelmen_ESA_2024.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Dr. Hjelmen Presenting at EntSoc 2024">
+            <img src="assets/img/lab_photos/Hjelmen_ESA_2024.jpeg" alt="Dr. Hjelmen presenting at ESA 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2024</span>
+              <span class="po-caption">Dr. Hjelmen Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Audrey_ESA_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Audrey Presenting at EntSoc 2024">
+            <img src="assets/img/lab_photos/Audrey_ESA_2024.jpg" alt="Audrey presenting at ESA 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2024</span>
+              <span class="po-caption">Audrey Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Olivia_ESA_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Olivia Presenting at EntSoc 2024">
+            <img src="assets/img/lab_photos/Olivia_ESA_2024.jpg" alt="Olivia presenting at ESA 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2024</span>
+              <span class="po-caption">Olivia Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Haylee_ESA_2024.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Haylee Presenting at EntSoc 2024">
+            <img src="assets/img/lab_photos/Haylee_ESA_2024.jpeg" alt="Haylee presenting at ESA 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2024</span>
+              <span class="po-caption">Haylee Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Babs_ESA_2024.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Babs Presenting at EntSoc 2024">
+            <img src="assets/img/lab_photos/Babs_ESA_2024.jpeg" alt="Babs presenting at ESA 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">EntSoc 2024</span>
+              <span class="po-caption">Babs Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2024: Lab social ══ -->
+        <div class="event-group" data-categories="social">
+          <div class="event-group-label"><span class="event-year">2024</span> Lab Socials &amp; PAG</div>
+        </div>
+        <div class="photo-masonry" data-group-id="social2024">
+
+          <a href="assets/img/lab_photos/Halloween_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Halloween-Themed Lab Meeting 2024; description: Making a candy haunted house!">
+            <img src="assets/img/lab_photos/Halloween_2024.jpg" alt="Halloween lab meeting 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Lab Meeting 2024</span>
+              <span class="po-caption">Halloween Themed Lab Meeting 🎃</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Group_Aviary_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: End of Year Lab Social 2024; description: Checking out Tracy Aviary!">
+            <img src="assets/img/lab_photos/Group_Aviary_2024.jpg" alt="Lab social Tracy Aviary 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Lab Social 2024</span>
+              <span class="po-caption">End-of-Year Outing — Tracy Aviary</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Group_Aviary_2_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Tracy Aviary Lab Social 2024">
+            <img src="assets/img/lab_photos/Group_Aviary_2_2024.jpg" alt="Tracy Aviary 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Lab Social 2024</span>
+              <span class="po-caption">Tracy Aviary</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/PAG_2024_Presentation.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Dr. Hjelmen Presenting at PAG 2024">
+            <img src="assets/img/lab_photos/PAG_2024_Presentation.jpg" alt="Dr. Hjelmen at PAG 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">PAG 2024</span>
+              <span class="po-caption">Dr. Hjelmen Presenting at PAG</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Carl_Tyler_PAG_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Catching Up at PAG 2024; description: Running into old friends at PAG 2024!">
+            <img src="assets/img/lab_photos/Carl_Tyler_PAG_2024.jpg" alt="Old friends at PAG 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">PAG 2024</span>
+              <span class="po-caption">Catching Up with Old Friends</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2024: UCUR ══ -->
+        <div class="event-group" data-categories="presentations">
+          <div class="event-group-label"><span class="event-year">2024</span> Utah Conference on Undergraduate Research (UCUR)</div>
+        </div>
+        <div class="photo-masonry" data-group-id="ucur2024">
+
+          <a href="assets/img/lab_photos/Babs_UCUR_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Babs Presenting at UCUR 2024">
+            <img src="assets/img/lab_photos/Babs_UCUR_2024.jpg" alt="Babs at UCUR 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">UCUR 2024</span>
+              <span class="po-caption">Babs Presenting at UCUR</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Haylee_UCUR_2024.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Haylee Presenting at UCUR 2024">
+            <img src="assets/img/lab_photos/Haylee_UCUR_2024.jpeg" alt="Haylee at UCUR 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">UCUR 2024</span>
+              <span class="po-caption">Haylee Presenting at UCUR</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Olivia_UCUR_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Olivia Presenting at UCUR 2024">
+            <img src="assets/img/lab_photos/Olivia_UCUR_2024.jpg" alt="Olivia at UCUR 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">UCUR 2024</span>
+              <span class="po-caption">Olivia Presenting at UCUR</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Audrey_UCUR_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Audrey Presenting at UCUR 2024">
+            <img src="assets/img/lab_photos/Audrey_UCUR_2024.jpg" alt="Audrey at UCUR 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">UCUR 2024</span>
+              <span class="po-caption">Audrey Presenting at UCUR</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Sam_UCUR_2024.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Sam Presenting at UCUR 2024">
+            <img src="assets/img/lab_photos/Sam_UCUR_2024.jpg" alt="Sam at UCUR 2024" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">UCUR 2024</span>
+              <span class="po-caption">Sam Presenting at UCUR</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2023: ESA & outreach ══ -->
+        <div class="event-group" data-categories="social presentations outreach">
+          <div class="event-group-label"><span class="event-year">2023</span> ESA, Outreach &amp; Lab Outings</div>
+        </div>
+        <div class="photo-masonry" data-group-id="events2023">
+
+          <a href="assets/img/lab_photos/UVU_Students_ESA_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: UVU Student Lunch at ESA 2023">
+            <img src="assets/img/lab_photos/UVU_Students_ESA_2023.jpg" alt="UVU students at ESA 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">ESA 2023</span>
+              <span class="po-caption">UVU Student Lunch at ESA</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Rem_Carl_ESA_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Remington and Dr. Hjelmen at ESA 2023">
+            <img src="assets/img/lab_photos/Rem_Carl_ESA_2023.jpg" alt="Remington and Dr. Hjelmen at ESA 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">ESA 2023</span>
+              <span class="po-caption">Remington &amp; Dr. Hjelmen at ESA</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Rem_Presentation_ESA_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Remington Presenting at ESA 2023">
+            <img src="assets/img/lab_photos/Rem_Presentation_ESA_2023.jpg" alt="Remington presenting at ESA 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">ESA 2023</span>
+              <span class="po-caption">Remington Presenting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Terrence_ESA_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Catching Up at ESA 2023; description: Running into old lab mates at ESA 2023.">
+            <img src="assets/img/lab_photos/Terrence_ESA_2023.jpg" alt="Old friends at ESA 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">ESA 2023</span>
+              <span class="po-caption">Catching Up with Old Lab Mates</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Springville_Team_2023.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="outreach"
+             data-glightbox="title: Springville Library Bugtopia 2023; description: The team of UVU presenters for Bugtopia at Springville Library.">
+            <img src="assets/img/lab_photos/Springville_Team_2023.jpeg" alt="Springville Library outreach 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Outreach</span>
+              <span class="po-event">Outreach 2023</span>
+              <span class="po-caption">Springville Library — Bugtopia</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Carl_Springville_2_2023.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="outreach"
+             data-glightbox="title: Dr. Hjelmen at Springville Library 2023; description: Answering bug questions from the community.">
+            <img src="assets/img/lab_photos/Carl_Springville_2_2023.jpeg" alt="Dr. Hjelmen at Springville outreach" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Outreach</span>
+              <span class="po-event">Outreach 2023</span>
+              <span class="po-caption">Dr. Hjelmen Answering Bug Questions</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Springville_Remington_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="outreach"
+             data-glightbox="title: Remington — Springville Library Outreach 2023">
+            <img src="assets/img/lab_photos/Springville_Remington_2023.jpg" alt="Remington at Springville outreach" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Outreach</span>
+              <span class="po-event">Outreach 2023</span>
+              <span class="po-caption">Remington Giving an Introduction</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Spanish_Fork_Students_2023.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="outreach"
+             data-glightbox="title: Spanish Fork Library Outreach 2023">
+            <img src="assets/img/lab_photos/Spanish_Fork_Students_2023.jpeg" alt="Spanish Fork Library outreach 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Outreach</span>
+              <span class="po-event">Outreach 2023</span>
+              <span class="po-caption">Students at Spanish Fork Library</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Butterfly_Lab_Photo.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Lab Outing — Butterfly Biosphere 2023">
+            <img src="assets/img/lab_photos/Butterfly_Lab_Photo.jpg" alt="Butterfly Biosphere lab outing 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Lab Outing 2023</span>
+              <span class="po-caption">Butterfly Biosphere at Thanksgiving Point</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Lab_Tour_Butterflies.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Lab Outing — Butterfly Biosphere 2023">
+            <img src="assets/img/lab_photos/Lab_Tour_Butterflies.jpg" alt="Butterfly Biosphere lab outing 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Lab Outing 2023</span>
+              <span class="po-caption">Touring the Butterfly Biosphere</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Marissa_graduate.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Marissa Graduating! 2023; description: One of the lab's first students graduating!">
+            <img src="assets/img/lab_photos/Marissa_graduate.jpg" alt="Marissa graduating 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">Milestone 2023</span>
+              <span class="po-caption">Marissa Graduating! 🎓</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Marissa_UCUR_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Marissa Presenting at UCUR 2023">
+            <img src="assets/img/lab_photos/Marissa_UCUR_2023.jpg" alt="Marissa at UCUR 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">UCUR 2023</span>
+              <span class="po-caption">Marissa Presenting at UCUR</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Sam_UCUR_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Sam Presenting at UCUR 2023">
+            <img src="assets/img/lab_photos/Sam_UCUR_2023.jpg" alt="Sam at UCUR 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">UCUR 2023</span>
+              <span class="po-caption">Sam Presenting at UCUR</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Remington_UCUR_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Remington Presenting at UCUR 2023">
+            <img src="assets/img/lab_photos/Remington_UCUR_2023.jpg" alt="Remington at UCUR 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">UCUR 2023</span>
+              <span class="po-caption">Remington Presenting at UCUR</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/UVU_PBESA_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: UVU at Pacific Branch ESA 2023 (Seattle)">
+            <img src="assets/img/lab_photos/UVU_PBESA_2023.jpg" alt="UVU at PBEntSoc 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">PBEntSoc 2023</span>
+              <span class="po-caption">UVU Representing at the Branch Meeting</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Remington_PBESA_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Remington Presenting at PBEntSoc 2023 — Seattle">
+            <img src="assets/img/lab_photos/Remington_PBESA_2023.jpg" alt="Remington presenting at PBEntSoc 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">PBEntSoc 2023</span>
+              <span class="po-caption">Remington Presenting His Research</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Hjelmen_PBESA_2023.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Dr. Hjelmen Presenting at PBEntSoc 2023">
+            <img src="assets/img/lab_photos/Hjelmen_PBESA_2023.jpg" alt="Dr. Hjelmen presenting at PBEntSoc 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">PBEntSoc 2023</span>
+              <span class="po-caption">Dr. Hjelmen Presenting Marissa's Project</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Seattle_Aquarium.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Seattle Aquarium 2023; description: Dr. Hjelmen and Remington checking out the aquarium in Seattle!">
+            <img src="assets/img/lab_photos/Seattle_Aquarium.jpg" alt="Seattle Aquarium 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">PBEntSoc 2023 — Seattle</span>
+              <span class="po-caption">Seattle Aquarium Adventure</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Mariners.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Mariners Game — Seattle 2023; description: Checking out a Mariners game while in Seattle!">
+            <img src="assets/img/lab_photos/Mariners.jpg" alt="Mariners game Seattle 2023" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">PBEntSoc 2023 — Seattle</span>
+              <span class="po-caption">Mariners Game in Seattle ⚾</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2022: ESA Vancouver & lab setup ══ -->
+        <div class="event-group" data-categories="social presentations lab">
+          <div class="event-group-label"><span class="event-year">2022</span> ESA Joint Annual Meeting — Vancouver &amp; Lab Life</div>
+        </div>
+        <div class="photo-masonry" data-group-id="events2022">
+
+          <a href="assets/img/lab_photos/ESA2022_Symposium.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: ESA 2022 Symposium — Vancouver; description: Dr. Hjelmen with the speakers from his organized symposium.">
+            <img src="assets/img/lab_photos/ESA2022_Symposium.jpeg" alt="ESA 2022 symposium" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">ESA 2022 — Vancouver</span>
+              <span class="po-caption">Symposium Speakers</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Sam_Vancouver.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Sam Presenting at ESA 2022 — Vancouver">
+            <img src="assets/img/lab_photos/Sam_Vancouver.jpg" alt="Sam presenting in Vancouver 2022" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">ESA 2022 — Vancouver</span>
+              <span class="po-caption">Sam Presenting Her Work</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Marissa_Vancouver.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Marissa Presenting at ESA 2022 — Vancouver">
+            <img src="assets/img/lab_photos/Marissa_Vancouver.jpg" alt="Marissa presenting in Vancouver 2022" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">ESA 2022 — Vancouver</span>
+              <span class="po-caption">Marissa Presenting Her Work</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Vancouver_clock.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: Exploring Vancouver, BC 2022">
+            <img src="assets/img/lab_photos/Vancouver_clock.jpg" alt="Exploring Vancouver 2022" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">ESA 2022 — Vancouver</span>
+              <span class="po-caption">Exploring Vancouver, BC</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Vancouver_Flight.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="social"
+             data-glightbox="title: On the Way to the Meeting — ESA 2022">
+            <img src="assets/img/lab_photos/Vancouver_Flight.jpg" alt="Flight to Vancouver 2022" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Social</span>
+              <span class="po-event">ESA 2022 — Vancouver</span>
+              <span class="po-caption">On the Way to the Meeting ✈️</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Marissa_Audrey_Genomics.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="presentations"
+             data-glightbox="title: Marissa and Audrey — Genomics Class Presentations 2022">
+            <img src="assets/img/lab_photos/Marissa_Audrey_Genomics.jpg" alt="Marissa and Audrey presenting in class 2022" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Presentations</span>
+              <span class="po-event">Genomics Class 2022</span>
+              <span class="po-caption">Marissa &amp; Audrey — Class Presentations</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/bug_collecting.jpeg" class="photo-item glightbox" data-gallery="gallery1" data-category="lab"
+             data-glightbox="title: Bug Collecting in the Field; description: Dr. Hjelmen joined the entomology class on their collecting trip!">
+            <img src="assets/img/lab_photos/bug_collecting.jpeg" alt="Bug collecting field trip" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Lab Work</span>
+              <span class="po-event">Field Work</span>
+              <span class="po-caption">Bug Collecting with Entomology Class</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/fly_pinning.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="lab"
+             data-glightbox="title: Insect Pinning; description: Haylee working on pinning some blow flies!">
+            <img src="assets/img/lab_photos/fly_pinning.jpg" alt="Insect pinning" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Lab Work</span>
+              <span class="po-event">Lab Work</span>
+              <span class="po-caption">Haylee Pinning Blow Flies</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- ══ 2021: Lab setup ══ -->
+        <div class="event-group" data-categories="lab">
+          <div class="event-group-label"><span class="event-year">2021</span> Setting Up the Lab</div>
+        </div>
+        <div class="photo-masonry" data-group-id="setup2021">
+
+          <a href="assets/img/lab_photos/Orders_coming_in.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="lab"
+             data-glightbox="title: Lab Setup — The Boxes Are Coming In! 2021">
+            <img src="assets/img/lab_photos/Orders_coming_in.jpg" alt="Lab orders coming in 2021" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Lab Work</span>
+              <span class="po-event">Lab Setup 2021</span>
+              <span class="po-caption">The Boxes Are Coming In! 📦</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/lab_orders.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="lab"
+             data-glightbox="title: Lab Setup — It's Really Piling Up! 2021">
+            <img src="assets/img/lab_photos/lab_orders.jpg" alt="Lab orders piling up 2021" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Lab Work</span>
+              <span class="po-event">Lab Setup 2021</span>
+              <span class="po-caption">It's Really Piling Up! 📦</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+          <a href="assets/img/lab_photos/Flow_setup.jpg" class="photo-item glightbox" data-gallery="gallery1" data-category="lab"
+             data-glightbox="title: Flow Cytometer Arrives! 2021; description: Flow cytometer ready to assemble!">
+            <img src="assets/img/lab_photos/Flow_setup.jpg" alt="Flow cytometer setup 2021" loading="lazy">
+            <div class="photo-overlay">
+              <span class="po-cat">Lab Work</span>
+              <span class="po-event">Lab Setup 2021</span>
+              <span class="po-caption">Flow Cytometer — Ready to Assemble!</span>
+              <span class="po-expand"><i class="bi bi-arrows-fullscreen"></i> View</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="emptyState">
+          <i class="bi bi-camera"></i>
+          <p>No photos in this category yet.</p>
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section>
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-presentations">Presentations</li>
-              <li data-filter=".filter-lab">"Lab" Work</li>
-              <li data-filter=".filter-outreach">Outreach</li>
-              <li data-filter=".filter-social">Social</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up">
-
-         <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Lab_Aunt.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Entomology 2025</h4>
-              <p>Photos with our "Lab Aunt" Dr. Lauren Weidner</p>
-              <a href="assets/img/lab_photos/Lab_Aunt.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Photos with our 'Lab Aunt' Dr. Lauren Weidner"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-         
-         <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Lab_Dinner_EntSoc_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Entomology 2025</h4>
-              <p>Lab Dinner at Entomology 2025</p>
-              <a href="assets/img/lab_photos/Lab_Dinner_EntSoc_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lab Dinner at Entomology 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-         <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/UVU_Profs_Portland.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Entomology 2025</h4>
-              <p>UVU Professors Explore Portland, OR<p>
-              <a href="assets/img/lab_photos/UVU_Profs_Portland.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="UVU Professors Explore Portland, OR"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-         
-         
-         <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Cyrus_EntSoc_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Entomology 2025</h4>
-              <p>Cyrus Presenting at EntSoc 2025</p>
-              <a href="assets/img/lab_photos/Cyrus_EntSoc_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Cyrus Presenting at EntSoc 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Haylee_EntSoc_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Entomology 2025</h4>
-              <p>Haylee Presenting at EntSoc 2025</p>
-              <a href="assets/img/lab_photos/Haylee_EntSoc_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Haylee Presenting at EntSoc 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            
-       <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Haylee_EntSoc_Present.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Entomology 2025</h4>
-              <p>Haylee Presenting at EntSoc 2025</p>
-              <a href="assets/img/lab_photos/Haylee_EntSoc_Present.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Haylee Presenting at EntSoc 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Bailey_EntSoc_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Entomology 2025</h4>
-              <p>Bailey Presenting at EntSoc 2025</p>
-              <a href="assets/img/lab_photos/Bailey_EntSoc_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Bailey Presenting at EntSoc 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Remington_EntSoc_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Entomology 2025</h4>
-              <p>Lab Alum Remington Presenting at EntSoc 2025</p>
-              <a href="assets/img/lab_photos/Remington_EntSoc_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lab Alum Remington Presenting at EntSoc 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            
-            
-         <div class="col-lg-4 col-md-6 portfolio-item filter-lab">
-            <img src="assets/img/lab_photos/fly_pinning_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Blow fly collections 2025</h4>
-              <p>Fly pinning 2025, photo credit: Bailey Jannuzzi</p>
-              <a href="assets/img/lab_photos/fly_pinning_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Fly pinning 2025, photo credit: Bailey Jannuzzi"><i class="bx bx-plus"></i></a>
-            </div>
-            </div> 
-
-
-         <div class="col-lg-4 col-md-6 portfolio-item filter-lab">
-            <img src="assets/img/lab_photos/Tree_trap_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Blow fly collections 2025</h4>
-              <p>Trap setup 2025, photo credit: Bailey Jannuzzi</p>
-              <a href="assets/img/lab_photos/Tree_trap_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Trap setup 2025, photo credit: Bailey Jannuzzi"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>  
-
-         <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Group_Museum_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Lab Outing 2025</h4>
-              <p>Lab Outing to the NHMU 2025</p>
-              <a href="assets/img/lab_photos/Group_Museum_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lab Outing to the NHMU 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>  
-
-         <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Graduation_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Graduation 2025</h4>
-              <p>A great crew of students graduating 2025</p>
-              <a href="assets/img/lab_photos/Graduation_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="A great crew of students graduating 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>  
-
-
-         <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Fun_Outstanding_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Outstanding Student Awards 2025</h4>
-              <p>Babs and Olivia winning Outstanding Student Awards</p>
-              <a href="assets/img/lab_photos/Fun_Outstanding_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Babs and Olivia winning Outstanding Student Awards"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>   
-        
-         <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Outstanding_Students_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Outstanding Student Awards 2025</h4>
-              <p>Babs and Olivia winning Outstanding Student Awards</p>
-              <a href="assets/img/lab_photos/Outstanding_Students_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Babs and Olivia winning Outstanding Student Awards"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>       
-         
-         
-         <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/UVU_PBESA_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>PBEntSoc 2025</h4>
-              <p>UVU Representing at the Branch Meeting 2025</p>
-              <a href="assets/img/lab_photos/UVU_PBESA_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="UVU Representing at the Branch Meeting 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-              
-         <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Olivia_PBESA_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>PBEntSoc 2025</h4>
-              <p>Olivia Presenting at the branch meeting 2025</p>
-              <a href="assets/img/lab_photos/Olivia_PBESA_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Olivia Presenting at the branch meeting 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Babs_PBESA_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>PBEntSoc 2025</h4>
-              <p>Babs Presenting at the branch meeting 2025</p>
-              <a href="assets/img/lab_photos/Babs_PBESA_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Haylee Presenting at the branch meeting 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-       
-        <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Haylee_PBESA_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>PBEntSoc 2025</h4>
-              <p>Haylee Presenting at the branch meeting 2025</p>
-              <a href="assets/img/lab_photos/Haylee_PBESA_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Haylee Presenting at the branch meeting 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Bailey_PBESA_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>PBEntSoc 2025</h4>
-              <p>Bailey Presenting at the branch meeting 2025</p>
-              <a href="assets/img/lab_photos/Bailey_PBESA_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Bailey Presenting at the branch meeting 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-outreach">
-            <img src="assets/img/lab_photos/Steam_con_2025.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>STEAM CON 2025</h4>
-              <p>STEAM CON 2025 with Dr. Weidner and Tagg</p>
-              <a href="assets/img/lab_photos/Steam_con_2025.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="STEAM CON 2025 with Dr. Weidner and Tagg"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-       
-          <div class="col-lg-4 col-md-6 portfolio-item filter-outreach">
-            <img src="assets/img/lab_photos/Steam_con_talk_2025.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>STEAM CON 2025</h4>
-              <p>Dr. Hjelmen Talking at STEAM CON 2025</p>
-              <a href="assets/img/lab_photos/Steam_con_talk_2025.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Dr. Hjelmen Talking at STEAM CON 2025"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>     
-       
-       
-        <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/UVU_ESA_dinner_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>EntSoc 2024</h4>
-              <p>UVU Student and Alumni Dinner at EntSoc</p>
-              <a href="assets/img/lab_photos/UVU_ESA_dinner_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="UVU Student and Alumni Dinner at EntSoc!"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-        
-       
-        <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Hjelmen_ESA_2024.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>EntSoc 2024</h4>
-              <p>Dr. Hjelmen Presenting at EntSoc 2024</p>
-              <a href="assets/img/lab_photos/Hjelmen_ESA_2024.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Dr. Hjelmen presenting at EntSoc 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-         
-        
-         <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Audrey_ESA_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>EntSoc 2024</h4>
-              <p>Audrey Presenting at EntSoc 2024</p>
-              <a href="assets/img/lab_photos/Audrey_ESA_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Audrey presenting at EntSoc 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-         
-         <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Olivia_ESA_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>EntSoc 2024</h4>
-              <p>Olivia Presenting at EntSoc 2024</p>
-              <a href="assets/img/lab_photos/Olivia_ESA_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Olivia presenting at EntSoc 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            
-        <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Haylee_ESA_2024.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>EntSoc 2024</h4>
-              <p>Haylee Presenting at EntSoc 2024</p>
-              <a href="assets/img/lab_photos/Haylee_ESA_2024.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Haylee presenting at EntSoc 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            
-       <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Babs_ESA_2024.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>EntSoc 2024</h4>
-              <p>Babs Presenting at EntSoc 2024</p>
-              <a href="assets/img/lab_photos/Babs_ESA_2024.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Babs presenting at EntSoc 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-      <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Halloween_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Halloween Themed Lab Meeting 2024</h4>
-              <p>Making a candy haunted house!</p>
-              <a href="assets/img/lab_photos/Halloween_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Making a candy haunted house!"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-        
-      <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Group_Aviary_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>End of Year Lab Social 2024</h4>
-              <p>Checking out Tracy Aviary!</p>
-              <a href="assets/img/lab_photos/Group_Aviary_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Checking out Tracy Aviary!"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-     
-       <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Group_Aviary_2_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>End of Year Lab Social 2024</h4>
-              <p>Checking out Tracy Aviary!</p>
-              <a href="assets/img/lab_photos/Group_Aviary_2_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Checking out Tracy Aviary!"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-     
-     
-     <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Babs_UCUR_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>UCUR 2024</h4>
-              <p>Babs Presenting at UCUR 2024</p>
-              <a href="assets/img/lab_photos/Babs_UCUR_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Babs presenting at UCUR 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          
-       
-       
-       <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Haylee_UCUR_2024.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>UCUR 2024</h4>
-              <p>Haylee Presenting at UCUR 2024</p>
-              <a href="assets/img/lab_photos/Haylee_UCUR_2024.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Haylee presenting at UCUR 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          
-       <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-          <img src="assets/img/lab_photos/Olivia_UCUR_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>UCUR 2024</h4>
-              <p>Olivia Presenting at UCUR 2024</p>
-              <a href="assets/img/lab_photos/Olivia_UCUR_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Olivia presenting at UCUR 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          
-          
-        
-        <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Audrey_UCUR_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>UCUR 2024</h4>
-              <p>Audrey Presenting at UCUR 2024</p>
-              <a href="assets/img/lab_photos/Audrey_UCUR_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Audrey presenting at UCUR 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Sam_UCUR_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>UCUR 2024</h4>
-              <p>Sam Presenting at UCUR 2024</p>
-              <a href="assets/img/lab_photos/Sam_UCUR_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Sam presenting at UCUR 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-lab">
-            <img src="assets/img/lab_photos/fly_pinning.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Insect Pinning</h4>
-              <p>Haylee working on pinning some blow flies!</p>
-              <a href="assets/img/lab_photos/fly_pinning.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Insect pinning"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-          
-          
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/PAG_2024_Presentation.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>PAG 2024</h4>
-              <p>Dr. Hjelmen Presenting at PAG 2024</p>
-              <a href="assets/img/lab_photos/PAG_2024_Presentation.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Dr. Hjelmen Presenting at PAG 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Carl_Tyler_PAG_2024.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>PAG 2024</h4>
-              <p>Running into old friends at PAG 2024</p>
-              <a href="assets/img/lab_photos/Carl_Tyler_PAG_2024.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Running into old friends at PAG 2024"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Terrence_ESA_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>ESA 2023</h4>
-              <p>Running into old lab mates at ESA 2023</p>
-              <a href="assets/img/lab_photos/Terrence_ESA_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Running into old lab mates at ESA 2023"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Rem_Carl_ESA_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>ESA 2023</h4>
-              <p>Remington and Dr. Hjelmen at ESA 2023</p>
-              <a href="assets/img/lab_photos/Rem_Carl_ESA_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Remington and Dr. Hjelmen at ESA 2023"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/UVU_Students_ESA_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>ESA 2023</h4>
-              <p>UVU Student Lunch at ESA 2023</p>
-              <a href="assets/img/lab_photos/UVU_Students_ESA_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="UVU Student Lunch at ESA 2023"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Rem_Presentation_ESA_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>ESA 2023</h4>
-              <p>Remington Presenting at ESA 2023</p>
-              <a href="assets/img/lab_photos/Rem_Presentation_ESA_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Remington Presenting at ESA 2023"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-outreach">
-            <img src="assets/img/lab_photos/Springville_Team_2023.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Springville Library Outreach 2023</h4>
-              <p>The team of UVU presenters for Bugtopia</p>
-              <a href="assets/img/lab_photos/Springville_Team_2023.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Springville Library Outreach 2023"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-outreach">
-            <img src="assets/img/lab_photos/Carl_Springville_2_2023.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Springville Library Outreach 2023</h4>
-              <p>Dr. Hjelmen answering bug questions</p>
-              <a href="assets/img/lab_photos/Carl_Springville_2_2023.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Springville Library Outreach 2023"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-outreach">
-            <img src="assets/img/lab_photos/Springville_Remington_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Springville Library Outreach 2023</h4>
-              <p>Remington giving an introduction</p>
-              <a href="assets/img/lab_photos/Springville_Remington_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Springville Library Outreach 2023"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-outreach">
-            <img src="assets/img/lab_photos/Spanish_Fork_Students_2023.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Outreach in Spanish Fork 2023</h4>
-              <p>Students interacting with children at Spanish Fork Library</p>
-              <a href="assets/img/lab_photos/Spanish_Fork_Students_2023.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Outreach in Spanish Fork"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-             <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Marissa_graduate.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Marissa Graduating!</h4>
-              <p>One of my first students graduating!</p>
-              <a href="assets/img/lab_photos/Marissa_graduate.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Marissa Graduating!"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Butterfly_Lab_Photo.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Lab Outing 2023</h4>
-              <p>Touring the Butterfly Biosphere at Thanksgiving Point</p>
-              <a href="assets/img/lab_photos/Butterfly_Lab_Photo.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lab Outing 2023"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-            <div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Lab_Tour_Butterflies.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Lab Outing 2023</h4>
-              <p>Touring the Butterfly Biosphere at Thanksgiving Point</p>
-              <a href="assets/img/lab_photos/Lab_Tour_Butterflies.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lab Outing 2023"><i class="bx bx-plus"></i></a>
-            </div>
-            </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/UVU_PBESA_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Pacific Branch of ESA 2023</h4>
-              <p>UVU Representing at the branch meeting!</p>
-              <a href="assets/img/lab_photos/UVU_PBESA_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Pacific Branch of ESA 2023"><i class="bx bx-plus"></i></a>
-            </div>
-          </div><div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Mariners.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Pacific Branch of ESA 2023</h4>
-              <p>Checking out a Mariners' game!</p>
-              <a href="assets/img/lab_photos/Mariners.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Pacific Branch of ESA 2023"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-		<div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Seattle_Aquarium.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Pacific Branch of ESA 2023</h4>
-              <p>Dr. Hjelmen and Remington checking out the aquarium in Seattle!</p>
-              <a href="assets/img/lab_photos/Seattle_Aquarium.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Pacific Branch of ESA 2023"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Remington_PBESA_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Pacific Branch of ESA 2023</h4>
-              <p>Remington presenting his independent research</p>
-              <a href="assets/img/lab_photos/Remington_PBESA_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Pacific Branch of ESA 2023"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Hjelmen_PBESA_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Pacific Branch of ESA 2023</h4>
-              <p>Dr. Hjelmen presenting Marissa's project</p>
-              <a href="assets/img/lab_photos/Hjelmen_PBESA_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Pacific Branch of ESA 2023"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Marissa_Audrey_Genomics.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Genomics class 2022</h4>
-              <p>Marissa and Audrey presenting their class project</p>
-              <a href="assets/img/lab_photos/Marissa_Audrey_Genomics.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Genomics class 2022"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Marissa_UCUR_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>UCUR 2023</h4>
-              <p>Marissa presenting her work at UCUR 2023</p>
-              <a href="assets/img/lab_photos/Marissa_UCUR_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="UCUR 2023"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Sam_UCUR_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>UCUR 2023</h4>
-              <p>Sam presenting her work at UCUR 2023</p>
-              <a href="assets/img/lab_photos/Sam_UCUR_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="UCUR 2023"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Remington_UCUR_2023.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>UCUR 2023</h4>
-              <p>Remington presenting his work at UCUR 2023</p>
-              <a href="assets/img/lab_photos/Remington_UCUR_2023.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="UCUR 2023"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
- 			<div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Vancouver_clock.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>JAM ESA 2022-Vancouver</h4>
-              <p>Exploring Vancouver, BC as a lab!</p>
-              <a href="assets/img/lab_photos/Vancouver_clock.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="JAM ESA 2022"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-          	<div class="col-lg-4 col-md-6 portfolio-item filter-social">
-            <img src="assets/img/lab_photos/Vancouver_Flight.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>JAM ESA 2022-Vancouver</h4>
-              <p>On the way to the meeting!</p>
-              <a href="assets/img/lab_photos/Vancouver_Flight.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="JAM ESA 2022"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/ESA2022_Symposium.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>JAM ESA 2022-Vancouver</h4>
-              <p>Dr. Hjelmen with the speakers from his organized symposium</p>
-              <a href="assets/img/lab_photos/ESA2022_Symposium.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="JAM ESA 2022-Vancouver"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-
- 			<div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Sam_Vancouver.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>JAM ESA 2022-Vancouver</h4>
-              <p>Sam presenting her work at ESA 2023!</p>
-              <a href="assets/img/lab_photos/Sam_Vancouver.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="JAM ESA 2022-Vancouver"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-presentations">
-            <img src="assets/img/lab_photos/Marissa_Vancouver.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>JAM ESA 2022-Vancouver</h4>
-              <p>Marissa presenting her work at ESA 2023!</p>
-              <a href="assets/img/lab_photos/Marissa_Vancouver.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="JAM ESA 2022-Vancouver"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
- 	<div class="col-lg-4 col-md-6 portfolio-item filter-lab">
-            <img src="assets/img/lab_photos/bug_collecting.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Bug Collecting</h4>
-              <p>Dr. Hjelmen joined the entomology class on their collecting trip!</p>
-              <a href="assets/img/lab_photos/bug_collecting.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Bug Collecting"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-
-			<div class="col-lg-4 col-md-6 portfolio-item filter-lab">
-            <img src="assets/img/lab_photos/Orders_coming_in.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Setting up the Lab</h4>
-              <p>The boxes are coming in!</p>
-              <a href="assets/img/lab_photos/Orders_coming_in.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Setting up the Lab"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-          
-          	<div class="col-lg-4 col-md-6 portfolio-item filter-lab">
-            <img src="assets/img/lab_photos/lab_orders.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Setting up the Lab</h4>
-              <p>It's really piling up!</p>
-              <a href="assets/img/lab_photos/lab_orders.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Setting up the Lab"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-             	<div class="col-lg-4 col-md-6 portfolio-item filter-lab">
-            <img src="assets/img/lab_photos/Flow_setup.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Setting up the Lab</h4>
-              <p>Flow cytometer ready to assemble!</p>
-              <a href="assets/img/lab_photos/Flow_setup.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Setting up the Lab"><i class="bx bx-plus"></i></a>
-            </div>
-          </div>
-          
-          
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-  </main><!-- End #main -->
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="team.html">Research Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -807,13 +1306,65 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <script>
+    // Initialize GLightbox
+    const lightbox = GLightbox({ selector: '.glightbox' });
 
+    // Filter logic — called by onclick on each button
+    function filterPhotos(category, btn) {
+      // Update button states
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const items  = document.querySelectorAll('.photo-item');
+      const groups = document.querySelectorAll('.event-group');
+      const grids  = document.querySelectorAll('.photo-masonry');
+
+      if (category === 'all') {
+        items.forEach(item => item.classList.remove('hidden-item'));
+        groups.forEach(g => g.classList.remove('group-hidden'));
+        grids.forEach(g => g.style.display = '');
+      } else {
+        // Show/hide individual photo items
+        items.forEach(item => {
+          if (item.dataset.category === category) {
+            item.classList.remove('hidden-item');
+          } else {
+            item.classList.add('hidden-item');
+          }
+        });
+
+        // Hide masonry grids that have no matching photos
+        grids.forEach(grid => {
+          const visibleInGrid = grid.querySelectorAll(`.photo-item[data-category="${category}"]`).length;
+          grid.style.display = visibleInGrid > 0 ? '' : 'none';
+        });
+
+        // Hide event-group headers whose next sibling grid is hidden
+        groups.forEach(group => {
+          const cats = group.dataset.categories || '';
+          if (cats.includes(category)) {
+            const nextGrid = group.nextElementSibling;
+            if (nextGrid && nextGrid.style.display === 'none') {
+              group.classList.add('group-hidden');
+            } else {
+              group.classList.remove('group-hidden');
+            }
+          } else {
+            group.classList.add('group-hidden');
+          }
+        });
+      }
+
+      // Show/hide empty state
+      const anyVisible = [...items].some(i => !i.classList.contains('hidden-item'));
+      document.getElementById('emptyState').style.display = anyVisible ? 'none' : 'block';
+    }
+  </script>
+
+</body>
 </html>

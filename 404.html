@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Page Not Found | Hjelmen Lab @ UVU</title>
+  <link href="assets/img/logo2.png" rel="icon">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    :root {
+      --green-dark: #1a3f26;
+      --green-main: #275D38;
+      --green-mid:  #3a7d52;
+      --green-light: #e8f2ec;
+      --green-pale:  #f4faf6;
+      --green-border: #c3ddc9;
+    }
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--green-pale);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .fourofour-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+    .fourofour-card {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 16px;
+      padding: 52px 48px;
+      max-width: 580px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(39,93,56,0.08);
+    }
+    .fourofour-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2rem;
+      color: var(--green-main);
+    }
+    .fourofour-code {
+      font-family: 'Lora', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      color: var(--green-main);
+      line-height: 1;
+      margin-bottom: 8px;
+      /* subtle letter spacing for the numbers */
+      letter-spacing: -2px;
+    }
+    .fourofour-card h1 {
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+    }
+    .fourofour-card p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .nav-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .nav-tile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: var(--green-pale);
+      border: 1px solid var(--green-border);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .nav-tile:hover {
+      background: var(--green-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(39,93,56,0.1);
+    }
+    .nav-tile .nt-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      background: var(--green-main);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    .nav-tile .nt-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      line-height: 1.3;
+    }
+    .nav-tile .nt-sub {
+      font-size: 0.73rem;
+      color: #888;
+      display: block;
+    }
+    .home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-main);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.92rem;
+      padding: 11px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .home-btn:hover { background: var(--green-dark); color: #fff; }
+    .footer-note {
+      font-size: 0.78rem;
+      color: #aaa;
+      margin-top: 20px;
+    }
+    .footer-note a { color: var(--green-main); }
+
+    /* Simple top bar so the logo is visible */
+    .mini-header {
+      background: #fff;
+      padding: 14px 0;
+      border-bottom: 1px solid #e8e8e8;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .mini-header .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #111;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .mini-header .logo span { color: var(--green-main); }
+
+    @media (max-width: 480px) {
+      .fourofour-card { padding: 36px 24px; }
+      .fourofour-code { font-size: 3.5rem; }
+      .nav-grid { grid-template-columns: 1fr; }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal header -->
+  <div class="mini-header">
+    <div class="container">
+      <a href="index.html" class="logo"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+    </div>
+  </div>
+
+  <!-- 404 content -->
+  <div class="fourofour-wrap">
+    <div class="fourofour-card">
+
+      <div class="fourofour-icon">
+        <i class="bi bi-bug-fill"></i>
+      </div>
+
+      <div class="fourofour-code">404</div>
+      <h1>Page not found</h1>
+      <p>
+        The page you're looking for doesn't exist — it may have moved, been renamed,
+        or the link you followed might be outdated. Old course pages have been
+        consolidated into the <a href="Previous_Courses.html" style="color:var(--green-main);">Previous Courses archive</a>.
+      </p>
+
+      <!-- Quick nav grid -->
+      <div class="nav-grid">
+        <a href="index.html" class="nav-tile">
+          <div class="nt-icon"><i class="bi bi-house-fill"></i></div>
+          <div class="nt-label">Home<span class="nt-sub">Back to the start</span></div>
+        </a>
+        <a href="researchinterests.html" class="nav-tile">
+          <div class="nt-icon"><i class="bi bi-diagram-3"></i></div>
+          <div class="nt-label">Research<span class="nt-sub">What we study</span></div>
+        </a>
+        <a href="Previous_Courses.html" class="nav-tile">
+          <div class="nt-icon"><i class="bi bi-book-fill"></i></div>
+          <div class="nt-label">Courses<span class="nt-sub">Syllabi &amp; schedules</span></div>
+        </a>
+        <a href="team.html" class="nav-tile">
+          <div class="nt-icon"><i class="bi bi-people-fill"></i></div>
+          <div class="nt-label">The Team<span class="nt-sub">Current &amp; past researchers</span></div>
+        </a>
+        <a href="publications.html" class="nav-tile">
+          <div class="nt-icon"><i class="bi bi-journal-text"></i></div>
+          <div class="nt-label">Publications<span class="nt-sub">Papers &amp; PDFs</span></div>
+        </a>
+        <a href="contact.html" class="nav-tile">
+          <div class="nt-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div class="nt-label">Contact<span class="nt-sub">Reach Dr. Hjelmen</span></div>
+        </a>
+      </div>
+
+      <a href="index.html" class="home-btn">
+        <i class="bi bi-arrow-left"></i> Back to Homepage
+      </a>
+
+    <p class="footer-note">
+      Think this is a mistake? Email
+        <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>.
+      </p>
+
+    </div>
+  </div>
+
+</body>
+</html>

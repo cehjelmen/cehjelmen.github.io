@@ -3,27 +3,25 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Publications</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Publications | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Publications from the Hjelmen Lab at Utah Valley University — genome size evolution, sex chromosomes, insect genomics.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -34,27 +32,255 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    .pub-hero {
+      background: linear-gradient(135deg, #275D38 0%, #1a3f26 100%);
+      color: white;
+      padding: 60px 0 50px;
+      margin-top: 72px;
+    }
+
+    .pub-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.4rem;
+    }
+
+    .pub-hero p {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    .pub-hero .scholar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 2px solid rgba(255,255,255,0.45);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: all 0.2s;
+      margin-top: 16px;
+    }
+
+    .pub-hero .scholar-btn:hover {
+      background: rgba(255,255,255,0.28);
+      color: white;
+    }
+
+    .pub-note {
+      background: #e8f2ec;
+      border-left: 4px solid #275D38;
+      border-radius: 0 6px 6px 0;
+      padding: 10px 16px;
+      font-size: 0.88rem;
+      color: #2c4a33;
+      margin-bottom: 2rem;
+    }
+
+    .year-block {
+      margin-bottom: 2.5rem;
+    }
+
+    .year-label {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #275D38;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e8f2ec;
+      margin-bottom: 1rem;
+    }
+
+    .pub-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0f0f0;
+      line-height: 1.6;
+    }
+
+    .pub-entry:last-child {
+      border-bottom: none;
+    }
+
+    .pub-entry .pub-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #275D38;
+      flex-shrink: 0;
+      margin-top: 9px;
+    }
+
+    .pub-entry .pub-text {
+      font-size: 0.93rem;
+      color: #333;
+      flex: 1;
+    }
+
+    .pub-entry .pub-text em {
+      color: #444;
+    }
+
+    .pub-entry .pub-text .pub-title {
+      /* no special style — title flows naturally in citation */
+    }
+
+    .pub-entry .pub-pdf {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .pub-entry .pub-pdf a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #275D38;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 4px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .pub-entry .pub-pdf a:hover {
+      background: #1a3f26;
+    }
+
+    .undergrad-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: #275D38;
+      background: #e8f2ec;
+      border-radius: 4px;
+      padding: 2px 8px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    sup.ug-mark {
+      color: #275D38;
+      font-weight: 700;
+    }
+
+    .toc-nav {
+      position: sticky;
+      top: 90px;
+      background: #fafafa;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 18px 20px;
+    }
+
+    .toc-nav h5 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .toc-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .toc-nav ul li a {
+      display: block;
+      padding: 5px 0;
+      color: #444;
+      font-size: 0.9rem;
+      text-decoration: none;
+      border-bottom: 1px solid #eee;
+      transition: color 0.2s;
+    }
+
+    .toc-nav ul li:last-child a {
+      border-bottom: none;
+    }
+
+    .toc-nav ul li a:hover {
+      color: #275D38;
+      font-weight: 600;
+    }
+
+    .toc-nav .pub-count {
+      font-size: 0.75rem;
+      color: #999;
+      float: right;
+    }
+
+    @media (max-width: 991px) {
+      .toc-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+      .pub-hero {
+        padding: 40px 0 35px;
+      }
+      .pub-hero h1 {
+        font-size: 1.7rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .pub-entry {
+        flex-wrap: wrap;
+      }
+      .pub-entry .pub-pdf {
+        margin-left: 22px;
+      }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-      <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -62,198 +288,518 @@
 
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
-  			<ul>
-                   <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
 
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+          <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#" class="active"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+
+          <li class="dropdown"><a href="#" class="active"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html" class="active">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-<li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
+          </li>
 
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-
+  </header>
+  <!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ======= Page Hero ======= -->
+    <div class="pub-hero">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-lg-8">
+            <h1><i class="bi bi-journal-text me-2"></i>Publications</h1>
+            <p>Peer-reviewed articles, book chapters, and collaborative works from the Hjelmen Lab.</p>
+            <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" class="scholar-btn">
+              <i class="bi bi-mortarboard-fill"></i> View Google Scholar Profile
+            </a>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <p style="color:rgba(255,255,255,0.6); font-size:0.82rem; margin:0;">
+              <sup class="ug-mark" style="color:#aed6bc;">#</sup> Undergraduate co-author
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Page Hero -->
+
+    <!-- ======= Publications Content ======= -->
+    <section class="page-content">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Publications</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Publications</li>
-          </ol>
-        </div>
+        <div class="row">
 
-      </div>
-    </section><!-- End Breadcrumbs -->
+          <!-- Table of Contents (sidebar) -->
+          <div class="col-lg-2 d-none d-lg-block">
+            <nav class="toc-nav">
+              <h5>Jump to year</h5>
+              <ul>
+                <li><a href="#y2026">2026 <span class="pub-count">1</span></a></li>
+                <li><a href="#y2025">2025 <span class="pub-count">3</span></a></li>
+                <li><a href="#y2024">2024 <span class="pub-count">3</span></a></li>
+                <li><a href="#y2022">2022 <span class="pub-count">2</span></a></li>
+                <li><a href="#y2021">2021 <span class="pub-count">2</span></a></li>
+                <li><a href="#y2020">2020 <span class="pub-count">6</span></a></li>
+                <li><a href="#y2019">2019 <span class="pub-count">1</span></a></li>
+                <li><a href="#y2018">2018 <span class="pub-count">2</span></a></li>
+                <li><a href="#y2017">2017 <span class="pub-count">2</span></a></li>
+                <li><a href="#y2015">2015 <span class="pub-count">2</span></a></li>
+                <li><a href="#y2014">2014 <span class="pub-count">2</span></a></li>
+                <li><a href="#y2013">2013 <span class="pub-count">1</span></a></li>
+              </ul>
+            </nav>
+          </div>
 
-    <!-- ======= About Us Section ======= -->
-	<p></p>     
-<div>
-	<h2 class="section-title">Publications
-	</div>
-	<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="subheading m-3">Check out my <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a> Page </h3>
-		<div class="subheading m-3">
-		<p>Undergraduate authors indicated with <sup>#</sup></p>
-		<p><b>2026</b></p>
-		<p>Abair A, Egan AN, #Bugg B, Nageswara-Raw M, Hughes CE, Denson K, Lopez M, #Sermersheim H, Trulillo JT, Straub SCK, Houston JP, Yang Y, Strickler SR, Cronn RC, Liston A, <b>Hjelmen CE</b>, Bailey CD. Phylotranscriptomics and genome size evolution in Leucaena (Fabaceae): Paleotetraploid genomic stability overshadows diploidization and environmental effects. <i>American Journal of Botany.</i> doi: 10.1002/ajb2.70178 <a href="assets/publications/Abair_et_al_2026_Botany.pdf">pdf</a></p> 
-		<p><b>2025</b></p>
-		<p>Zahn G, <b>Hjelmen CE</b>, Wainwright BJ. Distinct temporal trajectories of bacterial and fungal networks during agricultural rewilding. <i>Science of the Total Environnment</i>. doi.org/10.1016/j.scitotenv.2025.180999 <a href="assets/publications/Zahn_et_al_2025.pdf">PDF</a></p>
-		<p>Motte RR<sup>#</sup> <b>Hjelmen CE</b> Down syndrome cell adhesion molecule 1 evolution and its relationship to sociality: hymenopteran Down syndrome cell adhesion molecule 1 exhibits accelerated evolution in variable exon regions<i>Insect Systematics and Diversity</i>. doi.org/10.1093/isd/ixaf031 <a href="assets/publications/motte_hjelmen_isd.pdf">PDF</a></p>
-		<p>Oakes J, Kuddus JN, Downs E, Oakey C, Davis K, Mohammad L, Whitely K, <b>Hjelmen CE</b>, Kuddus R. Isolation and Characterization of a Crude Oil-Tolerant Obligate Halophilic Bacterium from the Great Salt Lake of the United States of America. <i>Microorganisms</i>. doi.org/10.3390/microorganisms13071568 <a href="assets/publications/Oakes_et_al_2025_microorganisms.pdf">PDF</a></p>
-		<p><b>2024</b></p>
-		<p>Copeland M, Landa S, Owoyemi AO, Jonika MM, Alfieri JM, Johnston JS, Sylvester TP, Kyre BR, Hoover Z, <b>Hjelmen CE</b>, Rieski LK, Blackmon H, Casola C. Genome assembly of the southern pine beetle (<i>Dendroctonus frontalis</i> Zimmeran) reveals the origins of gene content reduction in <i>Dendroctonus</i>. <i>R. Soc. Open Sci</i>. doi.org/10.1098/rsos.240755 <a href="assets/publications/copeland_et_al_2024_RSOS.pdf">PDF</a></p>
-		<p><b>Hjelmen CE</b>. Genome size and chromosome number are critical metrics for accurate genome assembly assessment in Eukaryota. <i>Genetics</i>. doi.org/10.1093/genetics/iyae099 <a href="assets/publications/Hjelmen_Genetics_2024.pdf">PDF</a></p>
-		<p>Sylvester T, Hoover Z, <b>Hjelmen CE</b>, Jonika MM, Blackmon LT, Alfieri JM, Johnston JS, Chien S, Esfandani T, Blackmon H. A reference quality genome assembly for the Jewel scarab <i>Chrysina gloriosa</i> <i>G3 </i>. doi.org/10.1093/g3journal/jkae084 <a href="assets/publications/G3_sylvester_et_al_2024.pdf">PDF</a></p>
-		<p><b>2022</b></p>
-		<p><b>Hjelmen CE</b>, Yuan Y, Parrot JJ, McGuane AS<sup>#</sup>, Srivastav SP, Purcell AC, Pimsler ML, Sze, S-H, Tarone AM. Identification and Characterization of Small RNA Markers of Age in the Blow Fly <i>Cochliomyia macellaria</i> (Fabricius)(Diptera: Calliphoridae) <i>Insects</i>. doi.org/10.3390/insects13100948 <a href="assets/publications/insects_2022_miRNA_macellaria.pdf">PDF</a></p>
-		<p>Morelli, MW<sup>#</sup>, Blackmon H, <b>Hjelmen CE</b>. Diptera and <i>Drosophila</i> Karyotype Databases: A useful dataset to guide evolutionary and genomic studies. <i>Frontiers in Ecology and Evolution</i> doi.org/10.3389/fevo.2022.832378 <a href="assets/publications/morelli_diptera_frontiers_2022.pdf">PDF</a></p>
-		<p><b>2021</b></p>
-		<p>Pimsler ML, <b>Hjelmen CE</b>, Jonika MM, Sharma A, Fu S, Bala M, Sze S, Tomberlin JK, Tarone AM. Sexual dimorphism in growth rate and gene expression throughout immature development in wild type <i>Chrysomya rufifaces</i> (Diptera: Calliphoridae Macquart). <i>Frontiers in Ecology and Evolution</i> doi.org/10.3389/fevo.2021.696638 <a href="assets/publications/pimsler_frontiers_2021.pdf">PDF</a></p>
-		<p>Tvedte ES, Gasser M, Sparklin BC, Michalski J, <b>Hjelmen CE</b>, Johnston JS, Zhao X, Bromley R, Tallon LJ, Sadzewicz L, Rasko DA, Dunning Hotopp, JC. Comparison of long-read sequencing technologies in interrogating bacteria and fly genomes. <i>G3</i>. doi.org/10.1093/g3journal/jkab083 <a href="assets/publications/Tvedte_et_al_2021_g3.pdf">PDF</a> </p>
-		<p><b>2020</b></p>
-		<p>Anderson NW<sup>#</sup>, <b>Hjelmen CE</b>, Blackmon H. The probability of fusions joining sex chromosomes and autosomes. <i>Biology Letters</i>. doi.org/10.1098/rsbl.2020.0648 <a href="assets/publications/bioletters2020.pdf">PDF</a> </p>
-		<p>Malawey AS, Zhang H, McGuane AS<sup>#</sup>, Walsh EM, Rusch TW, <b>Hjelmen CE</b>, Delclos PJ, Rangel J, Zheng L, Cai M, Yu Z, Tarone AM, Zhang J, Tomberlin JK. Interaction of age and temperature on heat shock protein expression, sperm count, and sperm viability of the adult black soldier fly (Diptera: Stratiomyidae) <i> Journal of Insects as Food and Feed</i> DOI: 10.3920/JIFF2020.0017 <a href="assets/publications/Malawey_jiff2020.pdf">PDF</a></p>
-		<p>Sylvester T, <b>Hjelmen CE</b>, Hanrahan SJ, Lenhart PA, Johnston JS, Blackmon H. Lineage-specific patterns of chromosome evolution are the rule not the exception in Polyneoptera insects. <i> Proceedings B</i> DOI: 10.1098/rspb.2020.1388 <a href="assets/publications/procB_sylvester2020.pdf">PDF</a></p>
-		<p><b>Hjelmen CE</b>, Holmes VR, Burrus CG<sup>#</sup>, Piron E<sup>#</sup>, Mynes M<sup>#</sup>, Garrett M<sup>#</sup>, Blackmon H, Johnston JS. Thoracic underreplication in <i>Drosophila</i> species estimates a minimum genome size and the dynamics of added DNA. <i>Evolution </i> DOI:10.1111/evo.14022 <a href="assets/publications/URevolution2020.pdf"> PDF </a></p>
-		<p>Jonika MM<sup>#</sup>, <b>Hjelmen CE</b>, Faris AM, McGuane AS<sup>#</sup>, Tarone AM. An evaluation of differentially spliced genes as markers for sex for forensic entomology. <i>Journal of Forensic Sciences</i> DOI: 10.1111/1556-4029.14461 <a href="assets/publications/jonikaSexID2020.pdf">PDF</a></p>
-		<p>Johnston JS, Zapalac ME<sup>#</sup>, <b>Hjelmen CE</b>. Flying High--Muscle-Specific Underreplication in <i>Drosophila</i>. <i>Genes</i> <a href="assets/publications/genes_UR_muscle_2020.pdf">PDF</a></p>
-        <p><b>Hjelmen CE</b>, Parrott JJ, Srivastav SP, McGuane AS, Ellis LL, Stewart AD, Johnston JS, and Tarone AM. Effect of phenotype selection on genome size variation in two species of Diptera. <i>Genes</i> <a href="assets/publications/genes_selection_2020.pdf">PDF</a></p>
-		<p><b>2019</b></p>
-        <p><b>Hjelmen CE</b>, Blackmon H, Holmes VR<sup>#</sup>, Burrus CG<sup>#</sup>, Johnston JS.  Genome Size evolution differs between <i>Drosophila</i> subgenera with striking differences in male and female genome size in <i>Sophophora</i>. <i> G3 </i> <a href="assets/publications/g3_Hjelmen_et_al_2019.pdf">PDF</a></p>
-        <p><b>2018</b></p>
-		<p><b>Hjelmen CE</b>, Garrett M<sup>#</sup>, Holmes VR<sup>#</sup>, Mynes M<sup>#</sup>, Piron E<sup>#</sup>, and Johnston JS. Genome size evolution within and between the sexes. <i>Journal of Heredity</i> <a href="assets/publications/J_hered_Hjelmen_et_al_2018.pdf">PDF</a> </p>
-        <p>Johnston JS, Bernardini A, <b>Hjelmen CE</b>.  "Genome Size Estimation and Quantitative Cytogenetics in Insects."  in <i>Insect Genomics:  Methods and Protocols</i>. <a href="assets/publications/Protocol_Johnston_et_al_2019.pdf">PDF</a> </p>
-        <p><b>2017</b></p>
-		<p>Lower S Sander, Johnston JS, Stanger-Hall K, <b>Hjelmen CE</b>, Hanrahan SJ, Korunes K, and Hall D. Genome Size in North American fireflies:  Substantial variation likely driven by neutral processes. <i>GBE</i>. <a href="assets/publications/GBE_Lower_et_al_2017.pdf">PDF</a> </p>
-		<p><b>Hjelmen CE</b>, and Johnston JS.  The mode and tempo of genome size evolution in the subgenus <i>Sophophora</i>. <i>PLOS One</i>. <a href="assets/publications/plos_one_Hjelmen_Johnston_2017.pdf">PDF</a>  </p>
-		<p><b>2015</b></p>
-		<p>Arnqvist G, Sayadi A, Immonen E, Hotzy C, Rankin D, Tuda M, <b>Hjelmen CE</b>, and Johnston JS.  Genome size correlates with reproductive fitness in seed beetles. <i>Proc. R. Soc. B.</i> <a href="assets/publications/roy_soc_proc_b_Arnqvist_et_al_2015.pdf">PDF</a> </p>
-		<p>Rangel J, Straus K<sup>#</sup>, Seedorf K<sup>#</sup>, <b>Hjelmen CE</b>, Johnston JS. Endopolyploidy changes with age-related polyethism in the honey bee, <i>Apis mellifera</i>. <i>PLOS One</i>. <a href="assets/publications/rangel_2015_endo.pdf">PDF</a> </p>
-		<p><b>2014</b></p>
-		<p>Ellis LL, Huang W, Quinn AM, Ahuja A, Alfrejd B, Gomez FE, <b>Hjelmen CE</b>, Moore KL, Mackay TFC, Johnston JS, and Tarone AM. Intrapopulation genome size variation in <i>D. melanogaster</i> Genetic Reference Panel lines. <i>PLOS Genetics</i>. <a href="assets/publications/ellis_et_al_2014_2.pdf">PDF</a> </p>
-		<p>The DGRP Consoritum.  Natural variation in genome architecture among 205 <i>Drosophila melanogaster</i> Genetic Reference Panel lines. <i>Genome Research</i>. <a href="assets/publications/Genome Res_Huang_et_al_2014.pdf">PDF</a> </p>
-		<p><b>2013</b><p>
-		<p class="mb-0">Larson MK, Tormoen GW, Weaver LJ, Luepke KJ, Patel IA, <b>Hjelmen CE </b>, Ensz NM, McComas LS, McCarty OJ.  Exogenous modification of platelet membranes with the omega-3 fatty acids EPA and DHA reduces platelet procoagulant activity and thrombus formation. <i> Am. J. Physiol. Cell Physiol.</i>  <a href="assets/publications/am_j_phys_cell_phys_Larson_et_al_2012.pdf">PDF</a> </p>
+          <!-- Publications list -->
+          <div class="col-lg-10">
+
+            <div class="pub-note">
+              <i class="bi bi-person-fill me-1"></i>
+              Undergraduate co-authors are marked with <sup class="ug-mark">#</sup>. PDFs are provided for personal/educational use.
+            </div>
+
+            <!-- 2026 -->
+            <div class="year-block" id="y2026">
+              <div class="year-label">2026</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Abair A, Egan AN, Bugg B<sup class="ug-mark">#</sup>, Nageswara-Raw M, Hughes CE, Denson K, Lopez M, Sermersheim H<sup class="ug-mark">#</sup>, Trulillo JT, Straub SCK, Houston JP, Yang Y, Strickler SR, Cronn RC, Liston A, <strong>Hjelmen CE</strong>, Bailey CD. Phylotranscriptomics and genome size evolution in <em>Leucaena</em> (Fabaceae): Paleotetraploid genomic stability overshadowed by diploidization and environmental effects. <em>American Journal of Botany.</em> doi: 10.1002/ajb2.70178
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/Abair_et_al_2026_Botany.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2025 -->
+            <div class="year-block" id="y2025">
+              <div class="year-label">2025</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Zahn G, <strong>Hjelmen CE</strong>, Wainwright BJ. Distinct temporal trajectories of bacterial and fungal networks during agricultural rewilding. <em>Science of the Total Environment.</em> doi: 10.1016/j.scitotenv.2025.180999
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/Zahn_et_al_2025.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Motte RR<sup class="ug-mark">#</sup>, <strong>Hjelmen CE</strong>. Down syndrome cell adhesion molecule 1 evolution and its relationship to sociality: hymenopteran <em>Dscam1</em> exhibits accelerated evolution in variable exon regions. <em>Insect Systematics and Diversity.</em> doi: 10.1093/isd/ixaf031
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/motte_hjelmen_isd.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Oakes J, Kuddus JN, Downs E, Oakey C, Davis K, Mohammad L, Whitely K, <strong>Hjelmen CE</strong>, Kuddus R. Isolation and characterization of a crude oil-tolerant obligate halophilic bacterium from the Great Salt Lake. <em>Microorganisms.</em> doi: 10.3390/microorganisms13071568
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/Oakes_et_al_2025_microorganisms.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2024 -->
+            <div class="year-block" id="y2024">
+              <div class="year-label">2024</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Copeland M, Landa S, Owoyemi AO, Jonika MM, Alfieri JM, Johnston JS, Sylvester TP, Kyre BR, Hoover Z, <strong>Hjelmen CE</strong>, Rieski LK, Blackmon H, Casola C. Genome assembly of the southern pine beetle (<em>Dendroctonus frontalis</em>) reveals the origins of gene content reduction in <em>Dendroctonus.</em> <em>R. Soc. Open Sci.</em> doi: 10.1098/rsos.240755
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/copeland_et_al_2024_RSOS.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  <strong>Hjelmen CE</strong>. Genome size and chromosome number are critical metrics for accurate genome assembly assessment in Eukaryota. <em>Genetics.</em> doi: 10.1093/genetics/iyae099
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/Hjelmen_Genetics_2024.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Sylvester T, Hoover Z, <strong>Hjelmen CE</strong>, Jonika MM, Blackmon LT, Alfieri JM, Johnston JS, Chien S, Esfandani T, Blackmon H. A reference quality genome assembly for the jewel scarab <em>Chrysina gloriosa.</em> <em>G3.</em> doi: 10.1093/g3journal/jkae084
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/G3_sylvester_et_al_2024.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2022 -->
+            <div class="year-block" id="y2022">
+              <div class="year-label">2022</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  <strong>Hjelmen CE</strong>, Yuan Y, Parrot JJ, McGuane AS<sup class="ug-mark">#</sup>, Srivastav SP, Purcell AC, Pimsler ML, Sze S-H, Tarone AM. Identification and characterization of small RNA markers of age in the blow fly <em>Cochliomyia macellaria</em> (Diptera: Calliphoridae). <em>Insects.</em> doi: 10.3390/insects13100948
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/insects_2022_miRNA_macellaria.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Morelli MW<sup class="ug-mark">#</sup>, Blackmon H, <strong>Hjelmen CE</strong>. Diptera and <em>Drosophila</em> karyotype databases: a useful dataset to guide evolutionary and genomic studies. <em>Frontiers in Ecology and Evolution.</em> doi: 10.3389/fevo.2022.832378
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/morelli_diptera_frontiers_2022.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2021 -->
+            <div class="year-block" id="y2021">
+              <div class="year-label">2021</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Pimsler ML, <strong>Hjelmen CE</strong>, Jonika MM, Sharma A, Fu S, Bala M, Sze S, Tomberlin JK, Tarone AM. Sexual dimorphism in growth rate and gene expression throughout immature development in wild type <em>Chrysomya rufifacies</em> (Diptera: Calliphoridae). <em>Frontiers in Ecology and Evolution.</em> doi: 10.3389/fevo.2021.696638
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/pimsler_frontiers_2021.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Tvedte ES, Gasser M, Sparklin BC, Michalski J, <strong>Hjelmen CE</strong>, Johnston JS, Zhao X, Bromley R, Tallon LJ, Sadzewicz L, Rasko DA, Dunning Hotopp JC. Comparison of long-read sequencing technologies in interrogating bacteria and fly genomes. <em>G3.</em> doi: 10.1093/g3journal/jkab083
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/Tvedte_et_al_2021_g3.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2020 -->
+            <div class="year-block" id="y2020">
+              <div class="year-label">2020</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Anderson NW<sup class="ug-mark">#</sup>, <strong>Hjelmen CE</strong>, Blackmon H. The probability of fusions joining sex chromosomes and autosomes. <em>Biology Letters.</em> doi: 10.1098/rsbl.2020.0648
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/bioletters2020.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Malawey AS, Zhang H, McGuane AS<sup class="ug-mark">#</sup>, Walsh EM, Rusch TW, <strong>Hjelmen CE</strong>, Delclos PJ, Rangel J, Zheng L, Cai M, Yu Z, Tarone AM, Zhang J, Tomberlin JK. Interaction of age and temperature on heat shock protein expression, sperm count, and sperm viability of the adult black soldier fly (Diptera: Stratiomyidae). <em>Journal of Insects as Food and Feed.</em> doi: 10.3920/JIFF2020.0017
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/Malawey_jiff2020.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Sylvester T, <strong>Hjelmen CE</strong>, Hanrahan SJ, Lenhart PA, Johnston JS, Blackmon H. Lineage-specific patterns of chromosome evolution are the rule not the exception in Polyneoptera insects. <em>Proceedings of the Royal Society B.</em> doi: 10.1098/rspb.2020.1388
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/procB_sylvester2020.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  <strong>Hjelmen CE</strong>, Holmes VR, Burrus CG<sup class="ug-mark">#</sup>, Piron E<sup class="ug-mark">#</sup>, Mynes M<sup class="ug-mark">#</sup>, Garrett M<sup class="ug-mark">#</sup>, Blackmon H, Johnston JS. Thoracic underreplication in <em>Drosophila</em> species estimates a minimum genome size and the dynamics of added DNA. <em>Evolution.</em> doi: 10.1111/evo.14022
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/URevolution2020.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Jonika MM<sup class="ug-mark">#</sup>, <strong>Hjelmen CE</strong>, Faris AM, McGuane AS<sup class="ug-mark">#</sup>, Tarone AM. An evaluation of differentially spliced genes as markers for sex for forensic entomology. <em>Journal of Forensic Sciences.</em> doi: 10.1111/1556-4029.14461
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/jonikaSexID2020.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Johnston JS, Zapalac ME<sup class="ug-mark">#</sup>, <strong>Hjelmen CE</strong>. Flying high — muscle-specific underreplication in <em>Drosophila.</em> <em>Genes.</em> doi: 10.3390/genes11030246
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/genes_UR_muscle_2020.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  <strong>Hjelmen CE</strong>, Parrott JJ, Srivastav SP, McGuane AS<sup class="ug-mark">#</sup>, Ellis LL, Stewart AD, Johnston JS, Tarone AM. Effect of phenotype selection on genome size variation in two species of Diptera. <em>Genes.</em> doi: 10.3390/genes11020218
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/genes_selection_2020.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2019 -->
+            <div class="year-block" id="y2019">
+              <div class="year-label">2019</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  <strong>Hjelmen CE</strong>, Blackmon H, Holmes VR<sup class="ug-mark">#</sup>, Burrus CG<sup class="ug-mark">#</sup>, Johnston JS. Genome size evolution differs between <em>Drosophila</em> subgenera with striking differences in male and female genome size in <em>Sophophora.</em> <em>G3.</em> doi: 10.1534/g3.119.400560
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/g3_Hjelmen_et_al_2019.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2018 -->
+            <div class="year-block" id="y2018">
+              <div class="year-label">2018</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  <strong>Hjelmen CE</strong>, Garrett M<sup class="ug-mark">#</sup>, Holmes VR<sup class="ug-mark">#</sup>, Mynes M<sup class="ug-mark">#</sup>, Piron E<sup class="ug-mark">#</sup>, Johnston JS. Genome size evolution within and between the sexes. <em>Journal of Heredity.</em> doi: 10.1093/jhered/esy063
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/J_hered_Hjelmen_et_al_2018.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Johnston JS, Bernardini A, <strong>Hjelmen CE</strong>. Genome size estimation and quantitative cytogenetics in insects. In: <em>Insect Genomics: Methods and Protocols.</em> doi: 10.1007/978-1-4939-8775-7_2
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/Protocol_Johnston_et_al_2019.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2017 -->
+            <div class="year-block" id="y2017">
+              <div class="year-label">2017</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Lower SS, Johnston JS, Stanger-Hall K, <strong>Hjelmen CE</strong>, Hanrahan SJ, Korunes K, Hall D. Genome size in North American fireflies: substantial variation likely driven by neutral processes. <em>Genome Biology and Evolution.</em> doi: 10.1093/gbe/evx097
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/GBE_Lower_et_al_2017.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  <strong>Hjelmen CE</strong>, Johnston JS. The mode and tempo of genome size evolution in the subgenus <em>Sophophora.</em> <em>PLOS One.</em> doi: 10.1371/journal.pone.0173505
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/plos_one_Hjelmen_Johnston_2017.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2015 -->
+            <div class="year-block" id="y2015">
+              <div class="year-label">2015</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Arnqvist G, Sayadi A, Immonen E, Hotzy C, Rankin D, Tuda M, <strong>Hjelmen CE</strong>, Johnston JS. Genome size correlates with reproductive fitness in seed beetles. <em>Proceedings of the Royal Society B.</em> doi: 10.1098/rspb.2015.1421
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/roy_soc_proc_b_Arnqvist_et_al_2015.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Rangel J, Straus K<sup class="ug-mark">#</sup>, Seedorf K<sup class="ug-mark">#</sup>, <strong>Hjelmen CE</strong>, Johnston JS. Endopolyploidy changes with age-related polyethism in the honey bee, <em>Apis mellifera.</em> <em>PLOS One.</em> doi: 10.1371/journal.pone.0122208
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/rangel_2015_endo.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2014 -->
+            <div class="year-block" id="y2014">
+              <div class="year-label">2014</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Ellis LL, Huang W, Quinn AM, Ahuja A, Alfrejd B, Gomez FE, <strong>Hjelmen CE</strong>, Moore KL, Mackay TFC, Johnston JS, Tarone AM. Intrapopulation genome size variation in <em>D. melanogaster</em> Genetic Reference Panel lines. <em>PLOS Genetics.</em> doi: 10.1371/journal.pgen.1004522
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/ellis_et_al_2014_2.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  The DGRP Consortium. Natural variation in genome architecture among 205 <em>Drosophila melanogaster</em> Genetic Reference Panel lines. <em>Genome Research.</em> doi: 10.1101/gr.171546.113
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/Genome Res_Huang_et_al_2014.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2013 -->
+            <div class="year-block" id="y2013">
+              <div class="year-label">2013</div>
+
+              <div class="pub-entry">
+                <div class="pub-dot"></div>
+                <div class="pub-text">
+                  Larson MK, Tormoen GW, Weaver LJ, Luepke KJ, Patel IA, <strong>Hjelmen CE</strong>, Ensz NM, McComas LS, McCarty OJ. Exogenous modification of platelet membranes with the omega-3 fatty acids EPA and DHA reduces platelet procoagulant activity and thrombus formation. <em>American Journal of Physiology: Cell Physiology.</em>  doi: 10.1152/ajpcell.00174.2012
+                </div>
+                <div class="pub-pdf">
+                  <a href="assets/publications/am_j_phys_cell_phys_Larson_et_al_2012.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end publications list col -->
+        </div><!-- end row -->
       </div>
     </section>
 
+  </main>
+  <!-- End #main -->
 
-
-		<!-- End About Us Section -->
-
-
-
-     
-    
-  </main><!-- End #main -->
-
-   <!-- ======= Footer ======= -->
+  <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="gs_estimations.html">Genome Size Estimations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
-  
+  </footer>
+  <!-- End Footer -->
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

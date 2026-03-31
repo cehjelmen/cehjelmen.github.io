@@ -3,29 +3,27 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Previous Courses</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Previous Courses | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Course history for Dr. Carl Hjelmen at Utah Valley University — bioinformatics, evolution, genomics, genetics, and more.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,257 +32,1577 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    :root {
+      --green-dark:   #1a3f26;
+      --green-main:   #275D38;
+      --green-mid:    #3a7d52;
+      --green-light:  #e8f2ec;
+      --green-pale:   #f4faf6;
+      --green-border: #c3ddc9;
+      --text-muted:   #666;
+    }
+    body { font-family: 'Source Sans 3', sans-serif; }
+
+    /* ── Hero ───────────────────────────── */
+    .courses-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 60%, var(--green-mid) 100%);
+      margin-top: 72px;
+      padding: 52px 0 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .courses-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .courses-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      position: relative;
+    }
+    .courses-hero p.lead {
+      color: rgba(255,255,255,0.82);
+      font-size: 1rem;
+      margin: 0 0 20px;
+      position: relative;
+      max-width: 580px;
+    }
+
+    /* stat pills in hero */
+    .hero-stat-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      position: relative;
+    }
+    .hero-stat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+    .hero-stat strong { color: #aed6bc; }
+
+    /* ── Search + filter bar ────────────── */
+    .filter-bar {
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 14px 0;
+      position: sticky;
+      top: 70px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .filter-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    /* Search input */
+    .course-search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 200px;
+      max-width: 340px;
+    }
+    .course-search-wrap i.search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+    .course-search {
+      width: 100%;
+      padding: 8px 36px 8px 34px;
+      border: 1.5px solid #ddd;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      font-family: 'Source Sans 3', sans-serif;
+      transition: border-color 0.2s;
+      background: #fff;
+    }
+    .course-search:focus {
+      outline: none;
+      border-color: var(--green-main);
+    }
+    .search-clear-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #bbb;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 0;
+      display: none;
+      line-height: 1;
+    }
+    .search-clear-btn.visible { display: block; }
+
+    /* Filter dropdowns */
+    .filter-select {
+      padding: 7px 30px 7px 12px;
+      border: 1.5px solid #ddd;
+      border-radius: 20px;
+      font-size: 0.83rem;
+      font-family: 'Source Sans 3', sans-serif;
+      color: #444;
+      background: #fff;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 16 16'%3E%3Cpath fill='%23888' d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      transition: border-color 0.2s;
+    }
+    .filter-select:focus { outline: none; border-color: var(--green-main); }
+    .filter-select.active-filter { border-color: var(--green-main); color: var(--green-main); font-weight: 600; }
+
+    .result-count {
+      margin-left: auto;
+      font-size: 0.8rem;
+      color: #aaa;
+      white-space: nowrap;
+    }
+
+    /* ── Main content area ──────────────── */
+    .courses-body {
+      background: var(--green-pale);
+      padding: 40px 0 70px;
+      min-height: 60vh;
+    }
+
+    /* ── Semester groups ────────────────── */
+    .semester-group {
+      margin-bottom: 36px;
+    }
+    .semester-group.hidden { display: none; }
+
+    .semester-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .semester-label h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 0;
+    }
+    .semester-label .sl-year-badge {
+      background: var(--green-main);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 9px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+    .semester-label .sl-line {
+      flex: 1;
+      height: 1px;
+      background: var(--green-border);
+    }
+    .semester-label .sl-count {
+      font-size: 0.72rem;
+      color: #aaa;
+      white-space: nowrap;
+    }
+
+    /* ── Course cards ───────────────────── */
+    .course-card {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 8px;
+      padding: 0;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+      margin-bottom: 10px;
+    }
+    .course-card.hidden { display: none; }
+    .course-card:hover {
+      box-shadow: 0 4px 16px rgba(39,93,56,0.1);
+      transform: translateY(-1px);
+    }
+
+    .course-card-inner {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+
+    /* Left accent bar by subject */
+    .course-card .cc-accent {
+      width: 5px;
+      flex-shrink: 0;
+    }
+
+    /* Main content */
+    .course-card .cc-body {
+      flex: 1;
+      padding: 14px 18px 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .cc-main { flex: 1; min-width: 0; }
+
+    .cc-code {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #aaa;
+      margin-bottom: 3px;
+    }
+    .cc-name {
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+    .cc-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+    .cc-desc.is-note {
+      font-style: italic;
+      color: #999;
+    }
+
+    /* Right: syllabus button */
+    .cc-actions {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 6px;
+      padding: 14px 16px 14px 0;
+    }
+    .cc-syllabus-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--green-main);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 5px 13px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .cc-syllabus-btn:hover { background: var(--green-dark); color: #fff; }
+
+    .cc-subject-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: #fff;
+      white-space: nowrap;
+    }
+
+    /* ── No results ─────────────────────── */
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: #bbb;
+      display: none;
+    }
+    .no-results.visible { display: block; }
+    .no-results i { font-size: 2.5rem; display: block; margin-bottom: 12px; }
+
+    /* ── Add-a-course guide ─────────────── */
+    .update-guide {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-top: 40px;
+      font-size: 0.83rem;
+      color: #666;
+    }
+    .update-guide h4 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .update-guide code {
+      background: var(--green-pale);
+      border: 1px solid var(--green-border);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 0.8rem;
+      color: var(--green-dark);
+    }
+
+    @media (max-width: 768px) {
+      .courses-hero { padding: 40px 0 34px; }
+      .courses-hero h1 { font-size: 1.75rem; }
+      .filter-bar { top: 58px; }
+      .cc-desc { display: none; }
+      .course-card .cc-body { gap: 10px; }
+    }
+    @media (max-width: 576px) {
+      .course-card-inner { flex-direction: column; }
+      .cc-actions { flex-direction: row; padding: 0 16px 14px; }
+      .course-card .cc-accent { width: 100%; height: 4px; }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-      <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html">Home</a></li>
-
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="active"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
               </li>
+              <li><a href="Previous_Courses.html" class="active">Previous Courses</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                    <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
-            </ul>
-          </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-			<li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
-
+          </li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-
+  </header>
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ── Hero ── -->
+    <div class="courses-hero">
       <div class="container">
+        <h1><i class="bi bi-book-fill me-2" style="font-size:1.8rem; vertical-align:middle;"></i>Previous Courses</h1>
+        <p class="lead">A complete record of courses taught at Utah Valley University, with syllabi where available. Search or filter to find a specific semester or subject.</p>
+        <div class="hero-stat-row">
+          <span class="hero-stat"><strong id="statSemesters">13</strong> semesters</span>
+          <span class="hero-stat"><strong id="statSections">40</strong> course sections</span>
+          <span class="hero-stat"><strong id="statUnique">11</strong> unique courses</span>
+          <span class="hero-stat"><strong>2021</strong> – present</span>
+        </div>
+      </div>
+    </div>
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Previous Courses</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Previous Courses</li>
-          </ol>
+    <!-- ── Filter bar ── -->
+    <div class="filter-bar">
+      <div class="container">
+        <div class="filter-inner">
+          <div class="course-search-wrap">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" class="course-search" id="courseSearch" placeholder="Search courses…" autocomplete="off">
+            <button class="search-clear-btn" id="searchClearBtn">×</button>
+          </div>
+
+          <select class="filter-select" id="yearFilter">
+            <option value="">All Years</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+          </select>
+
+          <select class="filter-select" id="subjectFilter">
+            <option value="">All Subjects</option>
+            <option value="bioinformatics">Bioinformatics</option>
+            <option value="evolution">Evolution</option>
+            <option value="genomics">Genomics</option>
+            <option value="genetics">Genetics</option>
+            <option value="entomology">Entomology</option>
+            <option value="ethics">Ethics</option>
+            <option value="research">Research Methods</option>
+            <option value="phylogenetics">Phylogenetics</option>
+          </select>
+
+          <span class="result-count" id="resultCount">38 sections</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Courses body ── -->
+    <div class="courses-body">
+      <div class="container" id="coursesContainer">
+
+        <!-- ═══════════════════════════════════════════════════
+             COURSE DATA
+             ═══════════════════════════════════════════════════
+             TO ADD A NEW SEMESTER: copy an existing semester
+             block and update the data attributes. Each course
+             card needs:
+               data-name  = searchable course name
+               data-year  = 4-digit year (for year filter)
+               data-subj  = subject key (for subject filter)
+               data-sem   = "Fall" | "Spring" | "Summer"
+             Syllabus: set href on .cc-syllabus-btn, or remove
+             the button and add a <p class="cc-desc is-note">
+             for the notes field instead.
+        ════════════════════════════════════════════════════ -->
+
+        <!-- ══ Fall 2025 ══ -->
+        <div class="semester-group" data-year="2025" data-sem="Fall" id="sem-fall2025">
+          <div class="semester-label">
+            <span class="sl-year-badge">2025</span>
+            <h2>Fall 2025</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">5 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2025" data-subj="bioinformatics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-01 &middot; Fall 2025</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Foundational bioinformatics introducing students to the scientific process, evolution, molecular biology, and computational approaches to studying biological data.</p>
+                </div>
+                <div class="cc-actions">
+  					<span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+ 						 <a href="assets/Syllabi/Old/Fall_2025_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    						 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   							 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  							</a>
+				</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2025" data-subj="bioinformatics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-02 &middot; Fall 2025</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Second section. </p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                   						 <a href="assets/Syllabi/Old/Fall_2025_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    						 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   							 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  							</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Phylogenetics BIOL 4300" data-year="2025" data-subj="phylogenetics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#7c3aad;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4300-01 &middot; Fall 2025</div>
+                  <div class="cc-name">Phylogenetics</div>
+                  <p class="cc-desc">Theory and practice of reconstructing evolutionary relationships. Topics include sequence alignment, substitution models, maximum likelihood, Bayesian inference, and phylogenetic comparative methods.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#7c3aad;">Phylogenetics</span>
+            			 <a href="assets/Syllabi/Old/Fall_2025_BIOL_4300_Syllabus.pdf"
+    					 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   						 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  						</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Genomics BIOL 4400" data-year="2025" data-subj="genomics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#2563a8;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4400-01 &middot; Fall 2025</div>
+                  <div class="cc-name">Genomics</div>
+                  <p class="cc-desc">Modern genomics covering sequencing, assembly, annotation, and comparative approaches. A strong focus on scientific literacy and communication. </p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#2563a8;">Genomics</span>
+					 <a href="assets/Syllabi/Old/Fall_2025_BIOL_4400_Syllabus.pdf"
+   						 class="cc-syllabus-btn" target="_blank" rel="noopener">
+						 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+						</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Research BIOL 2900" data-year="2025" data-subj="research" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#0f766e;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 2900-01 &middot; Fall 2025</div>
+                  <div class="cc-name">Introduction to Research</div>
+                  <p class="cc-desc">Introductory research and professional development course 
+                  giving students experience with the scientific process, experimental design, scientific communication,
+                  and a breakdown of the resources at UVU. This course is specific to NSF S-STEM Scholars.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Research Methods</span>
+    				 <a href="assets/Syllabi/Old/Fall_2025_BIOL_2900_Syllabus.pdf"
+    				 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ══ Summer 2025 ══ -->
+        <div class="semester-group" data-year="2025" data-sem="Summer" id="sem-summer2025">
+          <div class="semester-label">
+            <span class="sl-year-badge">2025</span>
+            <h2>Summer 2025</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">1 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Genetics BIOL 3500" data-year="2025" data-subj="genetics" data-sem="Summer">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 3500-01 &middot; Summer 2025</div>
+                  <div class="cc-name">Genetics</div>
+                  <p class="cc-desc">Principles of heredity including Mendelian genetics, molecular genetics, gene expression, and population genetics.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Genetics</span>
+                        <a href="assets/Syllabi/Old/Biol 3500-001_summer_2025_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+        <!-- ══ Spring 2025 ══ -->
+        <div class="semester-group" data-year="2025" data-sem="Spring" id="sem-spring2025">
+          <div class="semester-label">
+            <span class="sl-year-badge">2025</span>
+            <h2>Spring 2025</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">5 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2025" data-subj="bioinformatics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-01 &middot; Spring 2025</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Foundational bioinformatics introducing students to the scientific process, evolution, molecular biology, and computational approaches to studying biological data.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                             <a href="assets/Syllabi/Old/Spring_2025_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    						 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   							 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  							</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2025" data-subj="bioinformatics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-02 &middot; Spring 2025</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Second section. Same content as BIOL 1011-01.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                       <a href="assets/Syllabi/Old/Spring_2025_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    					 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  						</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Evolution BIOL 4500" data-year="2025" data-subj="evolution" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#b45309;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4500-01 &middot; Spring 2025</div>
+                  <div class="cc-name">Evolution</div>
+                  <p class="cc-desc">Upper-division survey of evolutionary biology covering natural selection, genetic drift, population genetics, speciation, phylogenetics, molecular evolution, and macroevolutionary patterns.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#b45309;">Evolution</span>
+                  <a href="assets/Syllabi/Old/Spring_2025_BIOL_4500_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Evolution BIOL 4500" data-year="2025" data-subj="evolution" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#b45309;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4500-04 &middot; Spring 2025</div>
+                  <div class="cc-name">Evolution</div>
+                  <p class="cc-desc">Second section. Same content as BIOL 4500-01.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#b45309;">Evolution</span>
+                                  <a href="assets/Syllabi/Old/Spring_2025_BIOL_4500_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Evolution of Sex BIOL 490R" data-year="2025" data-subj="evolution" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#b45309;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 490R-01 &middot; Spring 2025</div>
+                  <div class="cc-name">Evolution of Sex</div>
+                  <p class="cc-desc">Special topics seminar exploring the evolutionary origins and maintenance of sexual reproduction, sex determination systems, sexual selection, and sex chromosome evolution.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#b45309;">Evolution</span>
+                        <a href="assets/Syllabi/Old/Spring2025_BIOL_490R 001_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-      </div>
-    </section><!-- End Breadcrumbs -->
+        <!-- ══ Fall 2024 ══ -->
+        <div class="semester-group" data-year="2024" data-sem="Fall" id="sem-fall2024">
+          <div class="semester-label">
+            <span class="sl-year-badge">2024</span>
+            <h2>Fall 2024</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">4 sections</span>
+          </div>
 
-    <!-- ======= About Us Section ======= -->
-	<p></p>     
-	<div>
-	<h2 class="section-title"> Previous Courses</br>(Banner links may not work on linked pages) 
-	
-	</div>
-	<div align="center">
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2024" data-subj="bioinformatics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-01 &middot; Fall 2024</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Foundational bioinformatics introducing students to the scientific process, evolution, molecular biology, and computational approaches to studying biological data.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/Fall_2024_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-	<h4 class="section-title"> <u>Fall 2025</u></p></h4>
-	<h5 class="subheading m-3">
-	Introduction to Bioinformatics (BIOL 1011-1) <a href="previous/Fall2025biol1011_1.html"> here</a><br><br>
-	Introduction to Bioinformatics (BIOL 1011-2) <a href="previous/Fall2025biol1011_2.html"> here</a> <br><br>
-	Phylogenetics (BIOL 4300-1) <a href="previous/Fall2025biol4300.html"> here</a><br><br>
-	Genomics (BIOL 4400-1) <a href="previous/Fall2025biol4400.html"> here</a><br><br>
-	Introduction to Research (BIOL 2900-1) <a href="previous/Fall2025biol2900.html"> here</a><br><br>
-	</h5>	
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2024" data-subj="bioinformatics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-02 &middot; Fall 2024</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Second section. Same content as BIOL 1011-01.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/Fall_2024_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-	<h4 class="section-title"> <u>Spring 2025</u></p></h4>
-	<h5 class="subheading m-3">
-	Introduction to Bioinformatics (BIOL 1011-1) <a href="previous/Spring2025biol1011_1.html"> here</a><br><br>
-	Introduction to Bioinformatics (BIOL 1011-2) <a href="previous/Spring2025biol1011_2.html"> here</a> <br><br>
-	Evolution (BIOL 4500-1) <a href="previous/Spring2025biol4500_1.html"> here</a><br><br>
-	Evolution (BIOL 4500-4) <a href="previous/Spring2025biol4500_4.html"> here</a><br><br>
-	Evolution of Sex (BIOL 490R-1) <a href="previous/Spring2025biol490_1.html"> here</a><br><br>
-	</h5>	
+          <div class="course-card" data-name="Genomics BIOL 4400" data-year="2024" data-subj="genomics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#2563a8;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4400-01 &middot; Fall 2024</div>
+                  <div class="cc-name">Genomics</div>
+                  <p class="cc-desc">Modern genomics covering sequencing, assembly, annotation, and comparative approaches. A strong focus on scientific literacy and communication. </p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#2563a8;">Genomics</span>
+                        <a href="assets/Syllabi/Old/Fall_2024_BIOL_4400_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-	<h4 class="section-title"> <u>Fall 2024</u></p></h4>
-	<h5 class="subheading m-3">
-	Introduction to Bioinformatics (BIOL 1011-1) <a href="previous/Fall2024biol1011_1.html"> here</a><br><br>
-	Introduction to Bioinformatics (BIOL 1011-2) <a href="previous/Fall2024biol1011_2.html"> here</a> <br><br>
-	Genomics (BIOL 4400-1) <a href="previous/Fall2024biol4400.html"> here</a><br><br>
-	Entomology (ZOOL 3430/3435-1) <a href="previous/Fall2024zool3430.html"> here</a><br><br>
-	</h5>
-		
-	<h4 class="section-title"> <u>Spring 2024</u></p></h4>
-	<h5 class="subheading m-3">
-	Introduction to Bioinformatics (BIOL 1011-1) <a href="previous/Spring2024biol1011_1.html"> here</a><br><br>
-	Introduction to Bioinformatics (BIOL 1011-2) <a href="previous/Spring2024biol1011_2.html"> here</a> <br><br>
-	Molecular Evolution and Bioinformatics (BIOL 4550-1) <a href="previous/Spring2024biol4550.html"> here</a><br><br>
-	Evolution (BIOL 4500-1) <a href="previous/Spring2024biol4500.html"> here</a><br><br>
-	</h5>
-	
-	<h4 class="section-title"> <u>Fall 2023</u></p></h4>
-	<h5 class="subheading m-3">
-	Introduction to Bioinformatics (BIOL 1011-2) <a href="previous/Fall2023biol1011_2.html"> here</a><br><br>
-	Introduction to Bioinformatics (BIOL 1011-3) <a href="previous/Fall2023biol1011_3.html"> here</a> <br><br>
-	Genetics (BIOL 3500-3) <a href="previous/Fall2023biol3500.html"> here</a><br><br>
-	Genomics (BIOL 4400-1) <a href="previous/Fall2023biol4400.html"> here</a><br><br>
-	Evolution (BIOL 4500-1) <a href="previous/Fall2023biol4500.html"> here</a><br><br>
-	</h5>
+          <div class="course-card" data-name="Entomology ZOOL 3430 3435" data-year="2024" data-subj="entomology" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#be185d;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">ZOOL 3430/3435-01 &middot; Fall 2024</div>
+                  <div class="cc-name">Entomology</div>
+                  <p class="cc-desc">Survey of insect biology including taxonomy, morphology, physiology, behavior, ecology, and evolutionary relationships. Lecture and laboratory components.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#be185d;">Entomology</span>
+                        <a href="assets/Syllabi/Old/Fall_2024_ZOOL_3430_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+<!-- ══ Summer 2024 ══ -->
+        <div class="semester-group" data-year="2024" data-sem="Summer" id="sem-summer2024">
+          <div class="semester-label">
+            <span class="sl-year-badge">2024</span>
+            <h2>Summer 2024</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">1 sections</span>
+          </div>
 
-	<h4 class="section-title"> <u>Spring 2023</u></p></h4>
-	<h5 class="subheading m-3">
-	Introduction to Bioinformatics (BIOL 1011-1) <a href="previous/Spring2023biol1011_1.html"> here</a><br><br>
-	Introduction to Bioinformatics (BIOL 1011-2) <a href="previous/Spring2023biol1011_2.html"> here</a> <br><br>
-	Genetics (BIOL 3500-3) <a href="previous/Spring2023biol3500.html"> here</a><br><br>
-	Evolution (BIOL 4500-1) <a href="previous/Spring2023biol4500.html"> here</a><br><br>
-	</h5>
-
-	<h4 class="section-title"> <u>Fall 2022</u></p></h4>
-	<h5 class="subheading m-3">
-	Introduction to Bioinformatics (BIOL 1011-2) <a href="previous/Fall2022biol1011_2.html"> here</a><br><br>
-	Genetics (BIOL 3500-3)<a href="previous/Fall2022biol3500.html"> here</a><br><br>
-	Genomics (BIOL 4400-1)<a href="previous/Fall2022biol4400.html"> here</a><br><br>
-	
-	<h4 class="section-title"> <u>Spring 2022</u></p></h4>
-	<h5 class="subheading m-3">
-	Introduction to Bioinformatics (BIOL 1011-1) <a href="previous/Spring2022biol1011.html"> here</a><br><br>
-	Introduction to Bioinformatics (BIOL 1011-2)<a href="previous/Spring2022biol1011_2.html"> here</a><br><br>
-	Genetics (BIOL 3500-3)<a href="previous/Spring2022biol3500.html"> here</a><br><br>
-	</h5>
-	<h4 class="section-title"> <u>Fall 2021</u></p></h4>
-	<h5 class="subheading m-3">
-	Introduction to Bioinformatics (BIOL 1011-1) <a href="previous/biol1011.html"> here</a><br><br>
-	Introduction to Bioinformatics (BIOL 1011-2) <a href="previous/biol1011_2.html"> here</a><br><br>
-	Genetics (BIOL 3500) <a href="previous/biol3500.html"> here</a><br><br>
-	</div>
-	
-	</h5>
-	
-	</div>
-	
-	
-	  
-    
-
-		<!-- End About Us Section -->
+          <div class="course-card" data-name="Genetics BIOL 3500" data-year="2024" data-subj="genetics" data-sem="Summer">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 3500-01 &middot; Summer 2024</div>
+                  <div class="cc-name">Genetics</div>
+                  <p class="cc-desc">Principles of heredity including Mendelian genetics, molecular genetics, gene expression, and population genetics.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Genetics</span>
+                        <a href="assets/Syllabi/Old/Biol 3500-001_summer_2024_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
 
 
 
-     
-    
-  </main><!-- End #main -->
+        <!-- ══ Spring 2024 ══ -->
+        <div class="semester-group" data-year="2024" data-sem="Spring" id="sem-spring2024">
+          <div class="semester-label">
+            <span class="sl-year-badge">2024</span>
+            <h2>Spring 2024</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">4 sections</span>
+          </div>
 
-<!-- ======= Footer ======= -->
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2024" data-subj="bioinformatics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-01 &middot; Spring 2024</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Foundational bioinformatics introducing students to the scientific process, evolution, molecular biology, and computational approaches to studying biological data.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/Spring_2024_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2024" data-subj="bioinformatics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-02 &middot; Spring 2024</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Second section.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/Spring_2024_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Molecular Evolution and Bioinformatics BIOL 4550" data-year="2024" data-subj="evolution" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#b45309;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4550-01 &middot; Spring 2024</div>
+                  <div class="cc-name">Molecular Evolution and Bioinformatics</div>
+                  <p class="cc-desc">Evolution, but from a molecular perspective. A strong focus on population genetics. 
+                  Topics include molecular phylogenetics, selection detection, sequence evolution models. A final project writing a grant proposal</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#b45309;">Evolution</span>
+                        <a href="assets/Syllabi/Old/Spring_2024_BIOL_4550_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Evolution BIOL 4500" data-year="2024" data-subj="evolution" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#b45309;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4500-01 &middot; Spring 2024</div>
+                  <div class="cc-name">Evolution</div>
+                  <p class="cc-desc">Upper-division survey of evolutionary biology.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#b45309;">Evolution</span>
+                         <a href="assets/Syllabi/Old/Spring_2024_BIOL_4500_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ Fall 2023 ══ -->
+        <div class="semester-group" data-year="2023" data-sem="Fall" id="sem-fall2023">
+          <div class="semester-label">
+            <span class="sl-year-badge">2023</span>
+            <h2>Fall 2023</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">5 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2023" data-subj="bioinformatics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-02 &middot; Fall 2023</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Foundational bioinformatics introducing students to the scientific process, evolution, molecular biology, and computational approaches to studying biological data.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/Fall_2023_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2023" data-subj="bioinformatics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-03 &middot; Fall 2023</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Second section.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                         <a href="assets/Syllabi/Old/Fall_2023_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Genetics BIOL 3500" data-year="2023" data-subj="genetics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#0f766e;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 3500-03 &middot; Fall 2023</div>
+                  <div class="cc-name">Genetics</div>
+                  <p class="cc-desc">Principles of heredity including Mendelian genetics, molecular genetics, gene expression, and population genetics.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Genetics</span>
+                        <a href="assets/Syllabi/Old/Fall_2023_Biol 3500-003_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Genomics BIOL 4400" data-year="2023" data-subj="genomics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#2563a8;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4400-01 &middot; Fall 2023</div>
+                  <div class="cc-name">Genomics</div>
+                  <p class="cc-desc">Modern genomics covering sequencing, assembly, annotation, and comparative approaches. A strong focus on scientific literacy and communication. </p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#2563a8;">Genomics</span>
+                         <a href="assets/Syllabi/Old/Fall_2023_BIOL_4400_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Evolution BIOL 4500" data-year="2023" data-subj="evolution" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#b45309;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4500-01 &middot; Fall 2023</div>
+                  <div class="cc-name">Evolution</div>
+                  <p class="cc-desc">Upper-division survey of evolutionary biology.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#b45309;">Evolution</span>
+                        <a href="assets/Syllabi/Old/Fall_2023_BIOL_4500_Syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <!-- ══ Summer 2023 ══ -->
+        <div class="semester-group" data-year="2023" data-sem="Summer" id="sem-summer2023">
+          <div class="semester-label">
+            <span class="sl-year-badge">2023</span>
+            <h2>Summer 2023</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">1 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Genetics BIOL 3500" data-year="2023" data-subj="genetics" data-sem="Summer">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 3500-01 &middot; Summer 2023</div>
+                  <div class="cc-name">Genetics</div>
+                  <p class="cc-desc">Principles of heredity including Mendelian genetics, molecular genetics, gene expression, and population genetics.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Genetics</span>
+                        <a href="assets/Syllabi/Old/Biol 3500-001_summer_2023_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+
+        <!-- ══ Spring 2023 ══ -->
+        <div class="semester-group" data-year="2023" data-sem="Spring" id="sem-spring2023">
+          <div class="semester-label">
+            <span class="sl-year-badge">2023</span>
+            <h2>Spring 2023</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">4 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2023" data-subj="bioinformatics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-01 &middot; Spring 2023</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Foundational bioinformatics introducing students to the scientific process, evolution, molecular biology, and computational approaches to studying biological data.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                         <a href="assets/Syllabi/Old/BIOL 1011 Intro Bioinformatics_Syllabus_SPRING_2023.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2023" data-subj="bioinformatics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-02 &middot; Spring 2023</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Second section.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/BIOL 1011 Intro Bioinformatics_Syllabus_SPRING_2023.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Genetics BIOL 3500" data-year="2023" data-subj="genetics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#0f766e;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 3500-03 &middot; Spring 2023</div>
+                  <div class="cc-name">Genetics</div>
+                  <p class="cc-desc">Principles of heredity including Mendelian genetics, molecular genetics, gene expression, and population genetics.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Genetics</span>
+                        <a href="assets/Syllabi/Old/Spring_2023_Biol 3500-003_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Evolution BIOL 4500" data-year="2023" data-subj="evolution" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#b45309;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4500-01 &middot; Spring 2023</div>
+                  <div class="cc-name">Evolution</div>
+                  <p class="cc-desc">Upper-division survey of evolutionary biology.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#b45309;">Evolution</span>
+                        <a href="assets/Syllabi/Old/BIOL_4500_Syllabus_Spring_2023.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ Fall 2022 ══ -->
+        <div class="semester-group" data-year="2022" data-sem="Fall" id="sem-fall2022">
+          <div class="semester-label">
+            <span class="sl-year-badge">2022</span>
+            <h2>Fall 2022</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">3 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2022" data-subj="bioinformatics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-02 &middot; Fall 2022</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Foundational bioinformatics introducing students to the scientific process, evolution, molecular biology, and computational approaches to studying biological data.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/BIOL 1011 Intro Bioinformatics_Syllabus_FALL_2022.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Genetics BIOL 3500" data-year="2022" data-subj="genetics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#0f766e;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 3500-03 &middot; Fall 2022</div>
+                  <div class="cc-name">Genetics</div>
+                  <p class="cc-desc">Principles of heredity including Mendelian genetics, molecular genetics, gene expression, and population genetics.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Genetics</span>
+                        <a href="assets/Syllabi/Old/Biol 3500-003_fall_2022_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Genomics BIOL 4400" data-year="2022" data-subj="genomics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#2563a8;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 4400-01 &middot; Fall 2022</div>
+                  <div class="cc-name">Genomics</div>
+                  <p class="cc-desc">Modern genomics covering sequencing, assembly, annotation, and comparative approaches. A strong focus on scientific literacy and communication. </p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#2563a8;">Genomics</span>
+                        <a href="assets/Syllabi/Old/Fall_2022_BIOL_4400_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+<!-- ══ Summer 2022 ══ -->
+        <div class="semester-group" data-year="2022" data-sem="Summer" id="sem-summer2022">
+          <div class="semester-label">
+            <span class="sl-year-badge">2022</span>
+            <h2>Summer 2022</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">1 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Genetics BIOL 3500" data-year="2022" data-subj="genetics" data-sem="Summer">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 3500-01 &middot; Summer 2022</div>
+                  <div class="cc-name">Genetics</div>
+                  <p class="cc-desc">Principles of heredity including Mendelian genetics, molecular genetics, gene expression, and population genetics.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Genetics</span>
+                        <a href="assets/Syllabi/Old/Biol 3500-001_summer_2022_syllabus.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+
+
+
+        <!-- ══ Spring 2022 ══ -->
+        <div class="semester-group" data-year="2022" data-sem="Spring" id="sem-spring2022">
+          <div class="semester-label">
+            <span class="sl-year-badge">2022</span>
+            <h2>Spring 2022</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">3 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2022" data-subj="bioinformatics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-01 &middot; Spring 2022</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Foundational bioinformatics introducing students to the scientific process, evolution, molecular biology, and computational approaches to studying biological data.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/biol_1011_syllabus_spring_2022.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2022" data-subj="bioinformatics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-02 &middot; Spring 2022</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Second section.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/biol_1011_syllabus_spring_2022.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Genetics BIOL 3500" data-year="2022" data-subj="genetics" data-sem="Spring">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#0f766e;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 3500-03 &middot; Spring 2022</div>
+                  <div class="cc-name">Genetics</div>
+                  <p class="cc-desc">Principles of heredity including Mendelian genetics, molecular genetics, gene expression, and population genetics.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Genetics</span>
+                        <a href="assets/Syllabi/Old/biol_3500_syllabus_spring_2022.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ Fall 2021 ══ -->
+        <div class="semester-group" data-year="2021" data-sem="Fall" id="sem-fall2021">
+          <div class="semester-label">
+            <span class="sl-year-badge">2021</span>
+            <h2>Fall 2021</h2>
+            <div class="sl-line"></div>
+            <span class="sl-count">3 sections</span>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2021" data-subj="bioinformatics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-01 &middot; Fall 2021</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">First offering of the course at UVU. Foundational bioinformatics introducing students to the scientific process, evolution, molecular biology, and computational approaches to studying biological data.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/biol_1011_syllabus_fall_2021.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Introduction to Bioinformatics BIOL 1011" data-year="2021" data-subj="bioinformatics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#275D38;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 1011-02 &middot; Fall 2021</div>
+                  <div class="cc-name">Introduction to Bioinformatics</div>
+                  <p class="cc-desc">Second section.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#275D38;">Bioinformatics</span>
+                        <a href="assets/Syllabi/Old/biol_1011_syllabus_fall_2021.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-card" data-name="Genetics BIOL 3500" data-year="2021" data-subj="genetics" data-sem="Fall">
+            <div class="course-card-inner">
+              <div class="cc-accent" style="background:#0f766e;"></div>
+              <div class="cc-body">
+                <div class="cc-main">
+                  <div class="cc-code">BIOL 3500 &middot; Fall 2021</div>
+                  <div class="cc-name">Genetics</div>
+                  <p class="cc-desc">Principles of heredity including Mendelian genetics, molecular genetics, gene expression, and population genetics.</p>
+                </div>
+                <div class="cc-actions">
+                  <span class="cc-subject-tag" style="background:#0f766e;">Genetics</span>
+                         <a href="assets/Syllabi/Old/biol_3500_syllabus_fall_2021.pdf"
+    			 class="cc-syllabus-btn" target="_blank" rel="noopener">
+   					 <i class="bi bi-file-earmark-pdf"></i> Syllabus
+  					</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- No results -->
+        <div class="no-results" id="noResults">
+          <i class="bi bi-search"></i>
+          <p style="font-size:1rem; font-weight:600; color:#888;">No courses match your filters.</p>
+          <p style="font-size:0.85rem; color:#aaa;">Try adjusting your search or <button onclick="clearAll()" style="background:none;border:none;color:var(--green-main);font-weight:600;cursor:pointer;padding:0;">clear all filters</button>.</p>
+        </div>
+
+        
+
+  </main>
+
+  <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var searchInput = document.getElementById('courseSearch');
+      var clearBtn    = document.getElementById('searchClearBtn');
+      var yearFilter  = document.getElementById('yearFilter');
+      var subjFilter  = document.getElementById('subjectFilter');
+      var resultCount = document.getElementById('resultCount');
+      var noResults   = document.getElementById('noResults');
+      var allCards    = document.querySelectorAll('.course-card');
+      var allGroups   = document.querySelectorAll('.semester-group');
 
+      function runFilter() {
+        var q    = searchInput.value.trim().toLowerCase();
+        var year = yearFilter.value;
+        var subj = subjFilter.value;
+
+        clearBtn.classList.toggle('visible', q.length > 0);
+        yearFilter.classList.toggle('active-filter', year !== '');
+        subjFilter.classList.toggle('active-filter', subj !== '');
+
+        var visible = 0;
+        allCards.forEach(function(card) {
+          var nameMatch = !q || card.dataset.name.toLowerCase().includes(q);
+          var yearMatch = !year || card.dataset.year === year;
+          var subjMatch = !subj || card.dataset.subj === subj;
+          var show = nameMatch && yearMatch && subjMatch;
+          card.classList.toggle('hidden', !show);
+          if (show) visible++;
+        });
+
+        allGroups.forEach(function(group) {
+          var hasVisible = group.querySelectorAll('.course-card:not(.hidden)').length > 0;
+          group.classList.toggle('hidden', !hasVisible);
+        });
+
+        resultCount.textContent = visible + ' section' + (visible !== 1 ? 's' : '');
+        noResults.classList.toggle('visible', visible === 0);
+      }
+
+      function clearAll() {
+        searchInput.value = '';
+        yearFilter.value  = '';
+        subjFilter.value  = '';
+        runFilter();
+        searchInput.focus();
+      }
+
+      searchInput.addEventListener('input', runFilter);
+      clearBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        runFilter();
+        searchInput.focus();
+      });
+      yearFilter.addEventListener('change', runFilter);
+      subjFilter.addEventListener('change', runFilter);
+
+      // expose clearAll for the inline button onclick
+      window.clearAll = clearAll;
+    });
+  </script>
+
+</body>
 </html>

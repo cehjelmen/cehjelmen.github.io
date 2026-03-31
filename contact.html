@@ -3,27 +3,25 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Contact</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Contact | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Contact Dr. Carl Hjelmen at Utah Valley University. View office location, email, and schedule a meeting via the embedded Google Calendar.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -34,203 +32,671 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Template Main CSS File -->
+
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    :root {
+      --green-dark:   #1a3f26;
+      --green-main:   #275D38;
+      --green-mid:    #3a7d52;
+      --green-light:  #e8f2ec;
+      --green-pale:   #f4faf6;
+      --green-border: #c3ddc9;
+    }
+
+    body { font-family: 'Source Sans 3', sans-serif; }
+
+    /* ── Hero ───────────────────────────── */
+    .contact-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 60%, var(--green-mid) 100%);
+      margin-top: 72px;
+      padding: 52px 0 42px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .contact-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      position: relative;
+    }
+    .contact-hero p {
+      color: rgba(255,255,255,0.82);
+      font-size: 1rem;
+      margin: 0;
+      position: relative;
+    }
+
+    /* ── Main layout ────────────────────── */
+    .contact-body {
+      background: var(--green-pale);
+      padding: 48px 0 64px;
+    }
+
+    /* ── Contact info card ──────────────── */
+    .info-card {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 10px;
+      padding: 24px 26px;
+      margin-bottom: 20px;
+    }
+    .info-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--green-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-card h3 i { color: var(--green-main); }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .contact-detail:last-child { border-bottom: none; }
+    .contact-detail .cd-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-main);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    .contact-detail .cd-body { flex: 1; }
+    .contact-detail .cd-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #999;
+      display: block;
+      margin-bottom: 2px;
+    }
+    .contact-detail .cd-value {
+      font-size: 0.9rem;
+      color: #333;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .contact-detail .cd-value a {
+      color: var(--green-main);
+      text-decoration: none;
+    }
+    .contact-detail .cd-value a:hover { text-decoration: underline; }
+
+    /* ── Profile links ──────────────────── */
+    .profile-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: 7px;
+      background: var(--green-pale);
+      border: 1px solid var(--green-border);
+      text-decoration: none;
+      transition: all 0.18s;
+      margin-bottom: 8px;
+    }
+    .profile-link:last-child { margin-bottom: 0; }
+    .profile-link:hover {
+      background: var(--green-light);
+      transform: translateX(3px);
+    }
+    .profile-link i {
+      color: var(--green-main);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .profile-link span {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--green-dark);
+    }
+
+    /* ── Meeting instructions ───────────── */
+    .meeting-card {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .meeting-card .mc-header {
+      background: var(--green-main);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .meeting-card .mc-header i {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.1rem;
+    }
+    .meeting-card .mc-header h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .meeting-card .mc-body {
+      padding: 20px 22px 22px;
+    }
+
+    /* Numbered steps */
+    .meeting-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: step-counter;
+    }
+    .meeting-steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 11px 0;
+      border-bottom: 1px solid #f5f5f5;
+      counter-increment: step-counter;
+    }
+    .meeting-steps li:last-child { border-bottom: none; }
+    .meeting-steps li::before {
+      content: counter(step-counter);
+      background: var(--green-main);
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .meeting-steps li .step-text {
+      font-size: 0.88rem;
+      color: #444;
+      line-height: 1.55;
+    }
+    .meeting-steps li .step-text strong {
+      color: var(--green-dark);
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.9rem;
+    }
+
+    /* No-booking notice */
+    .no-booking-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #fff8e6;
+      border: 1px solid #f0c040;
+      border-radius: 6px;
+      padding: 11px 14px;
+      margin-top: 14px;
+      font-size: 0.82rem;
+      color: #6b4c00;
+      line-height: 1.5;
+    }
+    .no-booking-notice i {
+      color: #c89000;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Office hours note */
+    .office-hours-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: var(--green-light);
+      border: 1px solid var(--green-border);
+      border-radius: 6px;
+      padding: 11px 14px;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--green-dark);
+      line-height: 1.5;
+    }
+    .office-hours-note i {
+      color: var(--green-main);
+      font-size: 0.95rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Calendar section ───────────────── */
+    .calendar-card {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 10px;
+      overflow: hidden;
+      position: sticky;
+      top: 90px;
+    }
+    .calendar-card .cc-header {
+      background: var(--green-dark);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .calendar-card .cc-header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .calendar-card .cc-header i {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.1rem;
+    }
+    .calendar-card .cc-header h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .calendar-card .cc-header .cc-legend {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .calendar-card .cc-header .cc-legend .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #39d353;
+      flex-shrink: 0;
+    }
+
+    .calendar-card iframe {
+      display: block;
+      width: 100%;
+      border: none;
+    }
+
+    .calendar-note {
+      padding: 12px 16px;
+      background: var(--green-pale);
+      border-top: 1px solid var(--green-border);
+      font-size: 0.78rem;
+      color: #777;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .calendar-note i { color: var(--green-mid); flex-shrink: 0; }
+
+    /* ── Map ────────────────────────────── */
+    .map-section {
+      background: #fff;
+      padding: 0 0 0;
+    }
+    .map-section iframe {
+      display: block;
+      width: 100%;
+      height: 280px;
+      border: none;
+      filter: grayscale(15%);
+    }
+    .map-label {
+      background: var(--green-main);
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .map-label i { opacity: 0.8; }
+
+    /* ── Responsive ─────────────────────── */
+    @media (max-width: 991px) {
+      .calendar-card { position: static; }
+      .contact-hero h1 { font-size: 1.75rem; }
+      .contact-hero { padding: 40px 0 34px; }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-     <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html">Home</a></li>
-
-          <li class="dropdown"><a href="#">About <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                    <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-
-
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-<li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
-
+          </li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky">
+  <i class="fa-brands fa-bluesky"></i>
+</a>        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ── Hero ── -->
+    <div class="contact-hero">
       <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Contact</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Contact</li>
-          </ol>
-        </div>
-
+        <h1><i class="bi bi-envelope-fill me-2" style="font-size:1.8rem; vertical-align:middle;"></i>Contact</h1>
+        <p>Questions about research, courses, or the genome size estimation service? Reach out by email or request a meeting below.</p>
       </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Contact Section ======= -->
-    <div class="map-section">
-      <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1521.9472390970632!2d-111.7147541!3d40.2780942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0eaddd177d43479!2sUVU%20Bio%20Building!5e0!3m2!1sen!2sus!4v1627345523883!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <section id="contact" class="contact">
+    <!-- ── Main content ── -->
+    <div class="contact-body">
       <div class="container">
+        <div class="row g-4">
 
-        <div class="row justify-content-center">
+          <!-- ── LEFT: info + meeting instructions ── -->
+          <div class="col-lg-4">
 
-          <div class="col-lg-10">
+            <!-- Contact details -->
+            <div class="info-card">
+              <h3><i class="bi bi-person-circle"></i> Dr. Carl Hjelmen</h3>
 
-            <div class="info-wrap">
-              <div class="row">
-                <div class="col-lg-4 info">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>SB 242b<br>800 West University PKWY<br>Orem, UT 84058</p>
+              <div class="contact-detail">
+                <div class="cd-icon"><i class="bi bi-building"></i></div>
+                <div class="cd-body">
+                  <span class="cd-label">Office</span>
+                  <span class="cd-value">SB 242b<br>800 West University Pkwy<br>Orem, UT 84058</span>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="cd-icon"><i class="bi bi-envelope-fill"></i></div>
+                <div class="cd-body">
+                  <span class="cd-label">Email</span>
+                  <span class="cd-value">
+                    <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a><br>
+                    <a href="mailto:cehjelmen@gmail.com">cehjelmen@gmail.com</a>
+                  </span>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="cd-icon"><i class="bi bi-telephone-fill"></i></div>
+                <div class="cd-body">
+                  <span class="cd-label">Phone</span>
+                  <span class="cd-value">(801) 863-8084</span>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <div class="cd-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div class="cd-body">
+                  <span class="cd-label">Department</span>
+                  <span class="cd-value">
+                    <a href="http://www.uvu.edu/biology/" target="_blank" rel="noopener">Department of Biology</a><br>
+                    Utah Valley University
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Profiles -->
+            <div class="info-card">
+              <h3><i class="bi bi-link-45deg"></i> Academic Profiles</h3>
+              <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" class="profile-link">
+                <i class="bi bi-mortarboard-fill"></i>
+                <span>Google Scholar</span>
+              </a>
+              <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener" class="profile-link">
+                <i class="bi bi-journal-text"></i>
+                <span>ResearchGate</span>
+              </a>
+              <a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" class="profile-link">
+  				<i class="fa-brands fa-bluesky"></i>
+				  <span>Bluesky</span>
+				</a>  
+                
+              <a href="http://instagram.com/carlhjelmen/" target="_blank" rel="noopener" class="profile-link">
+                <i class="bi bi-instagram"></i>
+                <span>Instagram</span>
+              </a>
+              <a href="assets/publications/CV.pdf" class="profile-link">
+                <i class="bi bi-file-earmark-text"></i>
+                <span>Curriculum Vitae (PDF)</span>
+              </a>
+            </div>
+
+            <!-- Meeting instructions -->
+            <div class="meeting-card">
+              <div class="mc-header">
+                <i class="bi bi-calendar3"></i>
+                <h3>How to Request a Meeting</h3>
+              </div>
+              <div class="mc-body">
+
+                <ol class="meeting-steps">
+                  <li>
+                    <div class="step-text">
+                      <strong>Check the calendar →</strong>
+                      Look at the calendar on this page for a time that appears open for both of us.
+                    </div>
+                  </li>
+                  <li>
+                    <div class="step-text">
+                      <strong>Send an email</strong>
+                      Write to <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a> or <a href="mailto:cehjelmen@gmail.com">cehjelmen@gmail.com</a> with your proposed date, time, and a brief note about what you'd like to discuss.
+                    </div>
+                  </li>
+                  <li>
+                    <div class="step-text">
+                      <strong>Wait for confirmation</strong>
+                      I'll reply to confirm or suggest an alternative time. The meeting is not scheduled until you receive a confirmation.
+                    </div>
+                  </li>
+                </ol>
+
+                <div class="no-booking-notice">
+                  <i class="bi bi-exclamation-triangle-fill"></i>
+                  <span>There is <strong>no automated booking system</strong>. All meeting requests must go through email — do not assume a time is reserved until you hear back from me directly.</span>
                 </div>
 
-                <div class="col-lg-4 info mt-4 mt-lg-0">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>Carl.Hjelmen@uvu.edu<br>cehjelmen@gmail.com</p>
+                <div class="office-hours-note">
+                  <i class="bi bi-door-open-fill"></i>
+                  <span>If the calendar shows <strong>"Office Hours"</strong>, you are welcome to stop by SB 242b without an appointment during that time.</span>
                 </div>
 
-                <div class="col-lg-4 info mt-4 mt-lg-0">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+1 (801)-863-8084 <br></p>
-                </div>
               </div>
             </div>
 
           </div>
 
+          <!-- ── RIGHT: Calendar ── -->
+          <div class="col-lg-8">
+            <div class="calendar-card">
+              <div class="cc-header">
+                <div class="cc-header-left">
+                  <i class="bi bi-calendar3-week"></i>
+                  <h3>Dr. Hjelmen's Calendar</h3>
+                </div>
+                <div class="cc-legend">
+                  <span class="dot"></span>
+                  <span>Live — updates automatically</span>
+                </div>
+              </div>
+
+              <!--
+                CALENDAR EMBED — to update, replace the src below with your new embed URL.
+                Get it from: Google Calendar → Settings → [Your Calendar] → Integrate Calendar → Embed code.
+                Recommended: set mode=WEEK for the most useful view.
+              -->
+              <iframe
+                src="https://calendar.google.com/calendar/embed?height=640&wkst=1&bgcolor=%23ffffff&ctz=America%2FDenver&src=Y2VoamVsbWVuQGdtYWlsLmNvbQ&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%230B8043&showPrint=0&showTabs=1&showCalendars=0&mode=WEEK"
+                height="640"
+                frameborder="0"
+                scrolling="no"
+                title="Dr. Hjelmen's Google Calendar">
+              </iframe>
+
+              <div class="calendar-note">
+                <i class="bi bi-info-circle-fill"></i>
+                <span>This calendar may not reflect every commitment. An open slot is not a guarantee of availability — always confirm via email before assuming a time works.</span>
+              </div>
+            </div>
+          </div>
+
         </div>
-
- 
       </div>
-	  	<h4 class="section-title"> <br>My Calendar</p></h4>
-	<div align="center">
-	<h7> If you need to schedule a meeting with me, please look for an available time in the 
-	embedded Google Calendar (below) and reach out to me with that time.<br> <br>
-If it says "Office Hours", please feel free to stop by my office. <br><br>
-Keep in mind, that the calendar may not be fully updated and does
-	not guarantee we can meet at your requested time or that I will be available in my office.<br><br></h7>
-	</div>
-	<div align="center">
-	<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FDenver&amp;src=Y2VoamVsbWVuQGdtYWlsLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%230B8043&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;mode=WEEK" 
-	style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
-    </section><!-- End Contact Section -->
+    </div>
 
-  </main><!-- End #main -->
+    <!-- ── Map ── -->
+    <div class="map-section">
+      <div class="map-label">
+        <i class="bi bi-geo-alt-fill"></i>
+        UVU Biology Building (SB) — 800 West University Pkwy, Orem, UT 84058 · Office SB 242b
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1521.9472390970632!2d-111.7147541!3d40.2780942!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0eaddd177d43479!2sUVU%20Bio%20Building!5e0!3m2!1sen!2sus!4v1627345523883!5m2!1sen!2sus"
+        allowfullscreen
+        loading="lazy"
+        title="UVU Biology Building map">
+      </iframe>
+    </div>
 
-    <!-- ======= Footer ======= -->
+  </main>
+
+  <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="gs_estimations.html">Genome Size Estimations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="team.html">Research Team</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
-      </div>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+	<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -239,13 +705,9 @@ Keep in mind, that the calendar may not be fully updated and does
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

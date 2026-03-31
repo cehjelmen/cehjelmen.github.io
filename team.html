@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Research Team</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Research Team | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Meet the current and past undergraduate researchers of the Hjelmen Lab at Utah Valley University.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -25,450 +32,894 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    :root {
+      --green-dark:   #1a3f26;
+      --green-main:   #275D38;
+      --green-mid:    #3a7d52;
+      --green-light:  #e8f2ec;
+      --green-pale:   #f4faf6;
+      --green-border: #c3ddc9;
+      --text-body:    #2c2c2c;
+      --text-muted:   #666;
+    }
+
+    body { font-family: 'Source Sans 3', sans-serif; color: var(--text-body); }
+
+    /* ── Hero ───────────────────────────────────── */
+    .team-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 60%, var(--green-mid) 100%);
+      margin-top: 72px;
+      padding: 60px 0 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .team-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .team-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      position: relative;
+    }
+    .team-hero p.lead {
+      color: rgba(255,255,255,0.82);
+      font-size: 1rem;
+      max-width: 580px;
+      margin: 0;
+      position: relative;
+    }
+    .hero-join-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.14);
+      border: 2px solid rgba(255,255,255,0.4);
+      color: #fff;
+      padding: 9px 22px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-decoration: none;
+      margin-top: 18px;
+      transition: background 0.2s;
+      position: relative;
+    }
+    .hero-join-btn:hover { background: rgba(255,255,255,0.26); color: #fff; }
+
+    /* ── Section labels ─────────────────────────── */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .section-label h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 0;
+    }
+    .section-label .sl-line {
+      flex: 1;
+      height: 2px;
+      background: var(--green-light);
+    }
+    .section-label .sl-count {
+      background: var(--green-main);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    /* ── Current member cards ───────────────────── */
+    .current-section {
+      background: var(--green-pale);
+      padding: 56px 0 60px;
+    }
+
+    .member-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--green-border);
+      transition: box-shadow 0.25s, transform 0.25s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .member-card:hover {
+      box-shadow: 0 8px 28px rgba(39,93,56,0.14);
+      transform: translateY(-4px);
+    }
+
+    .member-card .mc-photo-wrap {
+      position: relative;
+      overflow: hidden;
+      height: 260px;
+      background: var(--green-light);
+    }
+    .member-card .mc-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+    .member-card:hover .mc-photo-wrap img { transform: scale(1.04); }
+
+    /* Start date ribbon */
+    .member-card .mc-ribbon {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: var(--green-main);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.04em;
+    }
+
+    .member-card .mc-body {
+      padding: 20px 22px 22px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .member-card .mc-name {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 6px;
+    }
+    .member-card .mc-project {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 14px;
+    }
+    .member-card .mc-project strong {
+      display: block;
+      color: var(--green-main);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .member-card .mc-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .member-card .mc-website {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--green-light);
+      color: var(--green-main);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 11px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .member-card .mc-website:hover { background: var(--green-border); }
+
+    /* PI card — slightly different treatment */
+    .pi-card {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 100%);
+      border-radius: 12px;
+      overflow: hidden;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+    }
+    .pi-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 18px 18px;
+      pointer-events: none;
+    }
+    .pi-card .mc-photo-wrap {
+      height: 260px;
+      background: rgba(255,255,255,0.08);
+    }
+    .pi-card .mc-body { padding: 20px 22px 22px; }
+    .pi-card .mc-name { color: #fff; }
+    .pi-card .mc-project { color: rgba(255,255,255,0.78); }
+    .pi-card .mc-project strong { color: rgba(255,255,255,0.5); }
+    .pi-card .mc-website {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+    .pi-card .mc-website:hover { background: rgba(255,255,255,0.25); }
+    .pi-card .mc-ribbon {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(4px);
+    }
+    .pi-title-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Alumni section ─────────────────────────── */
+    .alumni-section {
+      background: #fff;
+      padding: 56px 0 70px;
+    }
+
+    /* UVU alumni: horizontal cards with photo */
+    .alumni-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid var(--green-border);
+      background: var(--green-pale);
+      transition: box-shadow 0.2s, transform 0.2s;
+      margin-bottom: 14px;
+    }
+    .alumni-card:hover {
+      box-shadow: 0 4px 16px rgba(39,93,56,0.10);
+      transform: translateX(3px);
+    }
+    .alumni-card .ac-photo {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top center;
+      flex-shrink: 0;
+      border: 3px solid var(--green-border);
+    }
+    .alumni-card .ac-photo.ac-blank {
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-mid);
+      font-size: 1.5rem;
+    }
+    .alumni-card .ac-body { flex: 1; min-width: 0; }
+    .alumni-card .ac-name {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 2px;
+    }
+    .alumni-card .ac-project {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+    .alumni-card .ac-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    .alumni-card .ac-dates {
+      font-size: 0.75rem;
+      color: var(--green-main);
+      font-weight: 600;
+      background: var(--green-light);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+    .alumni-card .ac-outcome {
+      font-size: 0.75rem;
+      color: #555;
+      background: #f0f0f0;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .alumni-card .ac-outcome i { font-size: 0.7rem; color: var(--green-mid); }
+    .alumni-card .ac-website {
+      font-size: 0.75rem;
+      color: var(--green-main);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .alumni-card .ac-website:hover { text-decoration: underline; }
+
+    /* TAMU alumni: compact name-row list */
+    .tamu-section-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 36px 0 16px;
+    }
+    .tamu-section-label .tsl-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      background: #f0f0f0;
+      padding: 3px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .tamu-section-label .tsl-line {
+      flex: 1;
+      height: 1px;
+      background: #e0e0e0;
+    }
+
+    .tamu-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid #ebebeb;
+      background: #fafafa;
+      margin-bottom: 8px;
+      transition: background 0.15s;
+    }
+    .tamu-row:hover { background: var(--green-pale); }
+    .tamu-row .tr-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-mid);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .tamu-row .tr-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--green-dark);
+      min-width: 150px;
+    }
+    .tamu-row .tr-project {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      flex: 1;
+    }
+    .tamu-row .tr-inst {
+      font-size: 0.75rem;
+      color: #888;
+      white-space: nowrap;
+      font-style: italic;
+    }
+
+    /* ── Joining CTA ────────────────────────────── */
+    .join-cta {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-main));
+      border-radius: 12px;
+      padding: 36px 40px;
+      text-align: center;
+      margin-top: 52px;
+    }
+    .join-cta h3 {
+      font-family: 'Lora', serif;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .join-cta p { color: rgba(255,255,255,0.82); margin-bottom: 18px; font-size: 0.95rem; }
+    .join-cta a.cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--green-dark);
+      font-weight: 700;
+      padding: 11px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .join-cta a.cta-btn:hover { background: var(--green-light); }
+
+    /* ── Responsive ─────────────────────────────── */
+    @media (max-width: 768px) {
+      .team-hero { padding: 40px 0 34px; }
+      .team-hero h1 { font-size: 1.75rem; }
+      .tamu-row { flex-wrap: wrap; }
+      .tamu-row .tr-inst { width: 100%; }
+      .join-cta { padding: 28px 20px; }
+    }
+    @media (max-width: 576px) {
+      .alumni-card { flex-direction: column; }
+      .alumni-card .ac-photo { width: 56px; height: 56px; }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-     <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html">Home</a></li>
-
           <li class="dropdown"><a href="#" class="active"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
-              <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
+              <li><a href="team.html" class="active">Research Team</a></li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
-           <ul>
-                   <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-              
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-<li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
-
-		  		  
+          </li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-  
+  </header>
+
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ── Hero ── -->
+    <div class="team-hero">
+      <div class="container">
+        <h1><i class="bi bi-people-fill me-2" style="font-size:1.8rem; vertical-align:middle;"></i>The Research Team</h1>
+        <p class="lead mt-2">Undergraduate researchers are the engine of this lab. Every project, every dataset, every publication carries their contributions.</p>
+        <a href="mailto:Carl.Hjelmen@uvu.edu" class="hero-join-btn">
+          <i class="bi bi-envelope"></i> Interested in joining? Get in touch
+        </a>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- CURRENT MEMBERS                            -->
+    <!-- ══════════════════════════════════════════ -->
+    <section class="current-section">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Research Team</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Research Team</li>
-          </ol>
+        <div class="section-label">
+          <h2>Current Lab Members</h2>
+          <div class="sl-line"></div>
+          <span class="sl-count">4 members</span>
+        </div>
+
+        <div class="row g-4">
+
+          <!-- PI -->
+          <div class="col-lg-3 col-md-6">
+            <div class="pi-card member-card">
+              <div class="mc-photo-wrap">
+                <img src="assets/img/deadhorsepoint.jpg" alt="Dr. Carl Hjelmen">
+              </div>
+              <div class="mc-body">
+                <span class="pi-title-badge">Principal Investigator</span>
+                <div class="mc-name">Dr. Carl Hjelmen</div>
+                <div class="mc-project">
+                  <strong>Research Focus</strong>
+                  Genome size evolution, sex chromosome differentiation, underreplication, forensic entomology
+                </div>
+                <div class="mc-footer">
+                  <a href="aboutme.html" class="mc-website"><i class="bi bi-person-circle"></i> Full Bio</a>
+                  <a href="assets/publications/CV.pdf" class="mc-website"><i class="bi bi-file-earmark-text"></i> CV</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Haylee Beck -->
+          <div class="col-lg-3 col-md-6">
+            <div class="member-card">
+              <div class="mc-photo-wrap">
+                <img src="assets/img/students/Haylee_Beck.jpeg" alt="Haylee Beck">
+                <span class="mc-ribbon">Since Fall 2023</span>
+              </div>
+              <div class="mc-body">
+                <div class="mc-name">Haylee Beck</div>
+                <div class="mc-project">
+                  <strong>Project</strong>
+                  Survey of forensically relevant Diptera across Utah ecoregions
+                </div>
+                <div class="mc-footer">
+                  <!-- Add website link if Haylee has one -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bailey Jannuzzi -->
+          <div class="col-lg-3 col-md-6">
+            <div class="member-card">
+              <div class="mc-photo-wrap">
+                <img src="assets/img/students/Bailey.JPG" alt="Bailey Jannuzzi">
+                <span class="mc-ribbon">Since Spring 2024</span>
+              </div>
+              <div class="mc-body">
+                <div class="mc-name">Bailey Jannuzzi</div>
+                <div class="mc-project">
+                  <strong>Project</strong>
+                  Developing genomic and bioinformatic pipelines for environmental DNA detection from Diptera samples
+                </div>
+                <div class="mc-footer">
+                  <a href="https://bailey-jj.github.io" target="_blank" rel="noopener" class="mc-website">
+                    <i class="bi bi-globe2"></i> Personal Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beth Larsen -->
+          <div class="col-lg-3 col-md-6">
+            <div class="member-card">
+              <div class="mc-photo-wrap">
+                <img src="assets/img/students/Beth_Larsen.jpeg" alt="Beth Larsen">
+                <span class="mc-ribbon">Since Summer 2025</span>
+              </div>
+              <div class="mc-body">
+                <div class="mc-name">Beth Larsen</div>
+                <div class="mc-project">
+                  <strong>Project</strong>
+                  Genome size evolution of Paleopterous insects
+                </div>
+                <div class="mc-footer">
+                  <!-- Add website link if Beth has one -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- ALUMNI                                     -->
+    <!-- ══════════════════════════════════════════ -->
+    <section class="alumni-section">
+      <div class="container">
+
+        <div class="section-label">
+          <h2>Research Alumni</h2>
+          <div class="sl-line"></div>
+          <span class="sl-count">14 researchers</span>
+        </div>
+
+        <p class="text-muted mb-4" style="font-size:0.92rem;">
+          Former lab members have gone on to PhD programs, industry positions, and continued research. We're proud of every one of them.
+        </p>
+
+        <!-- UVU alumni with photos -->
+        <div class="row g-0">
+          <div class="col-lg-6 pe-lg-3">
+
+            <!-- Olivia Frary -->
+            <div class="alumni-card">
+              <img src="assets/img/students/olivia_headshot.jpg" alt="Olivia Frary" class="ac-photo">
+              <div class="ac-body">
+                <div class="ac-name">Olivia Frary</div>
+                <div class="ac-project">Genome size differences between homogametic and heterogametic individuals and links to lifespan</div>
+                <div class="ac-meta">
+                  <span class="ac-dates">Spring 2023 – Spring 2025</span>
+                  <span class="ac-outcome"><i class="bi bi-mortarboard-fill"></i> Started PhD Fall 2025</span>
+                  <a href="https://olivia-frary.github.io" target="_blank" rel="noopener" class="ac-website"><i class="bi bi-globe2"></i> Site</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Babs Jetton -->
+            <div class="alumni-card">
+              <img src="assets/img/students/Babs_.jpg" alt="Babs Jetton" class="ac-photo">
+              <div class="ac-body">
+                <div class="ac-name">Babs Jetton</div>
+                <div class="ac-project">Constructing a Diptera phylogeny and investigating karyotype evolution</div>
+                <div class="ac-meta">
+                  <span class="ac-dates">Spring 2023 – Spring 2025</span>
+                  <span class="ac-outcome"><i class="bi bi-mortarboard-fill"></i> Started PhD Fall 2025</span>
+                  <a href="https://barbarashelleyjetton.github.io/" target="_blank" rel="noopener" class="ac-website"><i class="bi bi-globe2"></i> Site</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Remington Motte -->
+            <div class="alumni-card">
+              <img src="assets/img/students/Remington_Motte.jpg" alt="Remington Motte" class="ac-photo">
+              <div class="ac-body">
+                <div class="ac-name">Remington Motte</div>
+                <div class="ac-project">Evolutionary biology and comparative phylogenetic methods; <em>Dscam1</em> evolution in Hymenoptera</div>
+                <div class="ac-meta">
+                  <span class="ac-dates">Spring 2022 – Spring 2023</span>
+                  <span class="ac-outcome"><i class="bi bi-mortarboard-fill"></i> Started PhD Fall 2024</span>
+                  <a href="https://remingtonrimo.github.io" target="_blank" rel="noopener" class="ac-website"><i class="bi bi-globe2"></i> Site</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 ps-lg-3">
+
+            <!-- Audrey French -->
+            <div class="alumni-card">
+              <img src="assets/img/students/Audrey_French.jpg" alt="Audrey French" class="ac-photo">
+              <div class="ac-body">
+                <div class="ac-name">Audrey French</div>
+                <div class="ac-project">Chromosome shape variation and evolution in fruit flies</div>
+                <div class="ac-meta">
+                  <span class="ac-dates">Fall 2021 – Fall 2024</span>
+                  <span class="ac-outcome"><i class="bi bi-briefcase-fill"></i> Industry</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Marissa Ohran -->
+            <div class="alumni-card">
+              <img src="assets/img/students/Marissa_Ohran.jpeg" alt="Marissa Ohran" class="ac-photo">
+              <div class="ac-body">
+                <div class="ac-name">Marissa Ohran</div>
+                <div class="ac-project">Assembling and assessing heterochromatin-rich genomes</div>
+                <div class="ac-meta">
+                  <span class="ac-dates">Fall 2021 – Spring 2023</span>
+                  <a href="https://m-ohran.github.io" target="_blank" rel="noopener" class="ac-website"><i class="bi bi-globe2"></i> Site</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Samantha Curnow -->
+            <div class="alumni-card">
+              <div class="ac-photo ac-blank"><i class="bi bi-person"></i></div>
+              <div class="ac-body">
+                <div class="ac-name">Samantha Curnow</div>
+                <div class="ac-project">Genome size evolution in <em>Drosophila</em> species and relationships to temperature and climate</div>
+                <div class="ac-meta">
+                  <span class="ac-dates">Spring 2022 – Spring 2024</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Texas A&M alumni -->
+        <div class="tamu-section-label">
+          <span class="tsl-badge">Texas A&amp;M University</span>
+          <div class="tsl-line"></div>
+        </div>
+
+        <div class="row g-2">
+          <div class="col-lg-6">
+
+            <div class="tamu-row">
+              <div class="tr-avatar"><i class="bi bi-person"></i></div>
+              <div class="tr-name">Alex McGuane</div>
+              <div class="tr-project">miRNA qPCR and RNA preparation</div>
+              <div class="tr-inst">Entomology</div>
+            </div>
+
+            <div class="tamu-row">
+              <div class="tr-avatar"><i class="bi bi-person"></i></div>
+              <div class="tr-name">Michelle Jonika</div>
+              <div class="tr-project">Immature blow fly sex identification using qPCR</div>
+              <div class="tr-inst">Entomology / Genetics / Forensics</div>
+            </div>
+
+            <div class="tamu-row">
+              <div class="tr-avatar"><i class="bi bi-person"></i></div>
+              <div class="tr-name">Elizabeth Piron</div>
+              <div class="tr-project">Genome size and underreplication estimates</div>
+              <div class="tr-inst">Entomology / Genetics</div>
+            </div>
+
+            <div class="tamu-row">
+              <div class="tr-avatar"><i class="bi bi-person"></i></div>
+              <div class="tr-name">Renee Holmes</div>
+              <div class="tr-project">Genome size and underreplication estimates</div>
+              <div class="tr-inst">Entomology</div>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+
+            <div class="tamu-row">
+              <div class="tr-avatar"><i class="bi bi-person"></i></div>
+              <div class="tr-name">Melissa Mynes</div>
+              <div class="tr-project">Genome size and underreplication estimates</div>
+              <div class="tr-inst">Entomology / Genetics</div>
+            </div>
+
+            <div class="tamu-row">
+              <div class="tr-avatar"><i class="bi bi-person"></i></div>
+              <div class="tr-name">Margaret Garrett</div>
+              <div class="tr-project">Genome size and underreplication estimates</div>
+              <div class="tr-inst">Entomology / Genetics</div>
+            </div>
+
+            <div class="tamu-row">
+              <div class="tr-avatar"><i class="bi bi-person"></i></div>
+              <div class="tr-name">Zoe Ward</div>
+              <div class="tr-project">Development of forensic entomology experiments</div>
+              <div class="tr-inst">Entomology / Genetics</div>
+            </div>
+
+            <div class="tamu-row">
+              <div class="tr-avatar"><i class="bi bi-person"></i></div>
+              <div class="tr-name">Anika Sharma</div>
+              <div class="tr-project">Fulbright Scholar — mRNA markers of development in <em>Chrysomya rufifacies</em></div>
+              <div class="tr-inst">Entomology</div>
+            </div>
+
+            <div class="tamu-row">
+              <div class="tr-avatar"><i class="bi bi-person"></i></div>
+              <div class="tr-name">Alli Konstantinov</div>
+              <div class="tr-project">Phylogenetic trait simulations</div>
+              <div class="tr-inst">Biology</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Join CTA -->
+        <div class="join-cta">
+          <h3>Interested in Joining the Lab?</h3>
+          <p>Undergraduate researchers at all levels are welcome. No prior research experience required — just curiosity and commitment. Projects are available in genomics, bioinformatics, field entomology, and more.</p>
+          <a href="mailto:Carl.Hjelmen@uvu.edu" class="cta-btn">
+            <i class="bi bi-envelope-fill"></i> Carl.Hjelmen@uvu.edu
+          </a>
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section>
 
-    <!-- ======= Our Team Section ======= -->
-    <section id="team" class="team section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>The Current <strong>Research Team</strong></h2>
-          <p>Here is the current lab team!</p>
-        </div>
-
-        <div class="row">
-
-  
-
-          
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/students/Haylee_Beck.jpeg" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Haylee Beck</h4>
-                <span>Survey of forensically relevant Diptera in Utah
-                <br><br>Started Fall 2023
-                </span>
-              </div>
-            </div>
-          </div>
-          
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/students/Bailey.JPG" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Bailey Jannuzzi</h4>
-                <span>Working to develop genomic and bioinformatic pipelines in order to identify environmental DNA from Diptera samples.
-                <br><br>Started Spring 2024
-                <br><br>Website <a href="https://bailey-jj.github.io">here</a>
-                </span>
-              </div>
-            </div>
-          </div>
-          
-    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/students/Beth_Larsen.jpeg" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Beth Larsen</h4>
-                <span>Genome Size Evolution of Paleopterous Insects 
-                <br><br>Started Summer 2025
-                </span>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-
-          
-
-
-
-      </div>
-	  <section id="team" class="team section-bg">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Research <strong>Alumni</strong></h2>
-          <p>Here are past researchers I have worked with.</p>
-        </div>
-
-        <div class="row">
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/students/olivia_headshot.jpg" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Olivia Frary</h4>
-                <span>I’m working on a project to determine if the difference in genome size between homogametic and heterogametic individuals in a species contributes to the difference in lifespan between those individuals.
-                <br><br>Started Spring 2023, Graduated Spring 2025, Started PhD Fall 2025
-                <br><br>Website <a href="https://olivia-frary.github.io">here</a>
-                </span>
-              </div>
-            </div>
-          </div>
-          
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/students/Babs_.jpg" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Babs Jetton</h4>
-                <span>Constructing Diptera phylogeny and investigation of Diptera karyotype evolution
-                <br><br>Started Spring 2023, Graduated Spring 2025, Started PhD Fall 2025 
-                <br><br>Website <a href="https://barbarashelleyjetton.github.io/">here</a>
-                </span>
-              </div>
-            </div>
-          </div>
-          
-               <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/students/Audrey_French.jpg" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Audrey French</h4>
-                <span>I'm currently working on identifying the chromosome shape variation and evolution in fruit flies. 
-                I'm currently studying biology and plan to go on and study genetics.
-                <br><br> Started Fall 2021, Graduated Fall 2024, Started work in Industry
-</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/students/Remington_Motte.jpg" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Remington Motte</h4>
-                <span>Working on questions in evolutionary biology and learning comparative phylogenetic methods
-                <br><br>Started Spring 2022, Graduated Spring 2023, Started PhD Fall 2024
-                <br><br> Website <a href="https://remingtonrimo.github.io">here </a>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Samantha Curnow</h4>
-                <span>Investigating genome size evolution in <i>Drosophila</i> species and its relation to temperature and climate variables.
-                <br><br>Started Spring 2022, Graduated Spring 2024
-                </span>
-              </div>
-            </div>
-          </div>
-         
-         
-         <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up">
-              <div class="member-img">
-                <img src="assets/img/students/Marissa_Ohran.jpeg" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Marissa Ohran</h4>
-                <span>Assembling and assessing problematic genomics (lots of heterochromatin!)
-                <br><br> Started Fall 2021--Graduated Spring 2023
-                <br><br> Website <a href="https://m-ohran.github.io">here </a>
-</span>
-              </div>
-            </div>
-          </div>
-		<div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Alli Konstantinov</h4>
-                <span>Phylogenetic Trait Simulations
-                <br><br>Texas A&M University Biology
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Alex McGuane</h4>
-                <span>miRNA qPCR and RNA prep
-                <br><br>Texas A&M University Entomology</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Michelle Jonika</h4>
-                <span>Immature blow fly sex identification using qPCR
-                <br><br>Texas A&M University Entomology/Genetics/Forensics</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Elizabeth Piron</h4>
-                <span>Genome size and underreplication estimates
-                <br><br>Texas A&M University Entomology/Genetics</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Renee Holmes</h4>
-                <span>Genome size and underreplication estimates
-                <br><br>Texas A&M University Entomology</span>
-              </div>
-            </div>
-          </div>
-		  
-		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Melissa Mynes</h4>
-                <span>Genome size and underreplication estimates
-                <br><br>Texas A&M University Entomology/Genetics</span>
-              </div>
-            </div>
-          </div>
-		  
-		  <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Margaret Garrett</h4>
-                <span>Genome size and underreplication estimates
-                <br><br>Texas A&M University Entomology/Genetics</span>
-              </div>
-            </div>
-          </div>
-		  
-		   <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Zoe Ward</h4>
-                <span>Development of experiments for forensic entomology
-                <br><br>Texas A&M University Entomology/Genetics</span>
-              </div>
-            </div>
-          </div>
-		  
-		   <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/blankpic.png" class="img-fluid" alt="">
-                </div>
-              <div class="member-info">
-                <h4>Anika Sharma</h4>
-                <span>Fulbright Scholar investigating mRNA markers of developmentin <i>Chrysomya rufifacies</i>
-                <br><br>Texas A&M University Entomology</span>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-      </div>
-    </section><!-- End Our Team Section -->
-
-  </main><!-- End #main -->
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="lab_photos.html">Lab Photos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Vendor JS Files -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7ZST668Y5S');</script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Join the Lab | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Undergraduate research opportunities in the Hjelmen Lab at Utah Valley University. Learn about active projects, what to expect, and how to apply.">
+  <link href="assets/img/logo2.png" rel="icon">
+  <link href="assets/img/logo2.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    :root {
+      --green-dark:   #1a3f26;
+      --green-main:   #275D38;
+      --green-mid:    #3a7d52;
+      --green-light:  #e8f2ec;
+      --green-pale:   #f4faf6;
+      --green-border: #c3ddc9;
+    }
+    body { font-family: 'Source Sans 3', sans-serif; }
+
+    /* Hero */
+    .join-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 60%, var(--green-mid) 100%);
+      margin-top: 72px;
+      padding: 64px 0 52px;
+      position: relative;
+      overflow: hidden;
+    }
+    .join-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .join-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+    .join-hero p.lead {
+      color: rgba(255,255,255,0.82);
+      font-size: 1.05rem;
+      max-width: 580px;
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .hero-apply-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: var(--green-dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+      position: relative;
+    }
+    .hero-apply-btn:hover { background: var(--green-light); color: var(--green-dark); }
+
+    /* Section headings */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .section-label h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 0;
+    }
+    .section-label .sl-line {
+      flex: 1;
+      height: 2px;
+      background: var(--green-light);
+    }
+
+    /* ── Active projects ── */
+    .projects-section { background: var(--green-pale); padding: 60px 0; }
+
+    .project-card {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .project-card:hover {
+      box-shadow: 0 6px 20px rgba(39,93,56,0.12);
+      transform: translateY(-3px);
+    }
+    .project-card .pc-top {
+      padding: 20px 22px 16px;
+      border-bottom: 1px solid var(--green-light);
+    }
+    .project-card .pc-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    .project-card .pc-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 3px 9px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+    .pc-status.recruiting {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+    }
+    .pc-status.active {
+      background: var(--green-light);
+      color: var(--green-main);
+      border: 1px solid var(--green-border);
+    }
+    .project-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .project-card p {
+      font-size: 0.86rem;
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .project-card .pc-bottom {
+      padding: 14px 22px;
+      background: var(--green-pale);
+    }
+    .project-card .pc-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .skill-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: var(--green-light);
+      color: var(--green-main);
+      border: 1px solid var(--green-border);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* ── What to expect ── */
+    .expect-section { background: #fff; padding: 60px 0; }
+
+    .expect-timeline {
+      position: relative;
+      padding-left: 36px;
+    }
+    .expect-timeline::before {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--green-light);
+    }
+    .expect-item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+    .expect-item:last-child { margin-bottom: 0; }
+    .expect-item::before {
+      content: '';
+      position: absolute;
+      left: -29px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--green-main);
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px var(--green-main);
+    }
+    .expect-item h4 {
+      font-family: 'Lora', serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 5px;
+    }
+    .expect-item p {
+      font-size: 0.86rem;
+      color: #555;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* What you'll learn grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .skill-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 14px;
+      background: var(--green-pale);
+      border: 1px solid var(--green-border);
+      border-radius: 8px;
+    }
+    .skill-item i {
+      color: var(--green-main);
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .skill-item span {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      line-height: 1.4;
+    }
+
+    /* ── FAQ ── */
+    .faq-section { background: var(--green-pale); padding: 60px 0; }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 16px 20px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--green-dark);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background 0.15s;
+      user-select: none;
+    }
+    .faq-q:hover { background: var(--green-pale); }
+    .faq-q .faq-chevron {
+      color: var(--green-main);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      transition: transform 0.25s;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-a {
+      display: none;
+      padding: 0 20px 16px;
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.7;
+      border-top: 1px solid var(--green-light);
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── Alumni outcomes ── */
+    .alumni-strip {
+      background: linear-gradient(135deg, var(--green-dark), var(--green-main));
+      padding: 52px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .alumni-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
+    .alumni-strip h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+      position: relative;
+    }
+    .alumni-strip p.sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      margin-bottom: 0;
+      position: relative;
+    }
+
+    .outcome-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 20px;
+      position: relative;
+    }
+    .outcome-card .oc-name {
+      font-family: 'Lora', serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+    .outcome-card .oc-project {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    .outcome-card .oc-outcome {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 20px;
+    }
+    .outcome-card .oc-outcome i { color: #aed6bc; }
+
+    /* ── Apply CTA ── */
+    .apply-section { background: #fff; padding: 60px 0; }
+
+    .apply-box {
+      background: var(--green-pale);
+      border: 1px solid var(--green-border);
+      border-radius: 12px;
+      padding: 36px 40px;
+    }
+    .apply-box h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin-bottom: 10px;
+    }
+    .apply-steps {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 24px;
+      counter-reset: apply-counter;
+    }
+    .apply-steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--green-border);
+      counter-increment: apply-counter;
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.55;
+    }
+    .apply-steps li:last-child { border-bottom: none; }
+    .apply-steps li::before {
+      content: counter(apply-counter);
+      background: var(--green-main);
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.78rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .apply-steps li strong { color: var(--green-dark); }
+    .apply-email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-main);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .apply-email-btn:hover { background: var(--green-dark); color: #fff; }
+
+    @media (max-width: 768px) {
+      .join-hero { padding: 44px 0 38px; margin-top: 58px; }
+      .join-hero h1 { font-size: 1.8rem; }
+      .apply-box { padding: 24px 20px; }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
+              <li><a href="team.html">Research Team</a></li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html" class="active">Join the Lab</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="researchinterests.html">Research Interests</a></li>
+              <li><a href="publications.html">Publications</a></li>
+            </ul>
+          </li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0;" onmouseover="this.style.color='#275D38'" onmouseout="this.style.color='#a0a0a0'"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0;" onmouseover="this.style.color='#275D38'" onmouseout="this.style.color='#a0a0a0'"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <div class="join-hero">
+      <div class="container">
+        <h1>Join the Hjelmen Lab</h1>
+        <p class="lead">Undergraduate researchers are the core of everything we do. No prior research experience required — just curiosity, commitment, and a willingness to learn.</p>
+        <a href="#apply" class="hero-apply-btn"><i class="bi bi-envelope-fill"></i> How to Apply</a>
+      </div>
+    </div>
+
+    <!-- ══ Active Projects ══ -->
+    <section class="projects-section">
+      <div class="container">
+        <div class="section-label">
+          <h2>Active Projects</h2>
+          <div class="sl-line"></div>
+        </div>
+        <p class="mb-4" style="color:#555; font-size:0.95rem;">
+          These are the projects currently running in the lab. Projects marked <span style="background:#dcfce7; color:#166534; border:1px solid #86efac; font-size:0.75rem; font-weight:700; padding:2px 8px; border-radius:10px;">Recruiting</span> are actively looking for student collaborators.
+        </p>
+
+        <div class="row g-3">
+
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card">
+              <div class="pc-top">
+                <div class="pc-icon" style="background:#275D38;"><i class="bi bi-search"></i></div>
+                <div class="pc-status active"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> Active</div>
+                <h3>Survey of Forensically Relevant Diptera in Utah</h3>
+                <p>Documenting which blow fly and other forensically important Diptera species occur across Utah's ecoregions, and how elevation, habitat, and season affect their distribution. Includes field collection and lab identification.</p>
+              </div>
+              <div class="pc-bottom">
+                <div class="pc-skills">
+                  <span class="skill-tag">Field collection</span>
+                  <span class="skill-tag">Insect ID</span>
+                  <span class="skill-tag">Data analysis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card">
+              <div class="pc-top">
+                <div class="pc-icon" style="background:#275D38;"><i class="bi bi-hdd-stack"></i></div>
+                <div class="pc-status active"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> Active</div>
+                <h3>Environmental DNA Detection from Diptera Samples</h3>
+                <p>Developing genomic and bioinformatic pipelines to identify insect species from environmental DNA — without needing physical specimens. Combines wet lab work with computational analysis.</p>
+              </div>
+              <div class="pc-bottom">
+                <div class="pc-skills">
+                  <span class="skill-tag">Bioinformatics</span>
+                  <span class="skill-tag">DNA extraction</span>
+                  <span class="skill-tag">R / Python</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card">
+              <div class="pc-top">
+                <div class="pc-icon" style="background:#275D38;"><i class="bi bi-layers"></i></div>
+                <div class="pc-status active"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> Active</div>
+                <h3>Genome Size Evolution in Paleopterous Insects</h3>
+                <p>Estimating and comparing genome sizes across Paleopterous insects (mayflies, dragonflies) using flow cytometry, investigating patterns of size change across these ancient lineages.</p>
+              </div>
+              <div class="pc-bottom">
+                <div class="pc-skills">
+                  <span class="skill-tag">Flow cytometry</span>
+                  <span class="skill-tag">Comparative phylogenetics</span>
+                  <span class="skill-tag">R</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card">
+              <div class="pc-top">
+                <div class="pc-icon" style="background:#275D38;"><i class="bi bi-gender-ambiguous"></i></div>
+                <div class="pc-status recruiting"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> Recruiting</div>
+                <h3>Sex Chromosome Evolution via Genome Size</h3>
+                <p>Using differences in genome size between males and females to identify species with unusual sex chromosome systems. Candidate species are then sequenced to investigate what's on those chromosomes.</p>
+              </div>
+              <div class="pc-bottom">
+                <div class="pc-skills">
+                  <span class="skill-tag">Flow cytometry</span>
+                  <span class="skill-tag">Genome sequencing</span>
+                  <span class="skill-tag">Bioinformatics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card">
+              <div class="pc-top">
+                <div class="pc-icon" style="background:#275D38;"><i class="bi bi-diagram-3"></i></div>
+                <div class="pc-status active"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> Active</div>
+                <h3>Diptera Phylogenetics &amp; Karyotype Evolution</h3>
+                <p>Constructing a comprehensive Diptera phylogeny and using it to investigate patterns of karyotype evolution across flies — how chromosome number and structure have changed through time.</p>
+              </div>
+              <div class="pc-bottom">
+                <div class="pc-skills">
+                  <span class="skill-tag">Phylogenetics</span>
+                  <span class="skill-tag">Comparative methods</span>
+                  <span class="skill-tag">R</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 6 -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card">
+              <div class="pc-top">
+                <div class="pc-icon" style="background:#275D38;"><i class="bi bi-diagram-3"></i></div>
+                <div class="pc-status active"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> Active</div>
+                <h3>Genome Size Evolution in Insects</h3>
+                <p>This project is a long term project in which the goal is to investigate patters of genome size evolution across all of insects. This project is expected to 
+                be broken up in to many smaller projects and investigations of genome size and its relationship to other life history characteristics</p>
+              </div>
+              <div class="pc-bottom">
+                <div class="pc-skills">
+                  <span class="skill-tag">Phylogenetics</span>
+                  <span class="skill-tag">Comparative methods</span>
+                  <span class="skill-tag">R</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 7 — open -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card" style="border-style:dashed; opacity:0.8;">
+              <div class="pc-top">
+                <div class="pc-icon" style="background:#aaa;"><i class="bi bi-plus-lg"></i></div>
+                <div class="pc-status recruiting"><i class="bi bi-circle-fill" style="font-size:0.5rem;"></i> Open</div>
+                <h3>Have an Idea? Bring It.</h3>
+                <p>The lab is open to new questions and directions. If you have an idea related to genome evolution, insect biology, or bioinformatics, reach out — we can talk through whether it's feasible and interesting.</p>
+              </div>
+              <div class="pc-bottom">
+                <div class="pc-skills">
+                  <span class="skill-tag">Your ideas here</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ What to Expect ══ -->
+    <section class="expect-section">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+
+          <div class="col-lg-5" data-aos="fade-right">
+            <div class="section-label">
+              <h2>What to Expect</h2>
+              <div class="sl-line"></div>
+            </div>
+            <p style="color:#555; font-size:0.92rem; margin-bottom:28px;">Research in the Hjelmen Lab is a genuine experience — not busy work. Here's what a typical student journey looks like.</p>
+
+            <div class="expect-timeline">
+              <div class="expect-item">
+                <h4>Getting started</h4>
+                <p>You'll begin by meeting with Dr. Hjelmen to discuss what it's like in the lab, your interests and your goals.
+                We then dig into papers and work to find a project is specific to you and your interests.
+                 You'll get oriented on lab protocols, safety, 
+                and the background literature for your project.</p>
+              </div>
+              <div class="expect-item">
+                <h4>Learning the techniques</h4>
+                <p>Depending on your project, you'll learn wet lab techniques 
+                (DNA extraction, flow cytometry, insect dissection) and/or computational 
+                approaches (R, command line, database searching). You don't need to 
+                know any of these going in.</p>
+              </div>
+              <div class="expect-item">
+                <h4>Collecting and analyzing data</h4>
+                <p>You'll generate and analyze your own data as part of an ongoing project. 
+                This is real research — results that don't go as 
+                expected are just as valuable as ones that do.</p>
+              </div>
+              <div class="expect-item">
+                <h4>Presenting and publishing</h4>
+                <p>Students are encouraged (and expected) to present at conferences 
+                (UCUR, Pacific Branch of Entomology, national Entomological Society of America meetings) 
+                and are included as co-authors on publications when they make significant contributions. 
+                Several past students are already published.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="section-label">
+              <h2>What You'll Learn</h2>
+              <div class="sl-line"></div>
+            </div>
+            <div class="skills-grid mb-5">
+              <div class="skill-item"><i class="bi bi-droplet-fill"></i><span>Flow cytometry &amp; genome size estimation</span></div>
+              <div class="skill-item"><i class="bi bi-code-slash"></i><span>R programming &amp; statistical analysis</span></div>
+              <div class="skill-item"><i class="bi bi-diagram-2"></i><span>Phylogenetic comparative methods</span></div>
+              <div class="skill-item"><i class="bi bi-bug-fill"></i><span>Insect collection &amp; identification</span></div>
+              <div class="skill-item"><i class="bi bi-hdd-stack"></i><span>Genomic database searching (NCBI, SRA)</span></div>
+              <div class="skill-item"><i class="bi bi-file-earmark-text"></i><span>Scientific writing &amp; literature reading</span></div>
+              <div class="skill-item"><i class="bi bi-mic-fill"></i><span>Conference presentation skills</span></div>
+              <div class="skill-item"><i class="bi bi-people-fill"></i><span>Collaborative research workflow</span></div>
+              <div class="skill-item"><i class="bi bi-terminal"></i><span>Command line &amp; bioinformatics pipelines</span></div>
+            </div>
+
+            <!-- Time commitment note -->
+            <div style="background:var(--green-pale); border:1px solid var(--green-border); border-radius:8px; padding:20px 22px;">
+              <h4 style="font-family:'Lora',serif; font-size:0.98rem; font-weight:700; color:var(--green-dark); margin-bottom:10px;"><i class="bi bi-clock me-2" style="color:var(--green-main);"></i>Time Commitment</h4>
+              <p style="font-size:0.86rem; color:#555; line-height:1.65; margin:0;">Most students work in the lab 5–10 hours per week, 
+              though this is flexible based on your schedule and the project phase. 
+              Research can be informally or done for credit through <strong>BIOL 4890</strong>.
+               Talk to Dr. Hjelmen about what arrangement works best for you.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Alumni Outcomes ══ -->
+    <div class="alumni-strip">
+      <div class="container">
+        <div class="row align-items-center g-4 mb-4">
+          <div class="col-lg-5" style="position:relative;">
+            <h2>Where Students Go</h2>
+            <p class="sub">UVU lab members have gone on to PhD programs and careers in science — often with publications already on their CV.</p>
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-3">
+            <div class="outcome-card">
+              <div class="oc-name">Olivia Frary</div>
+              <div class="oc-project">Genome size &amp; lifespan differences between sexes</div>
+              <span class="oc-outcome"><i class="bi bi-mortarboard-fill"></i> PhD Program, Fall 2025</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="outcome-card">
+              <div class="oc-name">Babs Jetton</div>
+              <div class="oc-project">Diptera phylogenetics &amp; karyotype evolution</div>
+              <span class="oc-outcome"><i class="bi bi-mortarboard-fill"></i> PhD Program, Fall 2025</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="outcome-card">
+              <div class="oc-name">Remington Motte</div>
+              <div class="oc-project"><em>Dscam1</em> evolution in Hymenoptera</div>
+              <span class="oc-outcome"><i class="bi bi-mortarboard-fill"></i> PhD Program, Fall 2024</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="outcome-card">
+              <div class="oc-name">Audrey French</div>
+              <div class="oc-project">Chromosome shape variation in fruit flies</div>
+              <span class="oc-outcome"><i class="bi bi-briefcase-fill"></i> Industry, Fall 2024</span>
+            </div>
+          </div>
+        </div>
+        <p style="color:rgba(255,255,255,0.6); font-size:0.8rem; margin-top:16px; position:relative;">
+          Remington Motte co-authored a published paper as an undergraduate. Olivia Frary and Babs Jetton both presented at national conferences before graduating. <a href="team.html" style="color:#aed6bc;">See the full team →</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- ══ FAQ ══ -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="section-label">
+              <h2>Frequently Asked Questions</h2>
+              <div class="sl-line"></div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Do I need prior research experience to join? <i class="bi bi-chevron-down faq-chevron"></i></div>
+              <div class="faq-a">No. Many of the most successful students in the lab started with no research experience at all. What matters is curiosity and a genuine willingness to show up and learn. All techniques are taught in the lab.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Do I need to know how to code? <i class="bi bi-chevron-down faq-chevron"></i></div>
+              <div class="faq-a">Not to start. Coding skills (especially R) are something you'll likely develop over time working in the lab — they're not a prerequisite. If you're already comfortable with R or Python, that's a bonus, but it's not required.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Can I do research for course credit? <i class="bi bi-chevron-down faq-chevron"></i></div>
+              <div class="faq-a">Research is often performed informally without credit; but, yes. There are options to take research for credit (1-3 credits in a semester). 
+              Talk to Dr. Hjelmen about enrolling. You usually must have already worked with Dr. Hjelmen for this option. 
+              .</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Is there pay? <i class="bi bi-chevron-down faq-chevron"></i></div>
+              <div class="faq-a">Paid positions depend on available funding and are not guaranteed. 
+              Most students work for course credit or as volunteers. 
+              When funding is available for a paid position, current lab members are given priority. 
+              Ask Dr. Hjelmen about the current situation when you reach out.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">How many hours per week is expected? <i class="bi bi-chevron-down faq-chevron"></i></div>
+              <div class="faq-a">There's flexibility, but most active students work around 5–10 hours per week. 
+              Consistency matters more than total hours — showing up reliably and following through on commitments 
+              is what makes a successful research experience.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">Will I have a chance to present or publish my work? <i class="bi bi-chevron-down faq-chevron"></i></div>
+              <div class="faq-a">Yes, both are encouraged and happen regularly.
+               Students who make significant contributions are included as co-authors on papers. 
+               Conference travel (to UCUR, Pacific Branch of the Entomological Society, and the national Entomological Society of America meeting) 
+               is supported when funding allows. Several current and former students 
+               have already been to national conferences.</div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-q" onclick="toggleFaq(this)">What if I'm not a biology major? <i class="bi bi-chevron-down faq-chevron"></i></div>
+              <div class="faq-a">Students from other disciplines are welcome, especially those with quantitative or computing backgrounds. 
+              However, research projects are restricted to students within UVU College of Science. If you're interested, or have additional questions 
+              reach out and we can talk about fit.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Apply ══ -->
+    <section class="apply-section" id="apply">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="apply-box">
+              <h2>Ready to Reach Out?</h2>
+              <p style="color:#555; font-size:0.92rem; margin-bottom:0;">There's no formal application. Just send an email — here's what to include to make it easy to respond:</p>
+              <ol class="apply-steps">
+                <li><strong>Introduce yourself</strong> — your name, year, and major</li>
+                <li><strong>Say what interests you</strong> — which project caught your eye, or what area of biology/bioinformatics excites you</li>
+                <li><strong>Describe your background briefly</strong> — any relevant coursework, skills, or experience (research or otherwise)</li>
+                <li><strong>Mention your availability</strong> — what semester you'd want to start and roughly how many hours per week you could commit. 
+                It's also good to know when you plan on graduating</li>
+                <li><strong>Attach your CV or unofficial transcript</strong> — optional, but helpful</li>
+                <li><strong>Suggest a time to meet</strong> - Read the <a href="contact.html" style="color:var(--green-main);"> contact page</a></li>
+              </ol>
+              <a href="mailto:Carl.Hjelmen@uvu.edu" class="apply-email-btn">
+                <i class="bi bi-envelope-fill"></i> Email Dr. Hjelmen
+              </a>
+              <p style="font-size:0.8rem; color:#aaa; margin-top:14px; margin-bottom:0;">
+                You can also stop by during office hours — check the <a href="contact.html" style="color:var(--green-main);">contact page</a> for Dr. Hjelmen's current calendar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-top"><div class="container"><div class="row">
+      <div class="col-lg-3 col-md-6 footer-contact"><h3>Hjelmen Lab</h3><p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p></div>
+      <div class="col-lg-3 col-md-6 footer-links"><h4>Contact</h4><strong>Office:</strong> SB 242b<br><strong>Phone:</strong> (801) 863-8084<br><strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a></div>
+      <div class="col-lg-3 col-md-6 footer-links"><h4>Profiles</h4><ul>
+        <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
+      </ul></div>
+      <div class="col-lg-3 col-md-6 footer-links"><h4>Quick Links</h4><ul>
+        <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="team.html">Research Team</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+      </ul></div>
+    </div></div></div>
+    <div class="container d-md-flex py-4">
+      <div class="me-md-auto text-center text-md-start"><div class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.</div></div>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function toggleFaq(el) {
+      var item = el.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(i) {
+        i.classList.remove('open');
+      });
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+
+</body>
+</html>

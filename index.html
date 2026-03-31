@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Hjelmen Lab--Homepage</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
+  <title>Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Hjelmen Lab at Utah Valley University — investigating genome size evolution and sex chromosome evolution in insects.">
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,238 +25,509 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    :root{--green-dark:#1a3f26;--green-main:#275D38;--green-mid:#3a7d52;--green-light:#e8f2ec;--green-pale:#f4faf6;--green-border:#c3ddc9}
+    body{font-family:'Source Sans 3',sans-serif}
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    /* HERO */
+    .site-hero{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green-main) 55%,var(--green-mid) 100%);padding:90px 0 70px;margin-top:70px;position:relative;overflow:hidden}
+    .site-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);background-size:24px 24px;pointer-events:none}
+    .site-hero::after{content:'';position:absolute;right:-80px;top:-80px;width:480px;height:480px;border-radius:50%;background:rgba(255,255,255,.04);pointer-events:none}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.88);font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:5px 14px;border-radius:20px;margin-bottom:20px}
+    .hero-title{font-family:'Lora',serif;font-size:3rem;font-weight:700;color:#fff;line-height:1.15;margin-bottom:10px}
+    .hero-title em{font-style:italic;color:#aed6bc}
+    .hero-subtitle{font-size:1.1rem;color:rgba(255,255,255,.78);line-height:1.65;max-width:480px;margin-bottom:28px}
+    .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px}
+    .hero-btn-primary{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--green-dark);font-weight:700;font-size:.9rem;padding:11px 26px;border-radius:6px;text-decoration:none;transition:all .2s}
+    .hero-btn-primary:hover{background:var(--green-light);color:var(--green-dark)}
+    .hero-btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#fff;font-weight:600;font-size:.9rem;padding:11px 26px;border-radius:6px;border:2px solid rgba(255,255,255,.4);text-decoration:none;transition:all .2s}
+    .hero-btn-secondary:hover{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.7)}
+    .hero-facts{display:flex;flex-wrap:wrap;gap:10px}
+    .hero-fact{display:flex;align-items:center;gap:7px;color:rgba(255,255,255,.72);font-size:.82rem}
+    .hero-fact i{color:#aed6bc;font-size:.9rem}
+    .hero-img-wrap{position:relative;display:flex;align-items:center;justify-content:center;height:100%}
+    .hero-img-frame{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);max-width:440px;width:100%}
+    .hero-img-frame img{width:100%;display:block;object-fit:cover;height:380px;object-position:center}
+    .hero-img-badge{position:absolute;bottom:-14px;left:-14px;background:#fff;border-radius:10px;padding:12px 16px;box-shadow:0 8px 24px rgba(0,0,0,.2);display:flex;align-items:center;gap:10px}
+    .hero-img-badge .hib-icon{width:38px;height:38px;border-radius:8px;background:var(--green-main);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0}
+    .hero-img-badge .hib-text strong{display:block;font-size:.88rem;font-weight:700;color:var(--green-dark);line-height:1.2}
+    .hero-img-badge .hib-text span{font-size:.75rem;color:#888}
+    @media(max-width:991px){.site-hero{padding:60px 0 50px}.hero-title{font-size:2.2rem}.hero-img-wrap{margin-top:40px}.hero-img-frame img{height:280px}}
+    @media(max-width:576px){.hero-title{font-size:1.8rem}.hero-img-badge{display:none}}
+
+    /* ABOUT STRIP */
+    .about-strip{background:var(--green-pale);padding:56px 0}
+    .about-strip h2{font-family:'Lora',serif;font-size:1.6rem;font-weight:700;color:var(--green-dark);margin-bottom:6px}
+    .about-strip h3{font-size:1rem;font-weight:400;color:var(--green-mid);font-style:italic;margin-bottom:20px}
+    .research-pill{display:inline-flex;align-items:center;gap:7px;background:var(--green-light);border:1px solid var(--green-border);color:var(--green-dark);font-size:.83rem;font-weight:600;padding:5px 13px;border-radius:20px;margin:0 6px 8px 0;text-decoration:none;transition:background .2s}
+    .research-pill i{color:var(--green-main);font-size:.85rem}
+    .research-pill:hover{background:var(--green-border)}
+
+    /* STATS */
+    .stats-bar{background:var(--green-main);padding:32px 0}
+    .stat-item{text-align:center;color:#fff;padding:8px 0}
+    .stat-item .stat-number{font-family:'Lora',serif;font-size:2.4rem;font-weight:700;color:#fff;line-height:1;display:block}
+    .stat-item .stat-label{font-size:.82rem;color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.07em;font-weight:600;margin-top:4px;display:block}
+
+    /* NEWS */
+    .news-section{background:#fff;padding:60px 0}
+    .section-header-row{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px}
+    .section-header-row h2{font-family:'Lora',serif;font-size:1.5rem;font-weight:700;color:var(--green-dark);margin:0}
+    .section-header-row a.view-all{font-size:.85rem;font-weight:700;color:var(--green-main);text-decoration:none;display:flex;align-items:center;gap:4px}
+    .section-header-row a.view-all:hover{text-decoration:underline}
+    .news-card{background:var(--green-pale);border:1px solid var(--green-border);border-left:4px solid var(--green-main);border-radius:0 8px 8px 0;padding:18px 20px;height:100%;transition:box-shadow .2s,transform .2s}
+    .news-card:hover{box-shadow:0 4px 16px rgba(39,93,56,.1);transform:translateY(-2px)}
+    .news-card .nc-meta{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+    .news-card .nc-date{font-size:.75rem;font-weight:700;color:var(--green-main);text-transform:uppercase;letter-spacing:.06em}
+    .news-card .nc-tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:2px 8px;border-radius:4px;color:#fff}
+    .news-card .nc-title{font-family:'Lora',serif;font-size:.98rem;font-weight:700;color:var(--green-dark);margin-bottom:6px;line-height:1.35}
+    .news-card .nc-desc{font-size:.83rem;color:#666;line-height:1.55;margin:0}
+    .news-card a.nc-link{display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:.8rem;font-weight:700;color:var(--green-main);text-decoration:none}
+    .news-card a.nc-link:hover{text-decoration:underline}
+
+    /* EXPLORE */
+    .explore-section{background:var(--green-pale);padding:60px 0}
+    .explore-card{background:#fff;border:1px solid var(--green-border);border-radius:12px;overflow:hidden;height:100%;transition:box-shadow .25s,transform .25s;text-decoration:none;display:flex;flex-direction:column}
+    .explore-card:hover{box-shadow:0 8px 28px rgba(39,93,56,.14);transform:translateY(-4px);text-decoration:none}
+    .explore-card .ec-banner{height:6px}
+    .explore-card .ec-body{padding:22px 22px 20px;flex:1;display:flex;flex-direction:column}
+    .explore-card .ec-icon{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#fff;margin-bottom:14px}
+    .explore-card .ec-title{font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:var(--green-dark);margin-bottom:6px}
+    .explore-card .ec-desc{font-size:.85rem;color:#666;line-height:1.55;flex:1;margin-bottom:14px}
+    .explore-card .ec-footer{font-size:.8rem;font-weight:700;display:flex;align-items:center;gap:4px}
+
+    /* PUBLICATIONS */
+    .pubs-section{background:#fff;padding:60px 0}
+    .pub-preview{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid #f0f0f0}
+    .pub-preview:last-child{border-bottom:none}
+    .pub-preview .pp-year{background:var(--green-main);color:#fff;font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:4px;flex-shrink:0;margin-top:3px;letter-spacing:.03em}
+    .pub-preview .pp-body{flex:1}
+    .pub-preview .pp-title{font-size:.9rem;font-weight:700;color:var(--green-dark);line-height:1.4;margin-bottom:3px}
+    .pub-preview .pp-journal{font-size:.78rem;color:#888;font-style:italic;margin-bottom:0}
+    .pub-preview .pp-pdf{flex-shrink:0;display:inline-flex;align-items:center;gap:4px;background:var(--green-main);color:#fff;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:4px;text-decoration:none;margin-top:3px;transition:background .2s}
+    .pub-preview .pp-pdf:hover{background:var(--green-dark)}
+
+    /* JOIN BANNER */
+    .join-banner{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green-main) 100%);padding:56px 0;position:relative;overflow:hidden}
+    .join-banner::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 1px);background-size:20px 20px;pointer-events:none}
+    .join-banner h2{font-family:'Lora',serif;font-size:1.8rem;font-weight:700;color:#fff;margin-bottom:8px}
+    .join-banner p{color:rgba(255,255,255,.78);font-size:1rem;margin-bottom:0;max-width:540px}
+    .join-banner .jb-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--green-dark);font-weight:700;font-size:.92rem;padding:12px 28px;border-radius:6px;text-decoration:none;transition:background .2s}
+    .join-banner .jb-btn:hover{background:var(--green-light)}
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-     <!-- ======= Header ======= -->
+  <!-- Header -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
       <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
-             <ul>
-                    <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-<li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
-
+          </li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-      <div class="carousel-inner" role="listbox">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: url(assets/img/slide/LightCollecting2.jpg);">
-          <div class="carousel-container">
-            <div class="carousel-content animate__animated">
-              <h2>Welcome to <span>the Hjelmen Lab</span></h2>
-              <p>We use insects to investigate genome evolution</p>
-              <div class="text-center"><a href="researchinterests.html" class="btn-get-started">Read more about research interests</a></div>
+  <!-- HERO -->
+  <div class="site-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-eyebrow"><i class="bi bi-geo-alt-fill"></i> Utah Valley University &middot; Orem, UT</div>
+          <h1 class="hero-title">Using insects to understand<br><em>how genomes evolve</em></h1>
+          <p class="hero-subtitle">We investigate why genomes vary so dramatically across the tree of life &mdash; in size, organization, and sex chromosome structure &mdash; using insects as our primary model system.</p>
+          <div class="hero-ctas">
+            <a href="researchinterests.html" class="hero-btn-primary"><i class="bi bi-diagram-3"></i> Research Interests</a>
+            <a href="contact.html" class="hero-btn-secondary"><i class="bi bi-envelope"></i> Join the Lab</a>
+          </div>
+          <div class="hero-facts">
+            <span class="hero-fact"><i class="bi bi-bug-fill"></i> Insects as model organisms</span>
+            <span class="hero-fact"><i class="bi bi-people-fill"></i> Undergraduate-driven research</span>
+            <span class="hero-fact"><i class="bi bi-droplet-fill"></i> Flow cytometry service available</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-img-wrap">
+            <div class="hero-img-frame">
+              <!-- SWAP THIS IMAGE when you have a new photo ready. Ideal: ~880x760px. Good options: lab group photo, field collection, flow cytometer, insect close-up. -->
+              <img src="assets/img/slide/LightCollecting2.jpg" alt="Hjelmen Lab research">
+            </div>
+            <div class="hero-img-badge">
+              <div class="hib-icon"><i class="bi bi-mortarboard-fill"></i></div>
+              <div class="hib-text">
+                <strong>Undergraduate Research</strong>
+                <span>Central to everything we do</span>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Slide 2 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/DrosVials5.jpg);">
-          <div class="carousel-container">
-            <div class="carousel-content animate__animated">
-              <h2><i>Drosophila</i> species as a model</h2>
-              <p>Most work we have done has relied on the nearly 200 <i>Drosophila</i> species. Our phylogenetic comparative methods have allowed
-			  us to identify unique species to investigate further with whole genome sequencing.</p>
-              <div class="text-center"><a href="publications.html" class="btn-get-started">Read more about previous work</a></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="carousel-item" style="background-image: url(assets/img/slide/DungBeetle2.jpg);">
-          <div class="carousel-container">
-            <div class="carousel-content animate__animated">
-              <h2>Not all lab and computer work</h2>
-              <p>While much of our work relies on lab work, there are 
-			  computational components as well as field components. The bugs have to come from somewhere! 
-			  If you're interested in working with me, reach out!</p>
-              <div class="text-center"><a href="contact.html" class="btn-get-started">Contact me</a></div>
-            </div>
-          </div>
-        </div>
-
       </div>
+    </div>
+  </div>
 
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      </a>
+  <main id="main">
 
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      </a>
+    <!-- ABOUT STRIP -->
+    <section class="about-strip">
+      <div class="container">
+        <div class="row align-items-start g-4">
+          <div class="col-lg-4">
+            <h2>The Hjelmen Lab</h2>
+            <h3>Evolution, Genomes &amp; Insects</h3>
+            <a href="aboutme.html" class="hero-btn-primary d-inline-flex mt-3" style="font-size:.85rem;padding:9px 20px;">
+              <i class="bi bi-person-circle"></i> About Dr. Hjelmen
+            </a>
+          </div>
+          <div class="col-lg-8">
+            <p style="color:#444;line-height:1.75;margin-bottom:16px;">
+              Genomes vary enormously across the tree of life &mdash; not just in which genes they carry, 
+              but in the total amount of DNA, chromosomal organization, and chromatin structure. 
+              Some grasshoppers carry 7&times; more DNA than humans. We want to know why. Using 
+              comparative phylogenetic approaches, flow cytometry, and whole genome sequencing, 
+              active research directions include:
+            </p>
+            <div class="d-flex flex-wrap">
+              <a href="researchinterests.html" class="research-pill"><i class="bi bi-diagram-3"></i> Genome Size Across Species</a>
+              <a href="researchinterests.html" class="research-pill"><i class="bi bi-graph-up"></i> Within-Species Variation</a>
+              <a href="researchinterests.html" class="research-pill"><i class="bi bi-layers"></i> Underreplication &amp; Heterochromatin</a>
+              <a href="researchinterests.html" class="research-pill"><i class="bi bi-gender-ambiguous"></i> Sex Chromosome Evolution</a>
+              <a href="researchinterests.html" class="research-pill"><i class="bi bi-search"></i> Forensic Entomology</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
+    <!-- STATS BAR -->
+    <div class="stats-bar" data-aos="fade-up">
+      <div class="container">
+        <div class="row align-items-center g-0">
+          <div class="col-6 col-md-3"><div class="stat-item"><span class="stat-number">30+</span><span class="stat-label">Publications</span></div></div>
+          <div class="col-6 col-md-3"><div class="stat-item"><span class="stat-number">20+</span><span class="stat-label">Students Mentored</span></div></div>
+          <div class="col-6 col-md-3"><div class="stat-item"><span class="stat-number">5</span><span class="stat-label">Research Areas</span></div></div>
+          <div class="col-6 col-md-3"><div class="stat-item"><span class="stat-number">2021</span><span class="stat-label">Founded at UVU</span></div></div>
+        </div>
+      </div>
     </div>
 
-  </section>
-	
-  <!-- End Hero -->
-  
+    <!-- NEWS SECTION
+         ─────────────────────────────────────────────────
+         HOW TO UPDATE: Edit the four news-card blocks below.
+         Each card has: nc-date, nc-tag (change style background
+         color for category), nc-title, nc-desc, and nc-link.
+         Add a new card by copying one block into the row.
+         ───────────────────────────────────────────────── -->
+    <section class="news-section">
+      <div class="container">
+        <div class="section-header-row">
+          <h2>Lab News</h2>
+        </div>
+        <div class="row g-3">
 
-
-    <!-- ======= About Us Section ======= -->
-    <section id="about-us" class="about-us">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row content">
-          <div class="col-lg-6" data-aos="fade-right">
-            <h2>We use insects</h2>
-            <h3>to investigate dynamics of genome size evolution and sex chromosome evolution</h3>
+          <div class="col-md-6 col-lg-3">
+            <div class="news-card">
+              <div class="nc-meta">
+                <span class="nc-date">2026</span>
+                <span class="nc-tag" style="background:#275D38;">Publication</span>
+              </div>
+              <div class="nc-title">New paper in <em>American Journal of Botany</em></div>
+              <p class="nc-desc">Phylotranscriptomics and genome size evolution in <em>Leucaena</em> &mdash; paleotetraploid stability and diploidization effects.</p>
+              <a href="assets/publications/Abair_et_al_2026_Botany.pdf" target="_blank" class="nc-link"><i class="bi bi-file-earmark-pdf"></i> Read PDF</a>
+            </div>
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
-            <p>
-              Genomes vary widely across the tree of life. This variation is not just in coding sequences (genes), but in how much DNA there is (genome size), how it's organized (chromosomes) and 
-accessible (euchromatin vs. heterochromatin).  I am largely interested in: 
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Estimating genome size and its variation across the tree of life</li>
-              <li><i class="ri-check-double-line"></i> Using genome size differences between males and females to investigate sex chromosome evolution</li>
-              <li><i class="ri-check-double-line"></i> Using Drosophila species underreplication amounts to investigate the evolution of heterochromatin</li>
-			  <li><i class="ri-check-double-line"></i> Using the above information to identify unique species for whole genome sequencing and bioinformatic analyses</li>
-			  
-            </ul>
-            <p class="row content">
-              I'm open to new questions and ideas! If you are interested in something else and want to work with me, reach out!
-            </p>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="news-card">
+              <div class="nc-meta">
+                <span class="nc-date">2025</span>
+                <span class="nc-tag" style="background:#7c3aad;">Alumni</span>
+              </div>
+              <div class="nc-title">Olivia Frary &amp; Babs Jetton start PhD programs</div>
+              <p class="nc-desc">Two lab members graduated Spring 2025 and began doctoral programs Fall 2025. Huge congratulations to both!</p>
+              <a href="team.html" class="nc-link"><i class="bi bi-people"></i> Meet the Team</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="news-card">
+              <div class="nc-meta">
+                <span class="nc-date">2025</span>
+                <span class="nc-tag" style="background:#b45309;">Conference</span>
+              </div>
+              <div class="nc-title">Lab at EntSoc 2025 &mdash; Portland, OR</div>
+              <p class="nc-desc">Cyrus, Haylee, Bailey, and alum Remington all presented research at the Entomological Society of America meeting.</p>
+              <a href="lab_photos.html" class="nc-link"><i class="bi bi-camera"></i> See Photos</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="news-card">
+              <div class="nc-meta">
+                <span class="nc-date">2024</span>
+                <span class="nc-tag" style="background:#be185d;">Media</span>
+              </div>
+              <div class="nc-title">Interview on <em>Lil Dude's Insect Academy</em></div>
+              <p class="nc-desc">Dr. Hjelmen was interviewed for the Lil Dude's Insect Academy podcast and web series on insect research.</p>
+              <a href="https://www.youtube.com/watch?v=RjxphZlr9n8" target="_blank" rel="noopener" class="nc-link"><i class="bi bi-play-circle"></i> Watch on YouTube</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPLORE THE LAB -->
+    <section class="explore-section">
+      <div class="container">
+        <div class="section-header-row mb-4"><h2>Explore the Lab</h2></div>
+        <div class="row g-3">
+
+          <div class="col-sm-6 col-lg-3">
+            <a href="researchinterests.html" class="explore-card">
+              <div class="ec-banner" style="background:#275D38;"></div>
+              <div class="ec-body">
+                <div class="ec-icon" style="background:#275D38;"><i class="bi bi-diagram-3"></i></div>
+                <div class="ec-title">Research</div>
+                <p class="ec-desc">Five active programs spanning comparative genomics, sex chromosome biology, underreplication, and forensic entomology.</p>
+                <span class="ec-footer" style="color:#275D38;">Explore topics <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <a href="team.html" class="explore-card">
+              <div class="ec-banner" style="background:#7c3aad;"></div>
+              <div class="ec-body">
+                <div class="ec-icon" style="background:#7c3aad;"><i class="bi bi-people-fill"></i></div>
+                <div class="ec-title">The Team</div>
+                <p class="ec-desc">Current undergraduate researchers and alumni who have gone on to PhD programs and careers in science.</p>
+                <span class="ec-footer" style="color:#7c3aad;">Meet everyone <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <a href="Spring2026biol1011_1.html" class="explore-card">
+              <div class="ec-banner" style="background:#2563a8;"></div>
+              <div class="ec-body">
+                <div class="ec-icon" style="background:#2563a8;"><i class="bi bi-book-fill"></i></div>
+                <div class="ec-title">Teaching</div>
+                <p class="ec-desc">Courses in bioinformatics, evolution, genomics, entomology, and ethics &mdash; with schedules and syllabi available for each.</p>
+                <span class="ec-footer" style="color:#2563a8;">View courses <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <a href="gs_estimations.html" class="explore-card">
+              <div class="ec-banner" style="background:#0f766e;"></div>
+              <div class="ec-body">
+                <div class="ec-icon" style="background:#0f766e;"><i class="bi bi-droplet-fill"></i></div>
+                <div class="ec-title">Genome Size Estimations</div>
+                <p class="ec-desc">Flow cytometry-based genome size estimation service for insect samples, open to external collaborators.</p>
+                <span class="ec-footer" style="color:#0f766e;">Learn more <i class="bi bi-arrow-right"></i></span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENT PUBLICATIONS -->
+    <section class="pubs-section">
+      <div class="container">
+        <div class="section-header-row">
+          <h2>Recent Publications</h2>
+          <a href="publications.html" class="view-all">View all <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="row">
+          <div class="col-lg-8">
+
+            <div class="pub-preview">
+              <span class="pp-year">2026</span>
+              <div class="pp-body">
+                <div class="pp-title">Phylotranscriptomics and genome size evolution in <em>Leucaena</em> (Fabaceae): Paleotetraploid genomic stability overshadows diploidization and environmental effects</div>
+                <p class="pp-journal">Abair, Egan, Hjelmen et al. &middot; American Journal of Botany</p>
+              </div>
+              <a href="assets/publications/Abair_et_al_2026_Botany.pdf" target="_blank" class="pp-pdf"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+            </div>
+
+            <div class="pub-preview">
+              <span class="pp-year">2025</span>
+              <div class="pp-body">
+                <div class="pp-title"><em>Dscam1</em> evolution and its relationship to sociality: hymenopteran <em>Dscam1</em> exhibits accelerated evolution in variable exon regions</div>
+                <p class="pp-journal">Motte &amp; Hjelmen &middot; Insect Systematics and Diversity</p>
+              </div>
+              <a href="assets/publications/motte_hjelmen_isd.pdf" target="_blank" class="pp-pdf"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+            </div>
+
+            <div class="pub-preview">
+              <span class="pp-year">2025</span>
+              <div class="pp-body">
+                <div class="pp-title">Distinct temporal trajectories of bacterial and fungal networks during agricultural rewilding</div>
+                <p class="pp-journal">Zahn, Hjelmen &amp; Wainwright &middot; Science of the Total Environment</p>
+              </div>
+              <a href="assets/publications/Zahn_et_al_2025.pdf" target="_blank" class="pp-pdf"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+            </div>
+
+            <div class="pub-preview">
+              <span class="pp-year">2024</span>
+              <div class="pp-body">
+                <div class="pp-title">Genome size and chromosome number are critical metrics for accurate genome assembly assessment in Eukaryota</div>
+                <p class="pp-journal">Hjelmen &middot; Genetics</p>
+              </div>
+              <a href="assets/publications/Hjelmen_Genetics_2024.pdf" target="_blank" class="pp-pdf"><i class="bi bi-file-earmark-pdf"></i> PDF</a>
+            </div>
+
+          </div>
+          <div class="col-lg-4 ps-lg-5 mt-4 mt-lg-0">
+            <div style="background:var(--green-pale);border:1px solid var(--green-border);border-radius:10px;padding:24px;text-align:center;">
+              <i class="bi bi-mortarboard-fill" style="font-size:2rem;color:var(--green-main);display:block;margin-bottom:10px;"></i>
+              <p style="font-size:.88rem;color:#555;margin-bottom:16px;line-height:1.6;">Full publication list with PDFs, DOI links, and undergraduate co-author highlights available on the publications page and Google Scholar.</p>
+              <a href="publications.html" class="hero-btn-primary d-flex mb-3" style="font-size:.83rem;padding:9px 18px;justify-content:center;"><i class="bi bi-journal-text"></i> All Publications</a>
+              <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:6px;font-size:.83rem;font-weight:600;color:var(--green-main);text-decoration:none;"><i class="bi bi-box-arrow-up-right"></i> Google Scholar Profile</a>
+            </div>
           </div>
         </div>
-
       </div>
-    </section><!-- End About Us Section -->
+    </section>
 
-  </main><!-- End #main -->
+    <!-- JOIN CTA -->
+    <div class="join-banner">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2>Interested in Joining the Lab?</h2>
+            <p>Undergraduate researchers are the core of everything we do. No prior research experience required &mdash; just curiosity and commitment. Projects in genomics, bioinformatics, field entomology, and more.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="contact.html" class="jb-btn"><i class="bi bi-envelope-fill"></i> Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-   <!-- ======= Footer ======= -->
+  </main>
+
+  <!-- Footer -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="gs_estimations.html">Genome Size Estimations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+        <div class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.</div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

@@ -3,29 +3,27 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Evolution (BIOL 4500)</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Evolution (BIOL 4500-01) | Spring 2026 | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Course page for Evolution (BIOL 4500-01), Spring 2026, taught by Dr. Carl Hjelmen at Utah Valley University.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!-- Vendor CSS -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,319 +32,1205 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    :root {
+      --green-dark:   #1a3f26;
+      --green-main:   #275D38;
+      --green-mid:    #3a7d52;
+      --green-light:  #e8f2ec;
+      --green-pale:   #f4faf6;
+      --green-border: #c3ddc9;
+      --amber:        #b45309;
+      --amber-light:  #fef3c7;
+      --amber-border: #fcd34d;
+      --blue:         #2563a8;
+      --blue-light:   #eff6ff;
+      --blue-border:  #bfdbfe;
+    }
+
+    body { font-family: 'Source Sans 3', sans-serif; }
+
+    /* ── Course hero ────────────────────── */
+    .course-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 60%, var(--green-mid) 100%);
+      margin-top: 72px;
+      padding: 48px 0 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .course-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .course-hero .ch-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .course-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 4px;
+      position: relative;
+    }
+    .course-hero .ch-sub {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.95rem;
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .course-hero .ch-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      position: relative;
+    }
+    .course-hero .ch-pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.13);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.9);
+      font-size: 0.8rem;
+      padding: 4px 12px;
+      border-radius: 16px;
+    }
+    .course-hero .ch-pill i { font-size: 0.85rem; color: #aed6bc; }
+
+    @media (max-width: 768px) {
+      .course-hero { padding: 36px 0 30px; margin-top: 58px; }
+      .course-hero h1 { font-size: 1.6rem; }
+    }
+
+    /* ── Page layout ────────────────────── */
+    .course-body {
+      background: var(--green-pale);
+      padding: 36px 0 64px;
+    }
+
+    /* ── Sidebar cards ──────────────────── */
+    .sidebar-card {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+    .sidebar-card .sc-header {
+      background: var(--green-main);
+      padding: 11px 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sidebar-card .sc-header h3 {
+      font-family: 'Lora', serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+    .sidebar-card .sc-header i { color: rgba(255,255,255,0.8); font-size: 0.95rem; }
+    .sidebar-card .sc-body { padding: 16px 18px; }
+
+    /* Course details rows */
+    .detail-row {
+      display: flex;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.86rem;
+    }
+    .detail-row:last-child { border-bottom: none; }
+    .detail-row .dr-icon {
+      color: var(--green-main);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+      width: 16px;
+    }
+    .detail-row .dr-label {
+      font-weight: 700;
+      color: #333;
+      min-width: 72px;
+      flex-shrink: 0;
+    }
+    .detail-row .dr-val {
+      color: #555;
+      line-height: 1.45;
+    }
+    .detail-row .dr-val a { color: var(--green-main); }
+
+    /* Syllabus button */
+    .syllabus-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: var(--green-main);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 11px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin-bottom: 8px;
+    }
+    .syllabus-btn:hover { background: var(--green-dark); color: #fff; }
+
+    .canvas-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: var(--green-pale);
+      color: var(--green-main);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 9px 20px;
+      border-radius: 6px;
+      border: 1px solid var(--green-border);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .canvas-link:hover { background: var(--green-light); }
+
+    /* Learning objectives */
+    .obj-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: obj-counter;
+    }
+    .obj-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      padding: 9px 0;
+      border-bottom: 1px solid #f5f5f5;
+      counter-increment: obj-counter;
+      font-size: 0.85rem;
+      color: #444;
+      line-height: 1.5;
+    }
+    .obj-list li:last-child { border-bottom: none; }
+    .obj-list li::before {
+      content: counter(obj-counter);
+      background: var(--green-main);
+      color: #fff;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* Contact card */
+    .contact-note {
+      font-size: 0.83rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .email-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-main);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin-bottom: 10px;
+    }
+    .email-btn:hover { background: var(--green-dark); color: #fff; }
+
+    .email-tip {
+      background: var(--green-pale);
+      border: 1px solid var(--green-border);
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 0.78rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .email-tip strong { color: var(--green-dark); display: block; margin-bottom: 4px; }
+    .email-tip ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .email-tip ul li {
+      padding: 2px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .email-tip ul li::before {
+      content: '→';
+      color: var(--green-main);
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── Schedule ───────────────────────── */
+    .schedule-wrap {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+    .schedule-header {
+      background: var(--green-dark);
+      padding: 13px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .schedule-header h2 {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .schedule-header .sh-note {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Legend */
+    .schedule-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 10px 20px;
+      background: var(--green-pale);
+      border-bottom: 1px solid var(--green-border);
+      font-size: 0.75rem;
+      color: #666;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* Week rows */
+    .week-row {
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.15s;
+    }
+    .week-row:last-child { border-bottom: none; }
+    .week-row:hover { background: #fafafa; }
+
+    /* Break / holiday rows */
+    .week-row.is-break {
+      background: #f8f8f8;
+      opacity: 0.7;
+    }
+    .week-row.is-break .wr-main { color: #aaa; font-style: italic; }
+
+    /* Rows with exams/major deadlines */
+    .week-row.has-exam { background: var(--amber-light); }
+    .week-row.has-exam:hover { background: #fde68a; }
+
+    .week-row-inner {
+      display: grid;
+      grid-template-columns: 52px 90px 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+      cursor: pointer;
+    }
+
+    .wr-week {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-right: 1px solid #f0f0f0;
+    }
+    .wr-week .wk-num {
+      background: var(--green-main);
+      color: #fff;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 0.7rem;
+    }
+    .week-row.is-break .wr-week .wk-num { background: #ccc; }
+    .week-row.has-exam .wr-week .wk-num { background: var(--amber); }
+
+    .wr-dates {
+      padding: 14px 10px;
+      border-right: 1px solid #f0f0f0;
+      font-size: 0.78rem;
+      color: #888;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3px;
+      line-height: 1.3;
+    }
+    .wr-dates .date-line {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .wr-dates .day-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--green-main);
+      min-width: 20px;
+    }
+    .week-row.is-break .wr-dates .day-badge { color: #aaa; }
+
+    .wr-main {
+      padding: 14px 14px;
+      border-right: 1px solid #f0f0f0;
+    }
+    .wr-main .topic-line {
+      font-size: 0.85rem;
+      color: #333;
+      line-height: 1.45;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+    }
+    .wr-main .topic-line .day-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+    .discussion-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--blue-light);
+      color: var(--blue);
+      border: 1px solid var(--blue-border);
+      padding: 1px 6px;
+      border-radius: 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+    .holiday-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      background: #f3f4f6;
+      color: #888;
+      border: 1px solid #e5e7eb;
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    .wr-due {
+      padding: 14px 14px;
+    }
+    .due-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 5px;
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+    .due-item:last-child { margin-bottom: 0; }
+    .due-item i {
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .due-item .di-text { color: #444; }
+    .due-item.is-exam .di-text {
+      font-weight: 700;
+      color: var(--amber);
+    }
+    .due-item.is-major .di-text {
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+    .due-item.is-reading .di-text { color: #888; font-style: italic; }
+
+    /* Expand toggle */
+    .wr-toggle {
+      display: none; /* hidden for now — expandable detail could be added later */
+    }
+
+    /* Readings row (expandable) */
+    .week-readings {
+      padding: 8px 14px 12px calc(52px + 14px);
+      background: #fafafa;
+      border-top: 1px dashed #e8e8e8;
+      display: none;
+      font-size: 0.8rem;
+      color: #777;
+    }
+    .week-readings.open { display: block; }
+    .week-readings strong { color: var(--green-dark); }
+
+    /* Mobile schedule fallback */
+    @media (max-width: 767px) {
+      .week-row-inner {
+        grid-template-columns: 44px 1fr;
+        grid-template-rows: auto auto;
+      }
+      .wr-dates { display: none; }
+      .wr-main { border-right: none; }
+      .wr-due { grid-column: 2; padding-top: 0; }
+    }
+
+    /* ── Sticky sidebar on desktop ──────── */
+    .sidebar-sticky { position: sticky; top: 90px; }
+    @media (max-width: 991px) { .sidebar-sticky { position: static; } }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-      <!-- ======= Header ======= -->
- <header id="header" class="fixed-top">
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html">Home</a></li>
-
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#" class="active"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
-             <ul>
-                    <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-
-
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html" class="active">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-<li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
-
+          </li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-
+  </header>
 
   <main id="main">
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+
+    <!-- ── Course Hero ── -->
+    <div class="course-hero">
       <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Evolution (BIOL 4500)</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Evolution (BIOL 4500)</li>
-          </ol>
+        <div class="ch-eyebrow"><i class="bi bi-book-fill"></i> Spring 2026 &middot; Utah Valley University</div>
+        <h1>Evolution</h1>
+        <div class="ch-sub">BIOL 4500-01 &nbsp;&middot;&nbsp; Dr. Carl Hjelmen &nbsp;&middot;&nbsp; Spring 2026</div>
+        <div class="ch-pills">
+          <span class="ch-pill"><i class="bi bi-calendar3"></i> Mon / Wed / Fri</span>
+          <span class="ch-pill"><i class="bi bi-mortarboard"></i> Upper Division &middot; 3 Credits</span>
+          <span class="ch-pill"><i class="bi bi-clock"></i> 15 Weeks</span>
+          <span class="ch-pill"><i class="bi bi-chat-dots"></i> Discussion-based</span>
         </div>
-
       </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
 
-    <!-- ======= About Us Section ======= -->
-	<p></p>     
-	<div>
-	<h2 class="section-title"> Evolution (ALWAYS UNDER CONSTRUCTION) </div>
-	<div>
-	<h4 class="section-title"> BIOL 4500--01 Spring 2026</p></h4>
-	</div>
-	<h4 class="section-title"><a href="assets/Syllabi/Spring_2026_BIOL_4500_Syllabus.pdf">Syllabus</a> </p></h4>
-	
-	
-		<h4 class="section-title"> <b>Learning Objectives</b></p></h4>
-	<div align="center">
-	<p><b>Upon completion of this course, students will be able to:</b></br></br>
-	<b>1.</b>	Discuss classic literature and historical figures on the subject of evolutionary biology</br></br>
-	<b>2.</b>	Explain the molecular and genetic basis for evolution.</br></br>
-	<b>3.</b>	Explain the mechanisms of evolution (natural selection, migration, genetic drift, mutation, </br>
-	and nonrandom mating) and their relationship to genetics of populations and sources of variability</br></br>
-	<b>4.</b>	Apply Hardy-Weinberg calculations to various populations</br></br>
-	<b>5.</b>	Describe the mechanisms of speciation and origin of new species</br></br>
-	<b>6.</b>	Evaluate how the fossil record relates to current views of evolution.</br></br>
-	<b>7.</b>	Analyze evolutionary trends demonstrated by phylogeny.</br></br>
-	<b>8.</b>	Investigate the course of evolution in prokaryotes and eukaryotes, with an emphasis on hominin evolution.</br></br>
-	<b>9.</b>	Compose a variety of disciplinary-appropriate texts; for example, scientific essays evaluating various evolutionary topics,</br>
-	 scientific posters, scientific manuscripts, mock grant proposals, etc
+    <!-- ── Body ── -->
+    <div class="course-body">
+      <div class="container">
+        <div class="row g-4">
 
-	
-</p></div>
-	
-	<h4 class="section-title"> Schedule (Subject to Change)</p></h4>
-	<div align="center">
-	<table style="width:50%">
-		<tr  align="center">
-		<th align="center">Week</th>
-		<th align="center">Dates</th>
-		<th align="center">Topic</th>
-		<th align="center">Readings</th>
-		<th align="center">Due Dates</th>
-		</tr>
-		<tr>
-		<td align="center">1</td>
-		<td align="center">Jan. 5</br></br>Jan. 7</br></br>Jan. 9</td>
-		<td align="center">Intro. & Syllabus</br></br>How to Read a Paper pt. 1</br></br> Science as a way of knowing <b>video</b></td>
-		<td align="center"><i>For Class</i></br>Ch. 1</i></td>
-		<td align="center"><i>Syllabus quiz-</br>due Jan 9</br></br>Questions about scientific papers-</br>due Jan. 7</br></br>Discussion Date Signup<br>Due Jan 9</td>
-		</tr>
-		<tr>
-		<td align="center">2</td>
-		<td align="center">Jan. 12</br></br>Jan. 14</br></br>Jan. 15</td>
-		<td align="center">What is Evolution <b>recording</b></br></br>Darwin History <b>video</b></br></br>How to Read a paper pt. 2</td>
-		<td align="center"><i>For Class:</i></br>Ch. 2</br></td>
-		<td align="center"><i>Discussion date signup</br>Due Jan 12</br></br>Darwin Video Questions</br>due Jan. 16<td>
-		</tr><tr>
-		<td align="center">3</td>
-		<td align="center">Jan. 19</br></br>Jan. 21</br></br>Jan. 23</td>
-		<td align="center">MLK Jr. Day</br><b>NO IN PERSON CLASS</b></br></br>Relevance of Mendel/Others</br></br><b>Discussion: Pre-Darwin Ideas</b></td>
-		<td align="center"><i>For Class:</i></br>Ch. 6</br></br><i>For Discussion:</i></br>Malik 2017</td>
-		<td align="center"><b>Selection of Project Subject</br>Jan. 23</b></br>Precis Jan. 23</td>
-		</tr><tr>
-		<td align="center">4</td>
-		<td align="center">Jan. 26</br></br>Jan. 28</br></br>Jan. 30</td>
-		<td align="center">Mendel cont.</br></br>Modern Synthesis <b>video</b></br></br><b>Discussion: Modern Synthesis</b></td>
-		<td align="center"><i>For Class:</i></br>Ch. 2</br></br><i>For Discussion:</i></br>Mayr 1993</td>
-		<td align="center"><i>Precis Jan. 30</td>
-		</tr><tr>
-		<td align="center">5</td>
-		<td align="center">Feb. 2</br></br>Feb. 4</br></br>Feb. 6</td>
-		<td align="center">Mechanisms: Selection</br></br>Mechanisms: Selection</br></br><b>Discussion: Darwin's Finches</b></td>
-		<td align="center"><i>For Discussion</i></br>Grant and Grant 2003</td>
-		<td align="center">Precis-Feb. 6</td>
-		</tr><tr>
-		<td align="center">6</td>
-		<td align="center">Feb. 9</br></br>Feb. 11</br></br>Feb. 13</td>
-		<td align="center">Mechanisms: Sexual Selection</br></br>Mechanisms: Sexual Selection</br></br><b>Discussion: Trade-Offs</b></td>
-		<td align="center"><i>For Class:</i></br>Ch. 16</br></br><i>For Discussion:</i><br>Simmons and Emlen 2006</td>
-		<td align="center"><i>Review/Reflection of Dobzhansky 1973</br>Due Feb. 11</br></br><i>Precis-Feb. 13</td>
-		</tr><tr>
-		<td align="center">7</td>
-		<td align="center">Feb. 16</br></br>Feb. 18</br></br>Feb. 20</td>
-		<td align="center"><b>HOLIDAY--NO CLASS</b></br></br>Mechanisms: Drift/Gene Flow</br></br><b>Discussion: Genetic Drift</br></td>
-		<td align="center"><i>For Class:</i></br></br></br><i>For Discussion:</i></br>Dobzhansky 1957</td>
-		<td align="center"><i><b>Exam 1--Due Feb. 20</b></br></br>Precis-Feb. 20</td>
-		</tr><tr>
-		<td align="center">8</td>
-		<td align="center">Feb. 23</br></br>Feb. 25</br></br>Feb. 27</td>
-		<td align="center">Hardy-Weinberg</br></br>Hardy-Weinberg</br></br>Hardy-Weinberg Work Day</td>
-		<td align="center"><i>For Class:</i></br>Ch. 7-8</br></br></td>
-		<td align="center"><i><b>Outline and Annotated Bibliography</br>due Feb. 27</b></br></td>
-		</tr><tr>
-		<td align="center">9</td>
-		<td align="center">Mar. 2</br></br>Mar. 4</br></br>Mar. 6</td>
-		<td align="center">Hardy-Weinberg Work Day</br></br>What is a species?</br></br><b>Discussion:  What is a species?</b></td>
-		<td align="center"><i>For Class:</i></br>Ch. 14.1</br></br><i>For Discussion:</i></br>Mayr 1996</td>
-		<td align="center"><i>Hardy-Weinberg Problems</br>Due Mar. 4</br></br>Precis Mar. 6</td>
-		</tr><tr>
-		<td align="center">-</td>
-		<td align="center">Mar. 9</br></br>Mar. 11</br></br>Mar. 13</td>
-		<td align="center"><b>SPRING BREAK--NO CLASS</b></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		</tr><tr>
-		<td align="center">10</td>
-		<td align="center">Mar. 16</br></br>Mar. 18</br></br>Mar. 19</td>
-		<td align="center">What is a species?</br></br>What is a Species?</br></br><b>Discussion: Why are there so many animals?</b></td>
-		<td align="center"><i>For Class:</i></br>Ch. 14.2-3</br></br><i>For Discussion</i></br>Hutchinson 1959</td>
-		<td align="center"><i>Precis Mar. 20</td>
-		</tr><tr>
-		<td align="center">11</td>
-		<td align="center">Mar. 23</br></br>Mar. 25</br></br>Mar. 27</td>
-		<td align="center">Speciation</br></br>Speciation</br></br><b>Discussion: Skepticism to Santa Rosalia</b></td>
-		<td align="center"><i>For Class:</i></br>Ch. 14.3-4</br></br><i>For Discussion</i></br>Felsenstein 1981</td>
-		<td align="center"><b>Meet with Dr. Hjelmen by Mar. 27</b></br></br>Precis-Mar. 27</td>
-		</tr><tr>
-		<td align="center">12</td>
-		<td align="center">Mar. 30</br></br>Apr. 1</br></br>Apr. 3</td>
-		<td align="center">Phylogenetics Hands-on</br></br>Phylogenetics Hands-on</br></br><b>Discussion: Reaffirmation of Santa Rosalia</b></td>
-		<td align="center"><i>For Class:</i></br>Ch. 4 & 5</br></br><i>For Discussion:</i></br>Bush 1993</td>
-		<td align="center"><i>Watch Phylogenetics lecture</br>Watch Phylogenetics Tutorial</br></br>Precis Apr. 3</i></td>
-		</tr><tr>
-		<td align="center">13</td>
-		<td align="center">Apr. 6</br></br>Apr. 8</br></br>Apr. 9</td>
-		<td align="center"><b>Speciation and Human Evolution</br></br>Review of Posters</br></br>Review of Posters</td>
-		<td align="center"><i>For Class:</i></br>Ch. 19</br></td>
-		<td align="center"><i><b>Poster Draft-Due Apr. 3</br></br>Peer Review of Poster-Due Apr. 6</td>
-		</tr><tr>
-		<td align="center">14</td>
-		<td align="center">Apr. 13</br></br>Apr. 15</br></br>Apr. 17</td>
-		<td align="center">Human Evolution</br></br>Human Evolution</br></br><b>Poster Presentations</b></td>
-		<td align="center"><i>For Class:</i></br>Ch. 19</br></td>
-		<td align="center"><b>Final Posters due by Apr. 10</td>
-		</tr><tr>
-		<td align="center">15</td>
-		<td align="center">Apr. 21</td>
-		<td align="center"><b>Discussion: Biological Classification</b></td>
-		<td align="center"><i>For Discussion: Mayr 1981</i> </td>
-		<td align="center"><i><b>Group Evaluation due Apr. 21</br></br><b>Exam 2 Due Apr. 22</br></br></b>Precis Due Apr. 20 </td>
-		</tr>
-		</table>
-		</div>
-		</br>
-		</br>
-	<h4 class="section-title"> Questions/Comments</p></h4>
-	<div align="center">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScNO-RbsmKqKv60CpIh2-RBhl2p4Q6OOVykl7eMRu5B2NPLvg/viewform?embedded=true" width="640" height="832" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>	
-	
-	
-	  
-    
+          <!-- ══ LEFT SIDEBAR ══ -->
+          <div class="col-lg-3">
+            <div class="sidebar-sticky">
 
-		<!-- End About Us Section -->
+              <!-- Quick info -->
+              <div class="sidebar-card">
+                <div class="sc-header">
+                  <i class="bi bi-info-circle-fill"></i>
+                  <h3>Course Info</h3>
+                </div>
+                <div class="sc-body">
+                  <div class="detail-row">
+                    <i class="bi bi-hash dr-icon"></i>
+                    <span class="dr-label">Course</span>
+                    <span class="dr-val">BIOL 4500-01</span>
+                  </div>
+                  <div class="detail-row">
+                    <i class="bi bi-calendar3 dr-icon"></i>
+                    <span class="dr-label">Semester</span>
+                    <span class="dr-val">Spring 2026</span>
+                  </div>
+                  <div class="detail-row">
+                    <i class="bi bi-clock dr-icon"></i>
+                    <span class="dr-label">Format</span>
+                    <span class="dr-val">M / W / F in-person</span>
+                  </div>
+                  <div class="detail-row">
+                    <i class="bi bi-person-fill dr-icon"></i>
+                    <span class="dr-label">Instructor</span>
+                    <span class="dr-val"><a href="aboutme.html">Dr. Carl Hjelmen</a></span>
+                  </div>
+                  <div class="detail-row">
+                    <i class="bi bi-building dr-icon"></i>
+                    <span class="dr-label">Office</span>
+                    <span class="dr-val">SB 242b</span>
+                  </div>
+                  <div class="detail-row">
+                    <i class="bi bi-envelope-fill dr-icon"></i>
+                    <span class="dr-label">Email</span>
+                    <span class="dr-val"><a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a></span>
+                  </div>
+                  <div class="mt-3">
+                    <a href="assets/Syllabi/Spring_2026_BIOL_4500_Syllabus.pdf" target="_blank" class="syllabus-btn">
+                      <i class="bi bi-file-earmark-pdf"></i> Download Syllabus
+                    </a>
+                    <a href="https://uvu.instructure.com" target="_blank" rel="noopener" class="canvas-link">
+                      <i class="bi bi-box-arrow-up-right"></i> Canvas Course Page
+                    </a>
+                  </div>
+                </div>
+              </div>
 
+              <!-- Contact -->
+              <div class="sidebar-card">
+                <div class="sc-header">
+                  <i class="bi bi-envelope-fill"></i>
+                  <h3>Questions &amp; Contact</h3>
+                </div>
+                <div class="sc-body">
+                  <p class="contact-note">The best way to reach me is by email or during office hours. Check the <a href="contact.html">contact page</a> for my current calendar.</p>
+                  <a href="mailto:Carl.Hjelmen@uvu.edu" class="email-btn">
+                    <i class="bi bi-envelope"></i> Email Dr. Hjelmen
+                  </a>
+                  <div class="email-tip">
+                    <strong>When emailing, please include:</strong>
+                    <ul>
+                      <li>Your full name</li>
+                      <li>"BIOL 4500" in the subject line</li>
+                      <li>A specific question or topic</li>
+                      <li>A proposed meeting time if requesting office hours</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
+              <!-- Learning objectives -->
+              <div class="sidebar-card">
+                <div class="sc-header">
+                  <i class="bi bi-check2-circle"></i>
+                  <h3>Learning Objectives</h3>
+                </div>
+                <div class="sc-body">
+                  <p style="font-size:0.8rem; color:#888; margin-bottom:10px;">Upon completion of this course, students will be able to:</p>
+                  <ol class="obj-list">
+                    <li>Discuss classic literature and historical figures in evolutionary biology</li>
+                    <li>Explain the molecular and genetic basis for evolution</li>
+                    <li>Explain mechanisms of evolution (natural selection, migration, genetic drift, mutation, nonrandom mating) and their relationship to population genetics</li>
+                    <li>Apply Hardy-Weinberg calculations to various populations</li>
+                    <li>Describe mechanisms of speciation and origin of new species</li>
+                    <li>Evaluate how the fossil record relates to current views of evolution</li>
+                    <li>Analyze evolutionary trends demonstrated by phylogeny</li>
+                    <li>Investigate the course of evolution in prokaryotes and eukaryotes, with emphasis on hominin evolution</li>
+                    <li>Compose disciplinary-appropriate texts: scientific essays, posters, manuscripts, and mock grant proposals</li>
+                  </ol>
+                </div>
+              </div>
 
-     
-    
-  </main><!-- End #main -->
+            </div>
+          </div>
 
-    <!-- ======= Footer ======= -->
+          <!-- ══ MAIN: Schedule ══ -->
+          <div class="col-lg-9">
+
+            <div class="schedule-wrap">
+              <div class="schedule-header">
+                <h2><i class="bi bi-calendar3-week"></i> Course Schedule</h2>
+                <span class="sh-note">Subject to change &mdash; check Canvas for updates</span>
+              </div>
+
+              <!-- Legend -->
+              <div class="schedule-legend">
+                <span class="legend-item"><span class="legend-dot" style="background:var(--blue);"></span> Discussion day</span>
+                <span class="legend-item"><span class="legend-dot" style="background:var(--amber);"></span> Exam / major deadline</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#ccc;"></span> No class / break</span>
+                <span class="legend-item"><i class="bi bi-book" style="color:var(--green-main); font-size:0.8rem;"></i> Reading due</span>
+                <span class="legend-item"><i class="bi bi-pencil-square" style="color:var(--green-main); font-size:0.8rem;"></i> Assignment due</span>
+              </div>
+
+              <!-- ── Week 1 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">1</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Jan. 5</div>
+                    <div class="date-line"><span class="day-badge">W</span> Jan. 7</div>
+                    <div class="date-line"><span class="day-badge">F</span> Jan. 9</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Intro &amp; Syllabus Overview</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>How to Read a Scientific Paper (pt. 1)</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Science as a Way of Knowing <em style="font-size:0.75rem; color:#aaa;">(video)</em></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Syllabus Quiz — due Jan. 9</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Questions about Scientific Papers — due Jan. 7</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Discussion Date Signup — due Jan. 9</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 1</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 2 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">2</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Jan. 12</div>
+                    <div class="date-line"><span class="day-badge">W</span> Jan. 14</div>
+                    <div class="date-line"><span class="day-badge">F</span> Jan. 15</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Early History of Evolution</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Darwin &amp; Natural Selection</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Darwin's Original Paper <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Jan. 16</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 1–2; Darwin 1859 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 3 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">3</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Jan. 19</div>
+                    <div class="date-line"><span class="day-badge">W</span> Jan. 21</div>
+                    <div class="date-line"><span class="day-badge">F</span> Jan. 23</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:#ccc;"></span>MLK Jr. Day <span class="holiday-badge">No Class</span></div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Mendel &amp; Genetics Review</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Genetics &amp; Evolution <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-major"><i class="bi bi-flag-fill" style="color:var(--green-main);"></i><span class="di-text">Project Subject Selection — Jan. 23</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Jan. 23</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 6; Malik 2017 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 4 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">4</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Jan. 26</div>
+                    <div class="date-line"><span class="day-badge">W</span> Jan. 28</div>
+                    <div class="date-line"><span class="day-badge">F</span> Jan. 30</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Mendel cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Modern Synthesis <em style="font-size:0.75rem; color:#aaa;">(video)</em></div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Modern Synthesis <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Jan. 30</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 2; Mayr 1993 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 5 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">5</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Feb. 2</div>
+                    <div class="date-line"><span class="day-badge">W</span> Feb. 4</div>
+                    <div class="date-line"><span class="day-badge">F</span> Feb. 6</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Mechanisms: Selection</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Mechanisms: Selection cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Darwin's Finches <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Feb. 6</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Grant &amp; Grant 2003 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 6 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">6</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Feb. 9</div>
+                    <div class="date-line"><span class="day-badge">W</span> Feb. 11</div>
+                    <div class="date-line"><span class="day-badge">F</span> Feb. 13</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Mechanisms: Sexual Selection</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Mechanisms: Sexual Selection cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Trade-Offs <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Review/Reflection: Dobzhansky 1973 — due Feb. 11</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Feb. 13</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 16; Simmons &amp; Emlen 2006 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 7 — Exam 1 ── -->
+              <div class="week-row has-exam">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">7</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Feb. 16</div>
+                    <div class="date-line"><span class="day-badge">W</span> Feb. 18</div>
+                    <div class="date-line"><span class="day-badge">F</span> Feb. 20</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:#ccc;"></span>Holiday <span class="holiday-badge">No Class</span></div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Mechanisms: Drift &amp; Gene Flow</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Genetic Drift <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-exam"><i class="bi bi-file-earmark-text-fill" style="color:var(--amber);"></i><span class="di-text">📋 Exam 1 — due Feb. 20</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Feb. 20</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Dobzhansky 1957 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 8 ── -->
+              <div class="week-row has-exam">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">8</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Feb. 23</div>
+                    <div class="date-line"><span class="day-badge">W</span> Feb. 25</div>
+                    <div class="date-line"><span class="day-badge">F</span> Feb. 27</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Hardy-Weinberg Equilibrium</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Hardy-Weinberg cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Hardy-Weinberg Work Day</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-major"><i class="bi bi-flag-fill" style="color:var(--green-main);"></i><span class="di-text">Outline &amp; Annotated Bibliography — due Feb. 27</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 7–8</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 9 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">9</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Mar. 2</div>
+                    <div class="date-line"><span class="day-badge">W</span> Mar. 4</div>
+                    <div class="date-line"><span class="day-badge">F</span> Mar. 6</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Hardy-Weinberg Work Day</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>What is a Species?</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: What is a Species? <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Hardy-Weinberg Problems — due Mar. 4</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Mar. 6</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 14.1; Mayr 1996 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Spring Break ── -->
+              <div class="week-row is-break">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num" style="background:#ccc;">—</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge" style="color:#ccc;">M</span> Mar. 9</div>
+                    <div class="date-line"><span class="day-badge" style="color:#ccc;">W</span> Mar. 11</div>
+                    <div class="date-line"><span class="day-badge" style="color:#ccc;">F</span> Mar. 13</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line" style="color:#aaa; font-style:italic;"><span class="day-dot" style="background:#ddd;"></span>Spring Break — No Class</div>
+                  </div>
+                  <div class="wr-due"></div>
+                </div>
+              </div>
+
+              <!-- ── Week 10 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">10</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Mar. 16</div>
+                    <div class="date-line"><span class="day-badge">W</span> Mar. 18</div>
+                    <div class="date-line"><span class="day-badge">F</span> Mar. 20</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>What is a Species? cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Species Concepts cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Why Are There So Many Animals? <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Mar. 20</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 14.2–3; Hutchinson 1959 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 11 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">11</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Mar. 23</div>
+                    <div class="date-line"><span class="day-badge">W</span> Mar. 25</div>
+                    <div class="date-line"><span class="day-badge">F</span> Mar. 27</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Speciation</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Speciation cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Skepticism to Santa Rosalia <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-major"><i class="bi bi-people-fill" style="color:var(--green-main);"></i><span class="di-text">Meet with Dr. Hjelmen — by Mar. 27</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Mar. 27</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 14.3–4; Felsenstein 1981 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 12 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">12</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Mar. 30</div>
+                    <div class="date-line"><span class="day-badge">W</span> Apr. 1</div>
+                    <div class="date-line"><span class="day-badge">F</span> Apr. 3</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Phylogenetics Hands-On</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Phylogenetics Hands-On cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Reaffirmation of Santa Rosalia <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-major"><i class="bi bi-file-earmark-image" style="color:var(--green-main);"></i><span class="di-text">Poster Draft — due Apr. 3</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Apr. 3</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 4 &amp; 5; Bush 1993 (for discussion)</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-play-circle" style="color:#999;"></i><span class="di-text">Watch: Phylogenetics lecture &amp; tutorial</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 13 ── -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">13</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Apr. 6</div>
+                    <div class="date-line"><span class="day-badge">W</span> Apr. 8</div>
+                    <div class="date-line"><span class="day-badge">F</span> Apr. 10</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Speciation &amp; Human Evolution</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Poster Review Workshop</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Poster Review Workshop cont.</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-major"><i class="bi bi-people-fill" style="color:var(--green-main);"></i><span class="di-text">Peer Review of Poster — due Apr. 6</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 19</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 14 ── -->
+              <div class="week-row has-exam">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">14</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Apr. 13</div>
+                    <div class="date-line"><span class="day-badge">W</span> Apr. 15</div>
+                    <div class="date-line"><span class="day-badge">F</span> Apr. 17</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Human Evolution</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Human Evolution cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Poster Presentations <span class="discussion-badge" style="background:#fef3c7; color:var(--amber); border-color:var(--amber-border);"><i class="bi bi-easel2"></i> Presentations</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-major"><i class="bi bi-image" style="color:var(--amber);"></i><span class="di-text">Final Posters — due Apr. 10</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Ch. 19</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ── Week 15 — Exam 2 ── -->
+              <div class="week-row has-exam">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">15</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">M</span> Apr. 21</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--blue);"></span>Discussion: Biological Classification <span class="discussion-badge"><i class="bi bi-chat-dots"></i> Discussion</span></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-exam"><i class="bi bi-file-earmark-text-fill" style="color:var(--amber);"></i><span class="di-text">📋 Exam 2 — due Apr. 22</span></div>
+                    <div class="due-item is-major"><i class="bi bi-people-fill" style="color:var(--green-main);"></i><span class="di-text">Group Evaluation — due Apr. 21</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Précis — due Apr. 20</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Mayr 1981 (for discussion)</span></div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- end schedule-wrap -->
+
+            <!-- Deadline summary -->
+            <div style="background:#fff; border:1px solid var(--green-border); border-radius:10px; overflow:hidden;">
+              <div style="background:var(--amber); padding:11px 18px; display:flex; align-items:center; gap:8px;">
+                <i class="bi bi-flag-fill" style="color:rgba(255,255,255,0.85);"></i>
+                <span style="font-family:'Lora',serif; font-size:0.9rem; font-weight:700; color:#fff;">Major Deadlines at a Glance</span>
+              </div>
+              <div style="padding:16px 18px;">
+                <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap:10px;">
+
+                  <div style="display:flex; align-items:flex-start; gap:10px; padding:9px 12px; background:var(--amber-light); border:1px solid var(--amber-border); border-radius:6px;">
+                    <i class="bi bi-file-earmark-text-fill" style="color:var(--amber); flex-shrink:0; margin-top:2px;"></i>
+                    <div>
+                      <div style="font-size:0.78rem; font-weight:700; color:var(--amber);">Exam 1</div>
+                      <div style="font-size:0.83rem; color:#444;">Due Feb. 20</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:10px; padding:9px 12px; background:var(--green-light); border:1px solid var(--green-border); border-radius:6px;">
+                    <i class="bi bi-flag-fill" style="color:var(--green-main); flex-shrink:0; margin-top:2px;"></i>
+                    <div>
+                      <div style="font-size:0.78rem; font-weight:700; color:var(--green-main);">Outline &amp; Annotated Bib.</div>
+                      <div style="font-size:0.83rem; color:#444;">Due Feb. 27</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:10px; padding:9px 12px; background:var(--green-light); border:1px solid var(--green-border); border-radius:6px;">
+                    <i class="bi bi-people-fill" style="color:var(--green-main); flex-shrink:0; margin-top:2px;"></i>
+                    <div>
+                      <div style="font-size:0.78rem; font-weight:700; color:var(--green-main);">Meet with Dr. Hjelmen</div>
+                      <div style="font-size:0.83rem; color:#444;">By Mar. 27</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:10px; padding:9px 12px; background:var(--green-light); border:1px solid var(--green-border); border-radius:6px;">
+                    <i class="bi bi-file-earmark-image" style="color:var(--green-main); flex-shrink:0; margin-top:2px;"></i>
+                    <div>
+                      <div style="font-size:0.78rem; font-weight:700; color:var(--green-main);">Poster Draft</div>
+                      <div style="font-size:0.83rem; color:#444;">Due Apr. 3</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:10px; padding:9px 12px; background:var(--green-light); border:1px solid var(--green-border); border-radius:6px;">
+                    <i class="bi bi-people-fill" style="color:var(--green-main); flex-shrink:0; margin-top:2px;"></i>
+                    <div>
+                      <div style="font-size:0.78rem; font-weight:700; color:var(--green-main);">Peer Review of Poster</div>
+                      <div style="font-size:0.83rem; color:#444;">Due Apr. 6</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:10px; padding:9px 12px; background:var(--green-light); border:1px solid var(--green-border); border-radius:6px;">
+                    <i class="bi bi-image" style="color:var(--green-main); flex-shrink:0; margin-top:2px;"></i>
+                    <div>
+                      <div style="font-size:0.78rem; font-weight:700; color:var(--green-main);">Final Poster</div>
+                      <div style="font-size:0.83rem; color:#444;">Due Apr. 10</div>
+                    </div>
+                  </div>
+
+                  <div style="display:flex; align-items:flex-start; gap:10px; padding:9px 12px; background:var(--amber-light); border:1px solid var(--amber-border); border-radius:6px;">
+                    <i class="bi bi-file-earmark-text-fill" style="color:var(--amber); flex-shrink:0; margin-top:2px;"></i>
+                    <div>
+                      <div style="font-size:0.78rem; font-weight:700; color:var(--amber);">Exam 2</div>
+                      <div style="font-size:0.83rem; color:#444;">Due Apr. 22</div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end main col -->
+        </div><!-- end row -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Current Courses</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Spring2026biol1011_1.html">Bioinformatics (BIOL 1011-01)</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Spring2026biol1011_2.html">Bioinformatics (BIOL 1011-02)</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Spring2026biol4260_1.html">Ethical Issues in Biology</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="Previous_Courses.html">Previous Courses</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Resources.html">Student Resources</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact &amp; Calendar</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Vendor JS -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

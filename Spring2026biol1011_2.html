@@ -1,31 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7ZST668Y5S');</script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Introduction to Bioinformatics (BIOL 1011)</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
+  <title>Introduction to Bioinformatics (BIOL 1011-02) | Spring 2026 | Hjelmen Lab @ UVU</title>
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,340 +17,610 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    :root{--green-dark:#1a3f26;--green-main:#275D38;--green-mid:#3a7d52;--green-light:#e8f2ec;--green-pale:#f4faf6;--green-border:#c3ddc9;--amber:#b45309;--amber-light:#fef3c7;--amber-border:#fcd34d;--blue:#2563a8;--blue-light:#eff6ff;--blue-border:#bfdbfe}
+    body{font-family:'Source Sans 3',sans-serif}
+    .course-hero{background:linear-gradient(135deg,var(--green-dark) 0%,var(--green-main) 60%,var(--green-mid) 100%);margin-top:72px;padding:48px 0 40px;position:relative;overflow:hidden}
+    .course-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);background-size:22px 22px;pointer-events:none}
+    .ch-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border-radius:20px;margin-bottom:12px;position:relative}
+    .course-hero h1{font-family:'Lora',serif;font-size:2rem;font-weight:700;color:#fff;margin-bottom:4px;position:relative}
+    .ch-sub{color:rgba(255,255,255,.75);font-size:.95rem;position:relative;margin-bottom:20px}
+    .ch-pills{display:flex;flex-wrap:wrap;gap:8px;position:relative}
+    .ch-pill{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9);font-size:.8rem;padding:4px 12px;border-radius:16px}
+    .ch-pill i{font-size:.85rem;color:#aed6bc}
+    .course-body{background:var(--green-pale);padding:36px 0 64px}
+    .sidebar-card{background:#fff;border:1px solid var(--green-border);border-radius:10px;overflow:hidden;margin-bottom:18px}
+    .sidebar-card .sc-header{background:var(--green-main);padding:11px 16px;display:flex;align-items:center;gap:8px}
+    .sidebar-card .sc-header h3{font-family:'Lora',serif;font-size:.9rem;font-weight:700;color:#fff;margin:0}
+    .sidebar-card .sc-header i{color:rgba(255,255,255,.8);font-size:.95rem}
+    .sidebar-card .sc-body{padding:16px 18px}
+    .detail-row{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid #f0f0f0;font-size:.86rem}
+    .detail-row:last-child{border-bottom:none}
+    .detail-row .dr-icon{color:var(--green-main);font-size:.9rem;flex-shrink:0;margin-top:2px;width:16px}
+    .detail-row .dr-label{font-weight:700;color:#333;min-width:72px;flex-shrink:0}
+    .detail-row .dr-val{color:#555;line-height:1.45}
+    .detail-row .dr-val a{color:var(--green-main)}
+    .syllabus-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--green-main);color:#fff;font-weight:700;font-size:.9rem;padding:11px 20px;border-radius:6px;text-decoration:none;transition:background .2s;margin-bottom:8px}
+    .syllabus-btn:hover{background:var(--green-dark);color:#fff}
+    .canvas-link{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--green-pale);color:var(--green-main);font-weight:700;font-size:.85rem;padding:9px 20px;border-radius:6px;border:1px solid var(--green-border);text-decoration:none;transition:background .2s}
+    .canvas-link:hover{background:var(--green-light)}
+    .obj-list{list-style:none;padding:0;margin:0;counter-reset:obj-counter}
+    .obj-list li{display:flex;align-items:flex-start;gap:11px;padding:9px 0;border-bottom:1px solid #f5f5f5;counter-increment:obj-counter;font-size:.85rem;color:#444;line-height:1.5}
+    .obj-list li:last-child{border-bottom:none}
+    .obj-list li::before{content:counter(obj-counter);background:var(--green-main);color:#fff;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;flex-shrink:0;margin-top:1px}
+    .contact-note{font-size:.83rem;color:#555;line-height:1.6;margin-bottom:12px}
+    .email-btn{display:flex;align-items:center;gap:8px;background:var(--green-main);color:#fff;font-weight:700;font-size:.88rem;padding:10px 16px;border-radius:6px;text-decoration:none;transition:background .2s;margin-bottom:10px}
+    .email-btn:hover{background:var(--green-dark);color:#fff}
+    .email-tip{background:var(--green-pale);border:1px solid var(--green-border);border-radius:6px;padding:10px 12px;font-size:.78rem;color:#555;line-height:1.6}
+    .email-tip strong{color:var(--green-dark);display:block;margin-bottom:4px}
+    .email-tip ul{list-style:none;padding:0;margin:0}
+    .email-tip ul li{padding:2px 0;display:flex;align-items:flex-start;gap:6px}
+    .email-tip ul li::before{content:'→';color:var(--green-main);font-size:.75rem;flex-shrink:0;margin-top:1px}
+    .schedule-wrap{background:#fff;border:1px solid var(--green-border);border-radius:10px;overflow:hidden;margin-bottom:18px}
+    .schedule-header{background:var(--green-dark);padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .schedule-header h2{font-family:'Lora',serif;font-size:1rem;font-weight:700;color:#fff;margin:0;display:flex;align-items:center;gap:8px}
+    .schedule-header .sh-note{font-size:.72rem;color:rgba(255,255,255,.6)}
+    .schedule-legend{display:flex;flex-wrap:wrap;gap:14px;padding:10px 20px;background:var(--green-pale);border-bottom:1px solid var(--green-border);font-size:.75rem;color:#666}
+    .legend-item{display:flex;align-items:center;gap:6px}
+    .legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+    .week-row{border-bottom:1px solid #f0f0f0;transition:background .15s}
+    .week-row:last-child{border-bottom:none}
+    .week-row:hover{background:#fafafa}
+    .week-row.is-break{background:#f8f8f8;opacity:.7}
+    .week-row.has-exam{background:var(--amber-light)}
+    .week-row.has-exam:hover{background:#fde68a}
+    .week-row-inner{display:grid;grid-template-columns:52px 90px 1fr 1fr;gap:0;align-items:stretch}
+    .wr-week{display:flex;align-items:center;justify-content:center;padding:14px 6px;font-size:.72rem;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:.05em;border-right:1px solid #f0f0f0}
+    .wr-week .wk-num{background:var(--green-main);color:#fff;border-radius:4px;padding:2px 6px;font-size:.7rem}
+    .week-row.is-break .wr-week .wk-num{background:#ccc}
+    .week-row.has-exam .wr-week .wk-num{background:var(--amber)}
+    .wr-dates{padding:14px 10px;border-right:1px solid #f0f0f0;font-size:.78rem;color:#888;display:flex;flex-direction:column;justify-content:center;gap:3px;line-height:1.3}
+    .wr-dates .date-line{display:flex;align-items:center;gap:5px}
+    .wr-dates .day-badge{font-size:.65rem;font-weight:700;color:var(--green-main);min-width:20px}
+    .week-row.is-break .wr-dates .day-badge{color:#aaa}
+    .wr-main{padding:14px;border-right:1px solid #f0f0f0}
+    .wr-main .topic-line{font-size:.85rem;color:#333;line-height:1.45;margin-bottom:4px;display:flex;align-items:flex-start;gap:7px}
+    .wr-main .topic-line .day-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:6px}
+    .discussion-badge{display:inline-flex;align-items:center;gap:4px;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;background:var(--blue-light);color:var(--blue);border:1px solid var(--blue-border);padding:1px 6px;border-radius:4px;margin-left:4px;vertical-align:middle}
+    .holiday-badge{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;background:#f3f4f6;color:#888;border:1px solid #e5e7eb;padding:1px 6px;border-radius:4px}
+    .wr-due{padding:14px}
+    .due-item{display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;font-size:.82rem;line-height:1.4}
+    .due-item:last-child{margin-bottom:0}
+    .due-item i{font-size:.8rem;flex-shrink:0;margin-top:2px}
+    .due-item .di-text{color:#444}
+    .due-item.is-exam .di-text{font-weight:700;color:var(--amber)}
+    .due-item.is-major .di-text{font-weight:700;color:var(--green-dark)}
+    .due-item.is-reading .di-text{color:#888;font-style:italic}
+    .sidebar-sticky{position:sticky;top:90px}
+    @media(max-width:991px){.sidebar-sticky{position:static}}
+    @media(max-width:767px){.week-row-inner{grid-template-columns:44px 1fr;grid-template-rows:auto auto}.wr-dates{display:none}.wr-main{border-right:none}.wr-due{grid-column:2;padding-top:0}}
+    @media(max-width:768px){.course-hero{padding:36px 0 30px;margin-top:58px}.course-hero h1{font-size:1.6rem}}
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
-
 <body>
 
-      <!-- ======= Header ======= -->
+  <!-- Header -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
       <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html">Home</a></li>
-
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#" class="active"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
-             <ul>
-                    <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-
-
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html" >Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html" class="active">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-<li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
-
+          </li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-
+  </header>
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- Hero -->
+    <div class="course-hero">
       <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Introduction to Bioinformatics (BIOL 1011-001)</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Introduction to Bioinformatics (BIOL 1011-001)</li>
-          </ol>
+        <div class="ch-eyebrow"><i class="bi bi-book-fill"></i> Spring 2026 &middot; Utah Valley University</div>
+        <h1>Introduction to Bioinformatics</h1>
+        <div class="ch-sub">BIOL 1011-02 &nbsp;&middot;&nbsp; Dr. Carl Hjelmen &nbsp;&middot;&nbsp; Spring 2026</div>
+        <div class="ch-pills">
+          <span class="ch-pill"><i class="bi bi-calendar3"></i> Tue / Thu</span>
+          <span class="ch-pill"><i class="bi bi-mortarboard"></i> Introductory &middot; 1 Credit</span>
+          <span class="ch-pill"><i class="bi bi-clock"></i> 15 Weeks</span>
+          <span class="ch-pill"><i class="bi bi-code-slash"></i> Includes R Programming</span>
         </div>
-
       </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
 
-    <!-- ======= About Us Section ======= -->
-	<p></p>     
-	<div>
-	<h2 class="section-title"><b>Introduction to Bioinformatics (ALWAYS UNDER CONSTRUCTION) </b></div>
-	<div>
-	<h4 class="section-title"> <b>BIOL 1011-001--Spring 2026</b></p></h4>
-	</div>
-	<h4 class="section-title"> <a href="assets/Syllabi/Spring_2026_BIOL 1011 Intro Bioinformatics_Syllabus.pdf"><b>Syllabus</b></a></p></h4>
-	
-	
-	<h4 class="section-title"> <b>Learning Objectives</b></p></h4>
-	<div align="center">
-	<p><b>Upon completion of this course, students will be able to:</b></br></br>
-	<b>1.</b>	Distinguish the process of science from other ways of understanding the world.</br></br>
-	<b>2.</b>	Evaluate evidence to solve problems using scientific thinking.</br></br>
-	<b>3.</b>	Describe the basic terminology and principles of the bioinformatic “omics” - such as genomics, transcriptomics, proteomics, etc.</br></br>
-	<b>4.</b>	Contrast the different methodologies of DNA sequencing.</br></br>
-	<b>5.</b>	Effectively use databases, websites, and computational methods for studying biological data in relation to the evolution of genes, proteins, and whole genomes.</br></br>
-	<b>6.</b>	Interact with the practical applications of bioinformatics, including some basic coding</br></br>
-</p></div>
-	
-	<h4 class="section-title"> <b>Schedule</b> (Subject to change)</p></h4>
-	<div align="center">
-	<table style="width:75%">
-		<tr  align="center">
-		<th align="center">Week of Class</th>
-		<th align="center">Dates</br>(Month/Day)</th>
-		<th align="center">Topic(s)</th>
-		<th align="center">Assignments/</br>Activities</th>
-		<th align="center">Recommended</br>Reading</th>
-		<th align="center">Additional Reading</br>(on Canvas)</th>
-		</tr>
-		<tr>
-		<td align="center">Week 1</td>
-		<td align="center">01/06 T</br></br>01/08 R</td>
-		<td align="center">Intro. to Bioinformatics</br></br>Scientific Process <b>video</b></td>
-		<td align="center">Syllabus Quiz</td>
-		<td align="center">Lesk: Preface, pp. 34-37</td>
-		<td align="center"> Gauthier et al. 2019</br>Markowetz 2017</td>
-		</tr><tr>
-		<td align="center">Week 2</td>
-		<td align="center">01/13 T</br></br>01/15 R</td>
-		<td align="center">Evolution <b>video</b></br></br>Evolution</td>
-		<td align="center">Case Study: Does sugar cause hyperactivity</td>
-		<td align="center">Lesk: pp. 1-7</td>
-		<td align="center">-</td>
-		</tr><tr>
-		<td align="center">Week 3</td>
-		<td align="center">01/20 T</br></br>01/22 R</td>
-		<td align="center">Inheritance</br></br>Inheritance</td>
-		<td align="center">Evolution Worksheet</td>
-		<td align="center">-</td>
-		<td align="center">-</td>
-		</tr><tr>
-		<td align="center">Week 4</td>
-		<td align="center">01/27 T</br></br>01/29 R</td>
-		<td align="center">Central Dogma: DNA Structure</br></br>DNA Replication</td>
-		<td align="center">Inheritance Assignment</td>
-		<td align="center">Lesk: pp. 9-17,49-58</td>
-		<td align="center">Crick 1970</td>
-		</tr><tr>
-		<td align="center">Week 5</td>
-		<td align="center">02/03 T</br></br>02/05 R</td>
-		<td align="center">RNA Transcription</br></br>Protein Translation</td>
-		<td align="center">DNA Structure Assignment</td>
-		<td align="center">Lesk: 88-122</td>
-		<td align="center">-</td>
-		</tr><tr>
-		<td align="center">Week 6</td>
-		<td align="center">02/10 T</br></br>02/12 R</td>
-		<td align="center">Central Dogma--Omics</br></br>Genome Sequencing Intro</td>
-		<td align="center"><b>TAKE HOME EXAM 1</br>DUE FEB 10</b></td>
-		<td align="center">Lesk: 57-67</td>
-		<td align="center">-</td>
-		</tr><tr>
-		<td align="center">Week 7</td>
-		<td align="center">02/17 T</br></br>02/19 R</td>
-		<td align="center">Genome Sequencing Intro</br></br>Next and 3rd Generation Sequencing</td>
-		<td align="center">Sequencing Intro Assignment</td>
-		<td align="center">-</td>
-		<td align="center">Shendure et al. 2017</br>Sims et al. 2014</br>Logsdon et al. 2020</br>Heather & Chain</br>Goodwin et al. 2016</td>
-		</tr><tr>
-		<td align="center">Week 8</td>
-		<td align="center">02/24 T</br></br>02/26 R</td>
-		<td align="center">Steps of Sequencing Processing</br></br>Genome Assembly</b></td>
-		<td align="center">Sequencing Assignment</td>
-		<td align="center">Lesk: pp. 68-73</td>
-		<td align="center"> Rice and Green 2017</td>
-		</tr><tr>
-		<td align="center">Week 9</td>
-		<td align="center">03/03 T</br></br>03/05 R</td>
-		<td align="center">Genome Assembly pt. 2</br></br>BLAST</td>
-		<td align="center">-</td>
-		<td align="center">-</td>
-		<td align="center">-</td>
-		</tr><tr>
-		<td align="center"> -</td>
-		<td align="center">03/10 T</br></br>03/12 R</td>
-		<td align="center"><b>SPRING BREAK--NO CLASS</b></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		</tr><tr>
-		<td align="center">Week 10</td>
-		<td align="center">03/17 T</br></br>03/19 R</td>
-		<td align="center">Other uses of NCBI</br></br> Phylogenetics</td>
-		<td align="center">BLAST/NCBI Assignment (in class)</td>
-		<td align="center">Lesk: pp. 123-143 </td>
-		<td align="center">Langmead and Nellore 2018</br>Erlich and Narayanan 2014 </td>
-		</tr>
-		<tr>
-		<td align="center">Week 11</td>
-		<td align="center">03/24 T</br></br>03/26 R</td>
-		<td align="center">Phylogenetics Hands on</br></br>Biology and Computers</td>
-		<td align="center"><b>TAKE HOME EXAM 2</br>DUE MAR. 24</b></br>Building your own phylogeny (in class)</td>
-		<td align="center">Lesk: pp. 154-171 </td>
-		<td align="center">Kapli et al. 2020</td>
-		</tr><tr>
-		<td align="center">Week 12</td>
-		<td align="center">03/31 T</br></br>04/02 R</td>
-		<td align="center">DNA Kits/Genetic Privacy</br></br>Introduction to R</td>
-		<td align="center">-</td>
-		<td align="center">Lesk: pp. 356-372, 378-393</td>
-		<td align="center">-</td>
-		</tr><tr>
-		<td align="center">Week 13</td>
-		<td align="center">04/07 T</br></br>04/09 R</td>
-		<td align="center">Using R </br></br>Using R</td>
-		<td align="center">R Assignment</td>
-		<td align="center">-</td>
-		<td align="center">-</td>
-		</tr><tr>
-		<td align="center">Week 14</td>
-		<td align="center">04/14 T</br></br>04/16 R</td>
-		<td align="center">Subsetting Data</br></br>Writing a Function</td>
-		<td align="center">R Assignment</td>
-		<td align="center">-</td>
-		<td align="center">-</td>
-		</tr><tr>
-		
-		<td align="center">Week 15</td>
-		<td align="center">04/21 T</td>
-		<td align="center">Identifying Types of chromosomes</td>
-		<td align="center"><b>TAKE HOME EXAM 3</br>DUE APR. 21</b></td>
-		<td align="center">-</td>
-		<td align="center">-</td>
-		</tr><tr>
-		<td align="center">Final</td>
-		<td align="center">04/27 T</td>
-		<td align="center">FINISH FINAL PROJECT</td>
-		<td align="center"><b>FINAL PROJECT</br>DUE APR. 27</b></td>
-		<td align="center">-</td>
-		<td align="center">-</td>
-		</tr>
-		</table>
-		</div>
-	</br>
-	</br>
-	<h4 class="section-title"> <b>Questions/Comments</b></p></h4>
-	<div align="center">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScNoCsnB2OT9DJ9p_gwJdcS7kiTq76fhMWtdSROZDGKxtfZoA/viewform?embedded=true" width="640" height="832" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>	</div>
-	</div>
-	
-	
-	
-	  
-    
+    <!-- Body -->
+    <div class="course-body">
+      <div class="container">
+        <div class="row g-4">
 
-		<!-- End About Us Section -->
+          <!-- Sidebar -->
+          <div class="col-lg-3">
+            <div class="sidebar-sticky">
 
+              <div class="sidebar-card">
+                <div class="sc-header"><i class="bi bi-info-circle-fill"></i><h3>Course Info</h3></div>
+                <div class="sc-body">
+                  <div class="detail-row"><i class="bi bi-hash dr-icon"></i><span class="dr-label">Course</span><span class="dr-val">BIOL 1011-02</span></div>
+                  <div class="detail-row"><i class="bi bi-calendar3 dr-icon"></i><span class="dr-label">Semester</span><span class="dr-val">Spring 2026</span></div>
+                  <div class="detail-row"><i class="bi bi-clock dr-icon"></i><span class="dr-label">Format</span><span class="dr-val">Tue / Thu in-person</span></div>
+                  <div class="detail-row"><i class="bi bi-person-fill dr-icon"></i><span class="dr-label">Instructor</span><span class="dr-val"><a href="aboutme.html">Dr. Carl Hjelmen</a></span></div>
+                  <div class="detail-row"><i class="bi bi-building dr-icon"></i><span class="dr-label">Office</span><span class="dr-val">SB 242b</span></div>
+                  <div class="detail-row"><i class="bi bi-envelope-fill dr-icon"></i><span class="dr-label">Email</span><span class="dr-val"><a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a></span></div>
+                  <div class="mt-3">
+                    <a href="assets/Syllabi/Spring_2026_BIOL 1011 Intro Bioinformatics_Syllabus.pdf" target="_blank" class="syllabus-btn"><i class="bi bi-file-earmark-pdf"></i> Download Syllabus</a>
+                  </div>
+                </div>
+              </div>
 
+              <div class="sidebar-card">
+                <div class="sc-header"><i class="bi bi-envelope-fill"></i><h3>Questions &amp; Contact</h3></div>
+                <div class="sc-body">
+                  <p class="contact-note">Email is the best way to reach me. Check the <a href="contact.html">contact page</a> for office hours and my calendar.</p>
+                  <a href="mailto:Carl.Hjelmen@uvu.edu" class="email-btn"><i class="bi bi-envelope"></i> Email Dr. Hjelmen</a>
+                  <div class="email-tip">
+                    <strong>When emailing, please include:</strong>
+                    <ul>
+                      <li>Your full name</li>
+                      <li>"BIOL 1011" in the subject line</li>
+                      <li>Your section number (01 or 02)</li>
+                      <li>A specific question or topic</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
 
-     
-    
-  </main><!-- End #main -->
+              <div class="sidebar-card">
+                <div class="sc-header"><i class="bi bi-check2-circle"></i><h3>Learning Objectives</h3></div>
+                <div class="sc-body">
+                  <p style="font-size:.8rem;color:#888;margin-bottom:10px;">Upon completion of this course, students will be able to:</p>
+                  <ol class="obj-list">
+                    <li>Distinguish the process of science from other ways of understanding the world</li>
+                    <li>Evaluate evidence to solve problems using scientific thinking</li>
+                    <li>Describe the basic terminology and principles of bioinformatic "omics" — genomics, transcriptomics, proteomics, etc.</li>
+                    <li>Contrast the different methodologies of DNA sequencing</li>
+                    <li>Effectively use databases, websites, and computational methods for studying biological data in relation to the evolution of genes, proteins, and whole genomes</li>
+                    <li>Interact with the practical applications of bioinformatics, including basic coding in R</li>
+                  </ol>
+                </div>
+              </div>
 
-    <!-- ======= Footer ======= -->
+            </div>
+          </div>
+
+          <!-- Schedule -->
+          <div class="col-lg-9">
+            <div class="schedule-wrap">
+              <div class="schedule-header">
+                <h2><i class="bi bi-calendar3-week"></i> Course Schedule</h2>
+                <span class="sh-note">Subject to change &mdash; check Canvas for updates</span>
+              </div>
+              <div class="schedule-legend">
+                <span class="legend-item"><span class="legend-dot" style="background:var(--amber);"></span> Exam / final project</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#ccc;"></span> No class / break</span>
+                <span class="legend-item"><i class="bi bi-book" style="color:var(--green-main);font-size:.8rem;"></i> Reading</span>
+                <span class="legend-item"><i class="bi bi-pencil-square" style="color:var(--green-main);font-size:.8rem;"></i> Assignment due</span>
+              </div>
+
+              <!-- Week 1 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">1</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Jan. 6</div>
+                    <div class="date-line"><span class="day-badge">R</span> Jan. 8</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Intro to Bioinformatics</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Scientific Process <em style="font-size:.75rem;color:#aaa;">(video)</em></div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Syllabus Quiz</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Lesk: Preface, pp. 34–37; Gauthier et al. 2019; Markowetz 2017</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 2 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">2</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Jan. 13</div>
+                    <div class="date-line"><span class="day-badge">R</span> Jan. 15</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Evolution <em style="font-size:.75rem;color:#aaa;">(video)</em></div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Evolution</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Case Study: Does Sugar Cause Hyperactivity?</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Lesk: pp. 1–7</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 3 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">3</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Jan. 20</div>
+                    <div class="date-line"><span class="day-badge">R</span> Jan. 22</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Inheritance</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Inheritance</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Evolution Worksheet</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 4 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">4</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Jan. 27</div>
+                    <div class="date-line"><span class="day-badge">R</span> Jan. 29</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Central Dogma: DNA Structure</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>DNA Replication</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Inheritance Assignment</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Lesk: pp. 9–17, 49–58; Crick 1970</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 5 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">5</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Feb. 3</div>
+                    <div class="date-line"><span class="day-badge">R</span> Feb. 5</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>RNA Transcription</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Protein Translation</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">DNA Structure Assignment</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Lesk: pp. 88–122</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 6 — Exam 1 -->
+              <div class="week-row has-exam">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">6</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Feb. 10</div>
+                    <div class="date-line"><span class="day-badge">R</span> Feb. 12</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Central Dogma — Omics</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Genome Sequencing Intro</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-exam"><i class="bi bi-file-earmark-text-fill" style="color:var(--amber);"></i><span class="di-text">📋 Take-Home Exam 1 — due Feb. 10</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Lesk: pp. 57–67</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 7 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">7</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Feb. 17</div>
+                    <div class="date-line"><span class="day-badge">R</span> Feb. 19</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Genome Sequencing Intro cont.</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Next &amp; 3rd Generation Sequencing</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Sequencing Intro Assignment</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Shendure et al. 2017; Sims et al. 2014; Logsdon et al. 2020; Heather &amp; Chain; Goodwin et al. 2016</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 8 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">8</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Feb. 24</div>
+                    <div class="date-line"><span class="day-badge">R</span> Feb. 26</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Steps of Sequencing Processing</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Genome Assembly</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Sequencing Assignment</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Lesk: pp. 68–73; Rice &amp; Green 2017</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 9 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">9</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Mar. 3</div>
+                    <div class="date-line"><span class="day-badge">R</span> Mar. 5</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Genome Assembly pt. 2</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>BLAST</div>
+                  </div>
+                  <div class="wr-due"></div>
+                </div>
+              </div>
+
+              <!-- Spring Break -->
+              <div class="week-row is-break">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num" style="background:#ccc;">—</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge" style="color:#ccc;">T</span> Mar. 10</div>
+                    <div class="date-line"><span class="day-badge" style="color:#ccc;">R</span> Mar. 12</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line" style="color:#aaa;font-style:italic;"><span class="day-dot" style="background:#ddd;"></span>Spring Break — No Class</div>
+                  </div>
+                  <div class="wr-due"></div>
+                </div>
+              </div>
+
+              <!-- Week 10 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">10</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Mar. 17</div>
+                    <div class="date-line"><span class="day-badge">R</span> Mar. 19</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Other Uses of NCBI</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Phylogenetics</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">BLAST/NCBI Assignment (in class)</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Lesk: pp. 123–143; Langmead &amp; Nellore 2018; Erlich &amp; Narayanan 2014</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 11 — Exam 2 -->
+              <div class="week-row has-exam">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">11</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Mar. 24</div>
+                    <div class="date-line"><span class="day-badge">R</span> Mar. 26</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Phylogenetics Hands-On</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Biology and Computers</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-exam"><i class="bi bi-file-earmark-text-fill" style="color:var(--amber);"></i><span class="di-text">📋 Take-Home Exam 2 — due Mar. 24</span></div>
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">Building Your Own Phylogeny (in class)</span></div>
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Lesk: pp. 154–171; Kapli et al. 2020</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 12 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">12</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Mar. 31</div>
+                    <div class="date-line"><span class="day-badge">R</span> Apr. 2</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>DNA Kits &amp; Genetic Privacy</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Introduction to R</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-reading"><i class="bi bi-book" style="color:#999;"></i><span class="di-text">Lesk: pp. 356–372, 378–393</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 13 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">13</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Apr. 7</div>
+                    <div class="date-line"><span class="day-badge">R</span> Apr. 9</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Using R</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Using R</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">R Assignment</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 14 -->
+              <div class="week-row">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">14</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Apr. 14</div>
+                    <div class="date-line"><span class="day-badge">R</span> Apr. 16</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Subsetting Data</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Writing a Function</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item"><i class="bi bi-pencil-square" style="color:var(--green-main);"></i><span class="di-text">R Assignment</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Week 15 — Exam 3 + Final -->
+              <div class="week-row has-exam">
+                <div class="week-row-inner">
+                  <div class="wr-week"><span class="wk-num">15</span></div>
+                  <div class="wr-dates">
+                    <div class="date-line"><span class="day-badge">T</span> Apr. 21</div>
+                    <div class="date-line"><span class="day-badge">—</span> Apr. 27</div>
+                  </div>
+                  <div class="wr-main">
+                    <div class="topic-line"><span class="day-dot" style="background:var(--green-main);"></span>Identifying Types of Chromosomes</div>
+                    <div class="topic-line"><span class="day-dot" style="background:var(--amber);"></span>Final — Finish Final Project</div>
+                  </div>
+                  <div class="wr-due">
+                    <div class="due-item is-exam"><i class="bi bi-file-earmark-text-fill" style="color:var(--amber);"></i><span class="di-text">📋 Take-Home Exam 3 — due Apr. 21</span></div>
+                    <div class="due-item is-exam"><i class="bi bi-trophy-fill" style="color:var(--amber);"></i><span class="di-text">🏆 Final Project — due Apr. 27</span></div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- end schedule-wrap -->
+
+            <!-- Deadline summary -->
+            <div style="background:#fff;border:1px solid var(--green-border);border-radius:10px;overflow:hidden;">
+              <div style="background:var(--amber);padding:11px 18px;display:flex;align-items:center;gap:8px;">
+                <i class="bi bi-flag-fill" style="color:rgba(255,255,255,.85);"></i>
+                <span style="font-family:'Lora',serif;font-size:.9rem;font-weight:700;color:#fff;">Major Deadlines at a Glance</span>
+              </div>
+              <div style="padding:16px 18px;">
+                <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;">
+                  <div style="display:flex;align-items:flex-start;gap:10px;padding:9px 12px;background:var(--amber-light);border:1px solid var(--amber-border);border-radius:6px;">
+                    <i class="bi bi-file-earmark-text-fill" style="color:var(--amber);flex-shrink:0;margin-top:2px;"></i>
+                    <div><div style="font-size:.78rem;font-weight:700;color:var(--amber);">Take-Home Exam 1</div><div style="font-size:.83rem;color:#444;">Due Feb. 10</div></div>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px;padding:9px 12px;background:var(--amber-light);border:1px solid var(--amber-border);border-radius:6px;">
+                    <i class="bi bi-file-earmark-text-fill" style="color:var(--amber);flex-shrink:0;margin-top:2px;"></i>
+                    <div><div style="font-size:.78rem;font-weight:700;color:var(--amber);">Take-Home Exam 2</div><div style="font-size:.83rem;color:#444;">Due Mar. 24</div></div>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px;padding:9px 12px;background:var(--amber-light);border:1px solid var(--amber-border);border-radius:6px;">
+                    <i class="bi bi-file-earmark-text-fill" style="color:var(--amber);flex-shrink:0;margin-top:2px;"></i>
+                    <div><div style="font-size:.78rem;font-weight:700;color:var(--amber);">Take-Home Exam 3</div><div style="font-size:.83rem;color:#444;">Due Apr. 21</div></div>
+                  </div>
+                  <div style="display:flex;align-items:flex-start;gap:10px;padding:9px 12px;background:var(--amber-light);border:1px solid var(--amber-border);border-radius:6px;">
+                    <i class="bi bi-trophy-fill" style="color:var(--amber);flex-shrink:0;margin-top:2px;"></i>
+                    <div><div style="font-size:.78rem;font-weight:700;color:var(--amber);">Final Project</div><div style="font-size:.83rem;color:#444;">Due Apr. 27</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- end main col -->
+        </div><!-- end row -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
   <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
-          </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-
-
-        </div>
-      </div>
-    </div>
-
+    <div class="footer-top"><div class="container"><div class="row">
+      <div class="col-lg-3 col-md-6 footer-contact"><h3>Hjelmen Lab</h3><p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p></div>
+      <div class="col-lg-3 col-md-6 footer-links"><h4>Contact</h4><strong>Office:</strong> SB 242b<br><strong>Phone:</strong> (801) 863-8084<br><strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a></div>
+      <div class="col-lg-3 col-md-6 footer-links"><h4>Current Courses</h4><ul>
+        <li><i class="bx bx-chevron-right"></i> <a href="Spring2026biol1011_1.html">Bioinformatics (BIOL 1011-02)</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="Spring2026biol1011_2.html">Bioinformatics (BIOL 1011-02)</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="Spring2026biol4260_1.html">Ethical Issues in Biology</a></li>
+      </ul></div>
+      <div class="col-lg-3 col-md-6 footer-links"><h4>Quick Links</h4><ul>
+        <li><i class="bx bx-chevron-right"></i> <a href="Previous_Courses.html">Previous Courses</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="Resources.html">Student Resources</a></li>
+        <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact &amp; Calendar</a></li>
+      </ul></div>
+    </div></div></div>
     <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
-      </div>
+      <div class="me-md-auto text-center text-md-start"><div class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.</div></div>
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a></div>
     </div>
-  </footer><!-- End Footer -->
-  
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  </footer>
 
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

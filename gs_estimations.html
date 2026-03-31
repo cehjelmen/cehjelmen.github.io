@@ -3,27 +3,25 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Genome Size Estimations</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Genome Size Estimations | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Flow cytometry-based genome size estimation service for insect samples. Hjelmen Lab at Utah Valley University.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -34,27 +32,242 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    /* Page-specific styles */
+    .gs-hero {
+      background: linear-gradient(135deg, #275D38 0%, #1a3f26 100%);
+      color: white;
+      padding: 60px 0 50px;
+      margin-top: 72px;
+    }
+
+    .gs-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .gs-hero p.lead {
+      color: rgba(255,255,255,0.85);
+      font-size: 1.1rem;
+      max-width: 640px;
+    }
+
+    .gs-hero .badge-pill {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 18px 20px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid #e8f2ec;
+      margin-bottom: 12px;
+      transition: box-shadow 0.2s;
+    }
+
+    .process-step:hover {
+      box-shadow: 0 4px 16px rgba(39,93,56,0.1);
+    }
+
+    .step-num {
+      background: #275D38;
+      color: white;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .step-body strong {
+      color: #1a3f26;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.95rem;
+    }
+
+    .step-body p {
+      margin: 0;
+      color: #555;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .step-body p.note {
+      margin-top: 4px;
+      color: #888;
+      font-size: 0.82rem;
+      font-style: italic;
+    }
+
+    .info-card {
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .info-card.green-bg {
+      background: #e8f2ec;
+      border: 1px solid #c3ddc9;
+    }
+
+    .info-card.white-bg {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+    }
+
+    .info-card h4 {
+      color: #275D38;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .info-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .info-card ul li {
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      font-size: 0.9rem;
+      color: #444;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .info-card ul li:last-child {
+      border-bottom: none;
+    }
+
+    .info-card ul li i {
+      color: #275D38;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #275D38 0%, #1a3f26 100%);
+      color: white;
+      border-radius: 10px;
+      padding: 36px 40px;
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      color: white;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 20px;
+    }
+
+    .cta-box a.btn-contact {
+      background: white;
+      color: #275D38;
+      font-weight: 700;
+      padding: 12px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .cta-box a.btn-contact:hover {
+      background: #e8f2ec;
+      color: #1a3f26;
+    }
+
+    .warning-badge {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-size: 0.88rem;
+      color: #664d03;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .warning-badge i {
+      color: #cc8800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .gs-hero {
+        padding: 40px 0 35px;
+      }
+      .gs-hero h1 {
+        font-size: 1.7rem;
+      }
+      .cta-box {
+        padding: 28px 20px;
+      }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-     <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -62,172 +275,338 @@
 
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
+
           <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-                     <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-<li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  <li><a href="gs_estimations.html" class="active">Genome Size Estimations</a></li>
+          </li>
+
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html" class="active">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+
+      <div class="header-social-links d-flex align-items-center">
+<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky">
+  <i class="fa-brands fa-bluesky"></i>
+</a>
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-
+  </header>
+  <!-- End Header -->
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ======= Page Hero ======= -->
+    <div class="gs-hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1><i class="bi bi-dna me-2"></i>Genome Size Estimation Service</h1>
+            <p class="lead mt-2">Flow cytometry-based genome size estimations for insect samples. Available to external collaborators on a per-species fee basis.</p>
+            <div class="mt-3">
+              <span class="badge-pill"><i class="bi bi-bug me-1"></i>Insects</span>
+              <span class="badge-pill"><i class="bi bi-droplet me-1"></i>Flow Cytometry</span>
+              <span class="badge-pill"><i class="bi bi-people me-1"></i>External Collaborations Welcome</span>
+            </div>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+            <a href="mailto:Carl.Hjelmen@uvu.edu" class="cta-box a.btn-contact" style="background:rgba(255,255,255,0.15); border:2px solid rgba(255,255,255,0.5); color:white; padding:12px 28px; border-radius:8px; text-decoration:none; display:inline-block; font-weight:600; transition:all 0.2s;">
+              <i class="bi bi-envelope me-2"></i>Get in Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Page Hero -->
+
+    <!-- ======= Main Content ======= -->
+    <section class="page-content">
       <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Genome Size Estimations</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Genome Size Estimations</li>
-          </ol>
+        <div class="row g-4">
+
+          <!-- LEFT: Process Steps -->
+          <div class="col-lg-7" data-aos="fade-right">
+
+            <h3 class="content-title">How It Works</h3>
+            <p class="mb-4" style="color:#555;">Before sending samples, 
+            please read through the following requirements carefully. 
+            Estimations will only be initiated after direct contact and agreement on rates.</p>
+
+            <!-- Step 1 -->
+            <div class="process-step">
+              <div class="step-num">1</div>
+              <div class="step-body">
+                <strong>Contact us first</strong>
+                <p>Estimations are only run after you have contacted Dr. Hjelmen, 
+                discussed your samples, and agreed upon a rate. 
+                Please <a href="mailto:Carl.Hjelmen@uvu.edu">reach out</a> before sending anything.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step">
+              <div class="step-num">2</div>
+              <div class="step-body">
+                <strong>Per-species pricing</strong>
+                <p>Estimations are charged at a per-species rate, 
+                billed upon completion. Rates are determined during initial contact.</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step">
+              <div class="step-num">3</div>
+              <div class="step-body">
+                <strong>No ethanol-preserved samples</strong>
+                <p>Flow cytometry requires intact nuclei. Ethanol-fixed samples are not compatible with this method and cannot be processed.</p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step">
+              <div class="step-num">4</div>
+              <div class="step-body">
+                <strong>Samples must be alive or flash-frozen</strong>
+                <p>Live samples or samples that were flash-frozen 
+                immediately upon collection are required for successful estimations.</p>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="process-step">
+              <div class="step-num">5</div>
+              <div class="step-body">
+                <strong>Ship frozen samples on dry ice</strong>
+                <p>Frozen samples must be shipped on dry ice to ensure they 
+                remain frozen during transit. Ice packs are not sufficient.</p>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="process-step">
+              <div class="step-num">6</div>
+              <div class="step-body">
+                <strong>Recommended: ≥5 males and ≥5 females per species</strong>
+                <p>Best results come from running at least five individuals of each sex. 
+                Smaller numbers can be accommodated but may affect reliability.</p>
+                <p class="note">More individuals per sex is always better — degraded 
+                samples, standard overlap, or other technical issues can reduce 
+                effective sample size.</p>
+              </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="process-step">
+              <div class="step-num">7</div>
+              <div class="step-body">
+                <strong>Send extra samples when possible</strong>
+                <p>Sending more than five individuals of each sex provides 
+                backup in case of DNA degradation or issues with the internal 
+                size standard (e.g., overlapping peak size, standard degradation).</p>
+              </div>
+            </div>
+
+            <!-- Step 8 -->
+            <div class="process-step">
+              <div class="step-num">8</div>
+              <div class="step-body">
+                <strong>Turnaround time</strong>
+                <p>Estimations are run between teaching and other lab 
+                responsibilities. In most cases turnaround is relatively quick,
+                 but timelines are discussed at the time of agreement.</p>
+              </div>
+            </div>
+
+            <!-- Warning note -->
+            <div class="warning-badge mt-3">
+              <i class="bi bi-exclamation-triangle-fill"></i>
+              <span>Technical issues do occur — standard species used for 
+              calibration can occasionally have overlapping peak sizes or 
+              degradation issues. Higher sample numbers help mitigate this risk.</span>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Info cards -->
+          <div class="col-lg-5" data-aos="fade-left">
+
+            <!-- What is flow cytometry -->
+            <div class="info-card green-bg mb-4">
+              <h4><i class="bi bi-info-circle-fill"></i>What is Flow Cytometry?</h4>
+              <p style="font-size:0.9rem; color:#333; margin:0;">Flow cytometry is used to 
+              estimate genome size by measuring the relative fluorescence of 
+              nuclei stained with a DNA-binding dye (typically propidium iodide). 
+              The fluorescence of sample nuclei is compared to that of a standard 
+              species with a known genome size, allowing estimation of the sample's 
+              genome size in MbDNA of DNA.</p>
+            </div>
+
+            <!-- What we need -->
+            <div class="info-card white-bg mb-4">
+              <h4><i class="bi bi-clipboard2-check-fill"></i>Sample Checklist</h4>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i>Prior contact and rate agreement</li>
+                <li><i class="bi bi-check-circle-fill"></i>Insects only (contact us about other arthropods)</li>
+                <li><i class="bi bi-check-circle-fill"></i>Live or flash-frozen — no ethanol</li>
+                <li><i class="bi bi-check-circle-fill"></i>Shipped on dry ice if frozen</li>
+                <li><i class="bi bi-check-circle-fill"></i>≥5 males and ≥5 females per species (more is better)</li>
+                <li><i class="bi bi-check-circle-fill"></i>Clearly labeled with species, sex, and date collected</li>
+              </ul>
+            </div>
+
+            <!-- What you get -->
+            <div class="info-card white-bg mb-4">
+              <h4><i class="bi bi-bar-chart-fill"></i>What You Receive</h4>
+              <ul>
+                <li><i class="bi bi-file-earmark-text"></i>Genome size estimates (MbDNA) per individual</li>
+                <li><i class="bi bi-gender-ambiguous"></i>Separate estimates by sex where applicable</li>
+                <li><i class="bi bi-graph-up"></i>Summary statistics across individuals</li>
+                <li><i class="bi bi-chat-dots"></i>Communication about any technical issues encountered</li>
+              </ul>
+            </div>
+
+            <!-- Relevant publications -->
+            <div class="info-card green-bg">
+              <h4><i class="bi bi-journal-bookmark-fill"></i>Relevant Publications</h4>
+              <ul>
+                <li><i class="bi bi-file-earmark-pdf"></i>
+                  <span>
+                    <a href="assets/publications/J_hered_Hjelmen_et_al_2018.pdf" style="color:#275D38;">Hjelmen et al. 2018</a>
+                    — Genome size evolution within and between the sexes. <em>J. Heredity</em>
+                  </span>
+                </li>
+                <li><i class="bi bi-file-earmark-pdf"></i>
+                  <span>
+                    <a href="assets/publications/g3_Hjelmen_et_al_2019.pdf" style="color:#275D38;">Hjelmen et al. 2019</a>
+                    — Genome size evolution in <em>Drosophila</em> subgenera. <em>G3</em>
+                  </span>
+                </li>
+                <li><i class="bi bi-file-earmark-pdf"></i>
+                  <span>
+                    <a href="assets/publications/Protocol_Johnston_et_al_2019.pdf" style="color:#275D38;">Johnston, Bernardini &amp; Hjelmen 2018</a>
+                    — Genome size estimation and quantitative cytogenetics in insects. <em>Methods Protocol</em>
+                  </span>
+                </li>
+                <li><i class="bi bi-file-earmark-pdf"></i>
+                  <span>
+                    <a href="assets/publications/Hjelmen_Genetics_2024.pdf" style="color:#275D38;">Hjelmen 2024</a>
+                    — Genome size as a metric for genome assembly assessment. <em>Genetics</em>
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="cta-box">
+              <h3>Interested in Getting an Estimation?</h3>
+              <p>Contact Dr. Hjelmen to discuss your samples, confirm compatibility, and agree on a rate before sending anything. Questions about sample preparation or shipping are always welcome.</p>
+              <a href="mailto:Carl.Hjelmen@uvu.edu" class="btn-contact">
+                <i class="bi bi-envelope-fill me-2"></i>Carl.Hjelmen@uvu.edu
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section>
 
-    <!-- ======= About Us Section ======= -->
-	<p></p>     
-<div>
-	<h3 class="section-title">Genome Size Estimations</h3>
-	</div>
-	        
-<div class="resume-content">
-            
-            <h3 class="section-title"><b>Interested in Getting a Genome Size Estimation for your Insect?</b></p></h3>
-            <div align="center">
-	<p><b>There are a number of things you should keep in mind if you want an estimation</b></br></br>
-	<b>1.  </b>Estimations will only be run if you have contacted Carl Hjelmen and agreed upon running your samples and have been provided a rate</br></br>
-	<b>2.  </b>Estimations are charged at a per-species rate upon completion of estimations</br></br>
-	<b>3.  </b>Samples cannot be in ethanol--Estimations of ethanol samples via flow cytometry will not work</br></br>
-	<b>4.  </b>Samples must be alive or frozen alive (flash frozen works)</br></br>
-	<b>5.  </b>Samples that are frozen must be shipped on dry ice to ensure they stay frozen (not ice packs)</br></br>
-	<b>6.  </b>For best results, estimations are run on <u>at least</u> five males and five females of your organism. (we can run with fewer)</br></br>
-	<b>7.  </b>There are times in which samples are degraded, standard species used for estimations have an issue (overlapping size, degraded standard, etc). Therefore a higher sample number is beneficial</br></br>
-	<b>8.  </b>You are welcome to send more than five of each sex to provide additional samples in case of DNA degradation, errors with standard, etc.</br></br>
-	<b>9.  </b>Estimations take time and are run between teaching responsibilities.  In most cases estimations have a relatively quick turn around time</br></br>
+  </main>
+  <!-- End #main -->
 
-</p>
-			<a href="mailto:Carl.Hjelmen@uvu.edu">Let me know</a> if you have questions and/or are interested an estimate!</p></p>
-			
-          </div>
-          </div>
-     
-
-
-
-		<!-- End About Us Section -->
-
-
-
-     
-    
-  </main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
+  <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="gs_estimations.html">Genome Size Estimations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky">
+  <i class="fa-brands fa-bluesky"></i>
+</a>
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
-  
+  </footer>
+  <!-- End Footer -->
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Vendor JS Files -->
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

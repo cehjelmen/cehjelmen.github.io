@@ -3,27 +3,25 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>About Me (Dr. Hjelmen)</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>About Dr. Hjelmen | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="About Carl Hjelmen, Assistant Professor of Bioinformatics and Genomics at Utah Valley University.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -34,284 +32,285 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    /* AOS fallback — ensures content visible if AOS JS fails locally */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] { animation: aos-fallback-fade 0.5s ease 0.6s both; }
+    [data-aos].aos-animate { animation: none; opacity: 1 !important; transform: none !important; }
+  </style>
 </head>
 
 <body>
 
-      <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html">Home</a></li>
 
-          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#" class="active"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html" class="active">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html" class="active">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
-          <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
-             <ul>
-                    <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
 
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+          <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  <li><a href="lab_photos.html">Photos</a></li>
-		  <li><a href="Resources.html">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
+          </li>
 
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>          
+		<a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-
+  </header>
+  <!-- End Header -->
 
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-
         <div class="d-flex justify-content-between align-items-center">
-          <h2>About Me (Dr. Hjelmen)</h2>
+          <h2>About Dr. Hjelmen</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li>About Me (Dr. Hjelmen)</li>
+            <li>About</li>
           </ol>
         </div>
-
       </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= About Us Section ======= -->
-	<p></p>     
-	<style>
-      .img-container {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="img-container"> <!-- Block parent element -->
-      <img src="assets/img/deadhorsepoint.jpg" alt="deadhorsepoint_picture" style="width:400px;">
-    </div>
-	<div>
-	<h2 class="section-title">Evolutionary Biologist Investigating Dynamics of Genome Size Evolution and Sex Chromosome Differentiation
-	</div>
-	<div>
-	<h4 class="section-title"> Pronouns: He/Him</p></h4>
-	<h4 class="section-title"> <a href="assets/publications/CV.pdf">Updated CV</a></p></h4>
-	</div>
-	<div class="subheading m-3">I grew up in small-town South Dakota with a passion for learning.
-	I attended a small liberal arts college, Augustana College (now Augustana University) where I received a Bachelor of Arts
-	with a major in Biology. Here, I also was able to pursue other interests, such as playing the upright bass in symphony orchestras.
-	Partway through my undergraduate program, I discovered research.  I started working as an undergraduate researcher after my
-	second year. The next year, I pursued NSF REU (Research Experiences for Undergraduates).  I was lucky enough to get one of these
-	REU positions in the Department of Entomology at Texas A&M University. It was here that I met my PhD Advisor, Dr. J. Spencer Johnston, and
-	really began to understand what could be accomplished with basic scientific research investigating broad evolutionary questions.</p>
-	<p>During my PhD, I focused on genome size evolution in <i>Drosophila</i> species. By using <i>Drosophila</i> species as a model,
-	 I was able to utilize the long history of research, broad knowledge of this group, and the ease of attaining species from 
-	 the species stock center to cheaply and quickly investigate genome size with comparative phylogenetic methods. One of the most rewarding aspects 
-	 of this research has been the ability to include undergraduate research students in the data collection, analysis, and manuscript 
-	 preparation stages. I know these experiences greatly benefited me as an undergraduate researcher, and I am proud to be able to provide 
-	 these opportunities for others.</p>
-	 <p>After my PhD, I had two differnet postdoctoral research positions, which allowed me to greatly increase my skills in bioinformatic 
-	 analyses. In my first postdoctoral position with Dr. Aaron Tarone, I investigated miRNA and protein makers of immature development in forensically relevant 
-	 flies. In my second postdoctoral position with Dr. Heath Blackmon, I continued to investigate genome size evolution in insects, as well as 
-	 whole genome sequencing of a variety of insect species.  I am happy to still be working with my PhD advisor and both of my postdoctoral advisors
-	 on projects which include undergraduate researchers.</p></div>
-	<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">     
-	<div class="w-100">
-        <h2 class="mb-5">Education & Experience</h2>
-
-		<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
-          <div class="resume-content">
-            <h3 class="mb-0">Assistant Professor of Bioinformatics and Genomics</h3>
-            <div class="subheading mb-3"><a href="http://www.uvu.edu/biology/">
-			<img src="assets/img/UVU.png" alt="UVU" style="width:100px; height100px; border:0;"></a></a>Department of Biology, Utah Valley University, Orem, UT</div>
-            </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2021 - Present</span>
-          </div>
-        </div>
-		
-		<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
-          <div class="resume-content">
-            <h3 class="mb-0">Postdoctoral Research Associate</h3>
-            <div class="subheading mb-3"><a href="http://www.bio.tamu.edu"><img src="assets/img/TAM-LogoBox.jpg" alt="Texas A&M" style="width:100px; height100px; border:0;"></a></a>Department of Biology, Texas A&M University, College Station, TX</div>
-            <div>Studying karyotype and genome size evolution across insects.</div>
-            <p>Advised by <a href="http:/coleoguy.github.io">Heath Blackmon</a></p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">January 2019 - August 2021</span>
-          </div>
-        </div>
-		
-		<div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
-          <div class="resume-content">
-            <h3 class="mb-0">Postdoctoral Research Associate</h3>
-            <div class="subheading mb-3"><a href="http://entomology.tamu.edu"><img src="assets/img/TAM-LogoBox.jpg" alt="Texas A&M" style="width:100px; height100px; border:0;"></a></a>Department of Entomology, Texas A&M University, College Station, TX</div>
-            <div>Proteomic and miRNA markers of fly development for applications in Forensic Entomology</div>
-            <p>Advised by <a href="http://taronelab.tamu.edu/">Aaron Tarone</a></p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2017 - December 2018</span>
-          </div>
-        </div>
-		
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
-          <div class="resume-content">
-            <h3 class="mb-0">Ph.D. in Entomology</h3>
-            <div class="subheading mb-3"><a href="http://entomology.tamu.edu"><img src="assets/img/TAM-LogoBox.jpg" alt="Texas A&M" style="width:100px; height100px; border:0;"></a></a>Texas A&M University, College Station, TX</div>
-            <div>Dissertation Title:  Phylogenetic analyses of genome size evolution in Drosophilidae</div>
-            <p>Advised by <a href="http://entomology.tamu.edu/people/johnston-j-spencer/">J. Spencer Johnston</a></p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2013 - August 2017</span>
-          </div>
-        </div>
-
-             <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
-          <div class="resume-content">
-            <h3 class="mb-0">Bachelor of Arts in Biology</h3>
-            <div class="subheading mb-3"><a href="http://augie.edu/biology"><img src="assets/img/Augie.jpg" alt="Augustana" style="width:100px; height100px; border:0;"></a></a>Augustana College, Sioux Falls, SD</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2009 - May 2013</span>
-          </div>
-        </div>
-
-      </div>
-	  
-	  
     </section>
-	<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
-      <div class="w-100">
-        <h2 class="mb-5">Interests</h2>
-		<p>Outside of the lab I like to try to fill my time with hobbies, such as:</p>
-		<p><u>Playing music</u>: I'm a classically trained bassist and self-taught guitarist.
-		<p><u>Listening to music</u>: I'm a big fan of classical music and hard rock.</p>
-		<p><u>Woodworking</u></p>
-		<p><u>Hiking</u>. and</p>
-		<p><u>Hanging out with my dog</u>, Guinness (lots of pictures of him on my instagram)</p>
-		<p></p>
-		<p></p>	
-	<style>
-      .img-container2 {
-        text-align: left;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="img-container2"> <!-- Block parent element -->
-      <img src="assets/img/guinness_and_me.jpg" alt="me and Guinness" style="width:350px;">
-    </div>
-		
-        
-		
-		<div class="subheading mb-5">Check out my <a href="http://instagram.com/carlhjelmen/">instagram</a> page to see more!</div>
+    <!-- End Breadcrumbs -->
 
-		<!-- End About Us Section -->
+    <!-- ======= About Content ======= -->
+    <section class="page-content">
+      <div class="container">
 
+        <!-- Profile block -->
+        <div class="row align-items-start mb-5">
+          <div class="col-md-3 text-center mb-4 mb-md-0">
+            <img src="assets/img/deadhorsepoint.jpg" alt="Dr. Carl Hjelmen" class="img-fluid rounded" style="max-width:220px;">
+            <div class="mt-3">
+              <p class="mb-1"><small class="text-muted">Pronouns: He/Him</small></p>
+              <a href="assets/publications/CV.pdf" class="btn btn-sm mt-2" style="background:#275D38; color:white; border-radius:4px; padding:6px 16px;">
+                <i class="bi bi-file-earmark-text me-1"></i> Download CV
+              </a>
+            </div>
+            <div class="mt-3">
+              <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" class="d-block text-muted small mb-1"><i class="bi bi-mortarboard me-1"></i>Google Scholar</a>
+              <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener" class="d-block text-muted small mb-1"><i class="bi bi-journal-text me-1"></i>ResearchGate</a>
+              <a href="http://instagram.com/carlhjelmen/" target="_blank" rel="noopener" class="d-block text-muted small"><i class="bi bi-instagram me-1"></i>Instagram</a>
+            </div>
+          </div>
 
+          <div class="col-md-9">
+            <h2 style="color:#275D38; font-weight:700;">Carl E. Hjelmen, Ph.D.</h2>
+            <h5 class="text-muted mb-3">Evolutionary Biologist | Assistant Professor of Bioinformatics &amp; Genomics</h5>
+            <p>I grew up in small-town South Dakota with a passion for learning. I attended Augustana College (now Augustana University) where I received a Bachelor of Arts in Biology and played upright bass in the symphony orchestra. Partway through my undergraduate program I discovered research, starting as an undergraduate researcher and then pursuing an NSF REU position in the Department of Entomology at Texas A&amp;M University. It was there I met my PhD advisor, Dr. J. Spencer Johnston, and began to understand what could be accomplished with basic scientific research investigating broad evolutionary questions.</p>
 
-     
-    
-  </main><!-- End #main -->
+            <p>During my PhD, I focused on genome size evolution in <i>Drosophila</i> species, utilizing the long history of research on this group and comparative phylogenetic methods. One of the most rewarding aspects of this work has been incorporating undergraduate researchers in data collection, analysis, and manuscript preparation — experiences I know are transformative, having benefited greatly from research opportunities as an undergraduate myself.</p>
 
-    <!-- ======= Footer ======= -->
+            <p>After my PhD, I held two postdoctoral positions that greatly expanded my bioinformatic skills. With Dr. Aaron Tarone, I investigated miRNA and protein markers of immature development in forensically relevant flies. With Dr. Heath Blackmon, I continued studying genome size evolution in insects and contributed to whole-genome sequencing projects. I'm proud to still collaborate with my PhD advisor and both postdoctoral advisors on projects involving undergraduate researchers.</p>
+          </div>
+        </div>
+
+        <!-- Education & Experience -->
+        <div>
+          <h3 class="content-title">Education &amp; Experience</h3>
+
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+            <div class="resume-content">
+              <h4 class="mb-0">Assistant Professor of Bioinformatics and Genomics</h4>
+              <div class="subheading mb-1">
+                <a href="http://www.uvu.edu/biology/" target="_blank" rel="noopener">
+                  <img src="assets/img/UVU.png" alt="UVU" style="height:30px; border:0; margin-right:8px;">
+                </a>Department of Biology, Utah Valley University, Orem, UT
+              </div>
+            </div>
+            <div class="resume-date text-md-end mt-2 mt-md-0">
+              <span style="color:#275D38; font-weight:600;">August 2021 – Present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+            <div class="resume-content">
+              <h4 class="mb-0">Postdoctoral Research Associate</h4>
+              <div class="subheading mb-1">
+                <a href="http://www.bio.tamu.edu" target="_blank" rel="noopener">
+                  <img src="assets/img/TAM-LogoBox.jpg" alt="Texas A&amp;M" style="height:30px; border:0; margin-right:8px;">
+                </a>Department of Biology, Texas A&amp;M University, College Station, TX
+              </div>
+              <div>Studying karyotype and genome size evolution across insects.</div>
+              <p class="mb-0">Advised by <a href="http://coleoguy.github.io" target="_blank" rel="noopener">Heath Blackmon</a></p>
+            </div>
+            <div class="resume-date text-md-end mt-2 mt-md-0">
+              <span style="color:#275D38; font-weight:600;">January 2019 – August 2021</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+            <div class="resume-content">
+              <h4 class="mb-0">Postdoctoral Research Associate</h4>
+              <div class="subheading mb-1">
+                <a href="http://entomology.tamu.edu" target="_blank" rel="noopener">
+                  <img src="assets/img/TAM-LogoBox.jpg" alt="Texas A&amp;M" style="height:30px; border:0; margin-right:8px;">
+                </a>Department of Entomology, Texas A&amp;M University, College Station, TX
+              </div>
+              <div>Proteomic and miRNA markers of fly development for forensic entomology applications.</div>
+              <p class="mb-0">Advised by <a href="http://taronelab.tamu.edu/" target="_blank" rel="noopener">Aaron Tarone</a></p>
+            </div>
+            <div class="resume-date text-md-end mt-2 mt-md-0">
+              <span style="color:#275D38; font-weight:600;">September 2017 – December 2018</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+            <div class="resume-content">
+              <h4 class="mb-0">Ph.D. in Entomology</h4>
+              <div class="subheading mb-1">
+                <a href="http://entomology.tamu.edu" target="_blank" rel="noopener">
+                  <img src="assets/img/TAM-LogoBox.jpg" alt="Texas A&amp;M" style="height:30px; border:0; margin-right:8px;">
+                </a>Texas A&amp;M University, College Station, TX
+              </div>
+              <div><em>Dissertation:</em> Phylogenetic analyses of genome size evolution in Drosophilidae</div>
+              <p class="mb-0">Advised by <a href="http://entomology.tamu.edu/people/johnston-j-spencer/" target="_blank" rel="noopener">J. Spencer Johnston</a></p>
+            </div>
+            <div class="resume-date text-md-end mt-2 mt-md-0">
+              <span style="color:#275D38; font-weight:600;">August 2013 – August 2017</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+            <div class="resume-content">
+              <h4 class="mb-0">Bachelor of Arts in Biology</h4>
+              <div class="subheading mb-1">
+                <a href="http://augie.edu/biology" target="_blank" rel="noopener">
+                  <img src="assets/img/Augie.jpg" alt="Augustana University" style="height:30px; border:0; margin-right:8px;">
+                </a>Augustana College (now Augustana University), Sioux Falls, SD
+              </div>
+            </div>
+            <div class="resume-date text-md-end mt-2 mt-md-0">
+              <span style="color:#275D38; font-weight:600;">August 2009 – May 2013</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interests -->
+        <div class="mt-5">
+          <h3 class="content-title">Outside the Lab</h3>
+          <div class="row align-items-start">
+            <div class="col-md-8">
+              <p>When I'm not in the lab or classroom, I try to fill my time with:</p>
+              <ul style="list-style:none; padding:0;">
+                <li class="mb-2"><i class="bi bi-music-note-beamed me-2" style="color:#275D38;"></i><strong>Playing music</strong> — classically trained bassist, self-taught guitarist</li>
+                <li class="mb-2"><i class="bi bi-vinyl-fill me-2" style="color:#275D38;"></i><strong>Listening to music</strong> — classical and hard rock</li>
+                <li class="mb-2"><i class="bi bi-tools me-2" style="color:#275D38;"></i><strong>Woodworking</strong></li>
+                <li class="mb-2"><i class="bi bi-tree-fill me-2" style="color:#275D38;"></i><strong>Hiking</strong></li>
+                <li class="mb-2"><i class="bi bi-heart-fill me-2" style="color:#275D38;"></i><strong>Hanging out with my dog Guinness</strong></li>
+              </ul>
+              <p><a href="http://instagram.com/carlhjelmen/" target="_blank" rel="noopener">Check out my Instagram</a> for more!</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <img src="assets/img/guinness_and_me.jpg" alt="Carl and Guinness" class="img-fluid rounded" style="max-width:250px;">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="gs_estimations.html">Genome Size Estimations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -319,14 +318,13 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

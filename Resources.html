@@ -3,27 +3,25 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7ZST668Y5S');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZST668Y5S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZST668Y5S');
+  </script>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Resources</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Resources | Hjelmen Lab @ UVU</title>
+  <meta name="description" content="Curated bioinformatics, R, coding, and genomics resources from the Hjelmen Lab at Utah Valley University.">
 
   <!-- Favicons -->
   <link href="assets/img/logo2.png" rel="icon">
   <link href="assets/img/logo2.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -34,242 +32,1071 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-  <!-- Template Main CSS File -->
+  <!-- Main CSS -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Company - v4.3.0
-  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    :root {
+      --green-dark:   #1a3f26;
+      --green-main:   #275D38;
+      --green-mid:    #3a7d52;
+      --green-light:  #e8f2ec;
+      --green-pale:   #f4faf6;
+      --green-border: #c3ddc9;
+
+      /* Category accent colors */
+      --cat-r:        #275D38;
+      --cat-coding:   #2563a8;
+      --cat-db:       #7c3aad;
+      --cat-tools:    #b45309;
+      --cat-programs: #0f766e;
+      --cat-papers:   #be185d;
+    }
+
+    body { font-family: 'Source Sans 3', sans-serif; }
+
+    /* ── Hero ───────────────────────────── */
+    .res-hero {
+      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-main) 60%, var(--green-mid) 100%);
+      margin-top: 72px;
+      padding: 56px 0 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .res-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+    .res-hero h1 {
+      font-family: 'Lora', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      position: relative;
+    }
+    .res-hero p {
+      color: rgba(255,255,255,0.82);
+      font-size: 1rem;
+      margin: 0;
+      position: relative;
+    }
+
+    /* ── Search bar ─────────────────────── */
+    .search-wrap {
+      position: relative;
+      max-width: 540px;
+      margin-top: 20px;
+      position: relative;
+    }
+    .search-wrap i {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #999;
+      font-size: 1rem;
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      padding: 11px 16px 11px 40px;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 0.95rem;
+      font-family: 'Source Sans 3', sans-serif;
+      transition: all 0.2s;
+      backdrop-filter: blur(4px);
+    }
+    .search-input::placeholder { color: rgba(255,255,255,0.55); }
+    .search-input:focus {
+      outline: none;
+      border-color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.18);
+    }
+    .search-clear {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.6);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0;
+      display: none;
+    }
+    .search-clear.visible { display: block; }
+
+    /* ── Category jump pills ────────────── */
+    .cat-nav {
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
+      padding: 14px 0;
+      position: sticky;
+      top: 70px;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .cat-nav-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .cat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1.5px solid #ddd;
+      background: #fff;
+      color: #555;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.18s;
+      white-space: nowrap;
+      font-family: 'Source Sans 3', sans-serif;
+    }
+    .cat-pill:hover { border-color: var(--green-main); color: var(--green-main); }
+    .cat-pill i { font-size: 0.85rem; }
+    .res-count {
+      margin-left: auto;
+      font-size: 0.8rem;
+      color: #aaa;
+      white-space: nowrap;
+    }
+
+    /* ── Main content ───────────────────── */
+    .resources-body {
+      background: var(--green-pale);
+      padding: 48px 0 70px;
+    }
+
+    /* ── Category block ─────────────────── */
+    .cat-block {
+      margin-bottom: 48px;
+    }
+    .cat-block.hidden { display: none; }
+
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--green-light);
+    }
+    .cat-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .cat-header h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 0;
+    }
+    .cat-header .cat-count-badge {
+      margin-left: auto;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    /* ── Resource cards grid ────────────── */
+    .res-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .res-card {
+      background: #fff;
+      border: 1px solid var(--green-border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .res-card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--card-accent, var(--green-main));
+      border-radius: 8px 0 0 8px;
+    }
+    .res-card:hover {
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+    .res-card .rc-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      color: #fff;
+      background: var(--card-accent, var(--green-main));
+    }
+    .res-card .rc-body { flex: 1; min-width: 0; }
+    .res-card .rc-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1.3;
+    }
+    .res-card .rc-desc {
+      font-size: 0.78rem;
+      color: #777;
+      line-height: 1.45;
+      margin: 0;
+    }
+    .res-card .rc-ext {
+      font-size: 0.75rem;
+      color: #bbb;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Internal resource cards (tutorials) */
+    .res-card.internal .rc-icon { background: var(--green-main); }
+    .res-card.internal::before { background: var(--green-main); }
+    .res-card.internal .rc-title { color: var(--green-dark); }
+
+    /* ── No results ─────────────────────── */
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: #aaa;
+      display: none;
+    }
+    .no-results.visible { display: block; }
+    .no-results i { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+
+    /* ── Search highlight ───────────────── */
+    .res-card.search-hidden { display: none; }
+    mark.search-hi {
+      background: #fef08a;
+      color: inherit;
+      padding: 0 1px;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 991px) {
+      .res-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+    }
+    @media (max-width: 576px) {
+      .res-grid { grid-template-columns: 1fr; }
+      .res-hero h1 { font-size: 1.75rem; }
+      .cat-nav { top: 58px; }
+    }
+      /* ── AOS fallback ─────────────────────────────────────────────
+       Ensures content is always visible even if AOS JS fails to
+       initialize (e.g. opening file locally without a server).
+       When served normally, AOS JS runs first and the animation
+       plays as intended. When JS fails, elements fade in via CSS
+       after a short delay so nothing is permanently hidden.
+    ────────────────────────────────────────────────────────────── */
+    @keyframes aos-fallback-fade {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    [data-aos] {
+      animation: aos-fallback-fade 0.5s ease 0.6s both;
+    }
+    [data-aos].aos-animate {
+      animation: none;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  </style>
 </head>
 
 <body>
 
-      <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-      <h1 class="logo me-auto"><a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
+      <h1 class="logo me-auto">
+        <a href="index.html"><span>Hjelmen </span>Lab @ <span>UVU</span></a>
+      </h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a href="index.html">Home</a></li>
-
           <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="aboutme.html">About Me (Dr. Hjelmen)</a></li>
+              <li><a href="aboutme.html">About Dr. Hjelmen</a></li>
               <li><a href="team.html">Research Team</a></li>
-              </li>
+              <li><a href="lab_photos.html">Lab Photos</a></li>
+              <li><a href="join.html">Join the Lab</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Teaching</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-                    <li>Spring 2026</li>
-              <li><a href="Spring2026biol1011_1.html">Introduction to Bioinformatics (BIOL 1011-01)</a></li>
-              <li><a href="Spring2026biol1011_2.html">Introduction to Bioinformatics (BIOL 1011-02)</a></li>
-              <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
-              <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
-
-           <li> <a href="Previous_Courses.html"><b>Previous Courses</b></a>
+              <li class="dropdown"><a href="#"><span>Spring 2026</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="Spring2026biol1011_1.html">Intro to Bioinformatics (BIOL 1011-01)</a></li>
+                  <li><a href="Spring2026biol1011_2.html">Intro to Bioinformatics (BIOL 1011-02)</a></li>
+                  <li><a href="Spring2026biol4500_1.html">Evolution (BIOL 4500-1)</a></li>
+                  <li><a href="Spring2026biol4260_1.html">Ethical Issues in Biology (BIOL 4260-1)</a></li>
+                </ul>
+              </li>
+              <li><a href="Previous_Courses.html">Previous Courses</a></li>
             </ul>
           </li>
-		<li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="researchinterests.html">Research Interests</a></li>
               <li><a href="publications.html">Publications</a></li>
-              </li>
             </ul>
-          </li>				    
-		  		  <li><a href="lab_photos.html">Photos</a></li>
-<li><a href="Resources.html" class="active">Resources</a></li>
-		  <li><a href="News.html">News</a></li>
-		  		  <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
-
+          </li>
+          <li><a href="Resources.html" class="active">Resources</a></li>
+          <li><a href="gs_estimations.html">Genome Size Estimations</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-      <div class="header-social-links d-flex">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bu bi-twitter"></i></a>
+      </nav>
+      <div class="header-social-links d-flex align-items-center">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-instagram" style="font-size:1rem;"></i></a>
+        <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener" title="Google Scholar" style="color:#a0a0a0; padding-left:14px; line-height:0; transition:color 0.2s;" onmouseover="this.style.color=&apos;#275D38&apos;" onmouseout="this.style.color=&apos;#a0a0a0&apos;"><i class="bi bi-mortarboard-fill" style="font-size:1rem;"></i></a>
       </div>
     </div>
-  </header><!-- End Header -->
-
+  </header>
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
+    <!-- ── Hero ── -->
+    <div class="res-hero">
       <div class="container">
+        <h1><i class="bi bi-collection-fill me-2" style="font-size:1.8rem; vertical-align:middle;"></i>Resources</h1>
+        <p>Curated tools, databases, tutorials, and papers for bioinformatics, genomics, and evolutionary biology. Always growing.</p>
+        <div class="search-wrap">
+          <i class="bi bi-search"></i>
+          <input type="text" class="search-input" id="searchInput" placeholder="Search resources…" autocomplete="off">
+          <button class="search-clear" id="searchClear" title="Clear search">×</button>
+        </div>
+      </div>
+    </div>
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Resources</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Resources</li>
-          </ol>
+    <!-- ── Category nav ── -->
+    <div class="cat-nav">
+      <div class="container">
+        <div class="cat-nav-inner">
+          <a href="#cat-r" class="cat-pill" style="--pill-color: var(--cat-r);">
+            <i class="bi bi-bar-chart-line" style="color:var(--cat-r);"></i> R &amp; Statistics
+          </a>
+          <a href="#cat-coding" class="cat-pill">
+            <i class="bi bi-code-slash" style="color:var(--cat-coding);"></i> Coding
+          </a>
+          <a href="#cat-db" class="cat-pill">
+            <i class="bi bi-database" style="color:var(--cat-db);"></i> Databases
+          </a>
+          <a href="#cat-tools" class="cat-pill">
+            <i class="bi bi-tools" style="color:var(--cat-tools);"></i> Tools &amp; Websites
+          </a>
+          <a href="#cat-programs" class="cat-pill">
+            <i class="bi bi-terminal" style="color:var(--cat-programs);"></i> Programs
+          </a>
+          <a href="#cat-papers" class="cat-pill">
+            <i class="bi bi-journal-text" style="color:var(--cat-papers);"></i> Papers
+          </a>
+          <span class="res-count" id="resCount">46 resources</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Resources body ── -->
+    <div class="resources-body">
+      <div class="container" id="resourcesContainer">
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- R & STATISTICS                      -->
+        <!-- ═══════════════════════════════════ -->
+        <div class="cat-block" id="cat-r">
+          <div class="cat-header">
+            <div class="cat-icon" style="background:var(--cat-r);">
+              <i class="bi bi-bar-chart-line"></i>
+            </div>
+            <h2>R &amp; Statistics</h2>
+            <span class="cat-count-badge" style="background:var(--cat-r);">10</span>
+          </div>
+          <div class="res-grid">
+
+            <a href="https://www.rstudio.com/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-r);"
+               data-title="RStudio Download" data-desc="Download the RStudio IDE for R development">
+              <div class="rc-icon"><i class="bi bi-download"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">RStudio Download</span>
+                <p class="rc-desc">Download the RStudio IDE for R development</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://www.r-graph-gallery.com/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-r);"
+               data-title="R Graph Gallery" data-desc="Comprehensive gallery of R plot types with reproducible code">
+              <div class="rc-icon"><i class="bi bi-palette2"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">R Graph Gallery</span>
+                <p class="rc-desc">Comprehensive gallery of R plot types with reproducible code</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="resources/StatsandVis.html" class="res-card internal"
+               style="--card-accent:var(--cat-r);"
+               data-title="Basic Stats and Visualization" data-desc="Lab tutorial: basic statistics and plotting in R (R Markdown)">
+              <div class="rc-icon"><i class="bi bi-file-earmark-code"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Basic Stats &amp; Visualization</span>
+                <p class="rc-desc">Lab tutorial: basic statistics and plotting in R (R Markdown)</p>
+              </div>
+              <i class="bi bi-file-earmark rc-ext"></i>
+            </a>
+
+            <a href="resources/PCA_Rmarkdown.html" class="res-card internal"
+               style="--card-accent:var(--cat-r);"
+               data-title="PCA and Plotting in R" data-desc="Lab tutorial: principal component analysis and visualization">
+              <div class="rc-icon"><i class="bi bi-file-earmark-code"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">PCA and Plotting in R</span>
+                <p class="rc-desc">Lab tutorial: principal component analysis and visualization</p>
+              </div>
+              <i class="bi bi-file-earmark rc-ext"></i>
+            </a>
+
+            <a href="resources/Mining_data.html" class="res-card internal"
+               style="--card-accent:var(--cat-r);"
+               data-title="Mining Gene Data from NCBI GenBank" data-desc="Quick code for extracting gene data with taxid information">
+              <div class="rc-icon"><i class="bi bi-file-earmark-code"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Mining Gene Data from NCBI GenBank</span>
+                <p class="rc-desc">Quick code for extracting gene data with taxid information</p>
+              </div>
+              <i class="bi bi-file-earmark rc-ext"></i>
+            </a>
+
+            <a href="resources/Tree_Vis.html" class="res-card internal"
+               style="--card-accent:var(--cat-r);"
+               data-title="Phylogenetic Tree Simulation" data-desc="Tutorial on tree simulation, trait simulation, and character mapping">
+              <div class="rc-icon"><i class="bi bi-file-earmark-code"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Phylogenetic Tree Simulation</span>
+                <p class="rc-desc">Tutorial: tree simulation, trait simulation, character mapping</p>
+              </div>
+              <i class="bi bi-file-earmark rc-ext"></i>
+            </a>
+
+            <a href="resources/Dating_Trees.html" class="res-card internal"
+               style="--card-accent:var(--cat-r);"
+               data-title="Making an Ultrametric Dated Phylogeny" data-desc="Quick tutorial on building time-calibrated phylogenies in R">
+              <div class="rc-icon"><i class="bi bi-file-earmark-code"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Making an Ultrametric Dated Phylogeny</span>
+                <p class="rc-desc">Quick tutorial for time-calibrated phylogenies in R</p>
+              </div>
+              <i class="bi bi-file-earmark rc-ext"></i>
+            </a>
+
+            <a href="resources/First-Week-and-a-half-of-R-1.html" class="res-card internal"
+               style="--card-accent:var(--cat-r);"
+               data-title="Introductory R for Early Undergraduates" data-desc="Very introductory approach to R for early undergraduates">
+              <div class="rc-icon"><i class="bi bi-file-earmark-code"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Introductory R for Undergraduates</span>
+                <p class="rc-desc">Very gentle introduction to R for early undergraduates</p>
+              </div>
+              <i class="bi bi-file-earmark rc-ext"></i>
+            </a>
+
+            <a href="resources/Subsetting_data-1.html" class="res-card internal"
+               style="--card-accent:var(--cat-r);"
+               data-title="Subsetting Data in R" data-desc="Introductory guide to data subsetting and filtering in R">
+              <div class="rc-icon"><i class="bi bi-file-earmark-code"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Subsetting Data in R</span>
+                <p class="rc-desc">Introductory guide to data subsetting and filtering</p>
+              </div>
+              <i class="bi bi-file-earmark rc-ext"></i>
+            </a>
+
+            <a href="https://www.researchsquare.com/article/rs-155672/v1" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-r);"
+               data-title="ggtreeExtra Package" data-desc="Write-up and documentation for the ggtreeExtra R package">
+              <div class="rc-icon"><i class="bi bi-journal-code"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">ggtreeExtra Package</span>
+                <p class="rc-desc">Write-up for annotating phylogenetic trees with data layers</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- CODING                              -->
+        <!-- ═══════════════════════════════════ -->
+        <div class="cat-block" id="cat-coding">
+          <div class="cat-header">
+            <div class="cat-icon" style="background:var(--cat-coding);">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h2>Coding Resources</h2>
+            <span class="cat-count-badge" style="background:var(--cat-coding);">6</span>
+          </div>
+          <div class="res-grid">
+
+            <a href="https://www.codewars.com/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-coding);"
+               data-title="Codewars" data-desc="Improve coding skills by training with others on code challenges">
+              <div class="rc-icon" style="background:var(--cat-coding);"><i class="bi bi-trophy"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Codewars</span>
+                <p class="rc-desc">Improve coding skills through community code challenges</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://replit.com/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-coding);"
+               data-title="Replit" data-desc="Online IDE for collaborative and team coding projects">
+              <div class="rc-icon" style="background:var(--cat-coding);"><i class="bi bi-people"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Replit</span>
+                <p class="rc-desc">Online IDE for collaborative and team coding projects</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://sandbox.bio/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-coding);"
+               data-title="Sandbox.bio" data-desc="Interactive bioinformatics tutorials in the browser">
+              <div class="rc-icon" style="background:var(--cat-coding);"><i class="bi bi-terminal"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Sandbox.bio</span>
+                <p class="rc-desc">Interactive bioinformatics tutorials in the browser</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="http://rosalind.info/problems/locations/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-coding);"
+               data-title="Rosalind" data-desc="Learn bioinformatics and programming through problem-solving challenges">
+              <div class="rc-icon" style="background:var(--cat-coding);"><i class="bi bi-puzzle"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Rosalind</span>
+                <p class="rc-desc">Learn bioinformatics and programming through problem-solving</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="http://w3schools.com/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-coding);"
+               data-title="W3 Schools" data-desc="Tutorials and references for web coding and scripting languages">
+              <div class="rc-icon" style="background:var(--cat-coding);"><i class="bi bi-globe2"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">W3Schools</span>
+                <p class="rc-desc">Tutorials and references for web coding and scripting</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://github.com/Joscelinrocha/Learning-R-Resources/wiki/t.-From-R-to-Python-%F0%9F%90%8D" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-coding);"
+               data-title="From R to Python" data-desc="Curated resources to help R users learn Python">
+              <div class="rc-icon" style="background:var(--cat-coding);"><i class="bi bi-arrow-left-right"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">From R to Python</span>
+                <p class="rc-desc">Curated resources and links to help R users transition to Python</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- DATABASES                           -->
+        <!-- ═══════════════════════════════════ -->
+        <div class="cat-block" id="cat-db">
+          <div class="cat-header">
+            <div class="cat-icon" style="background:var(--cat-db);"><i class="bi bi-table"></i>
+              <i class="bi bi-database"></i>
+            </div>
+            <h2>Databases</h2>
+            <span class="cat-count-badge" style="background:var(--cat-db);">6</span>
+          </div>
+          <div class="res-grid">
+
+            <a href="https://www.ncbi.nlm.nih.gov/genbank/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-db);"
+               data-title="NCBI GenBank" data-desc="NIH genetic sequence database — the primary repository for sequence data">
+              <div class="rc-icon" style="background:var(--cat-db);"><i class="bi bi-hdd-stack"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">NCBI GenBank</span>
+                <p class="rc-desc">NIH genetic sequence database — the primary repository for sequence data</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://www.ncbi.nlm.nih.gov/sra" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-db);"
+               data-title="Sequence Read Archive (SRA)" data-desc="Largest publicly available repository of high-throughput sequencing data">
+              <div class="rc-icon" style="background:var(--cat-db);"><i class="bi bi-hdd-network"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Sequence Read Archive (SRA)</span>
+                <p class="rc-desc">Largest public repository of high-throughput sequencing data</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="http://www.genomesize.com/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-db);"
+               data-title="Animal Genome Size Database" data-desc="Curated genome size data by T. Ryan Gregory at University of Guelph">
+              <div class="rc-icon" style="background:var(--cat-db);"><i class="bi bi-diagram-3"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Animal Genome Size Database</span>
+                <p class="rc-desc">Curated genome size data, maintained by T. Ryan Gregory (U. Guelph)</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="http://coleoguy.github.io/karyotypes/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-db);"
+               data-title="Karyotype Databases" data-desc="Beetle, Polyneoptera, and amphibian karyotype collections — Blackmon lab, Texas A&M">
+              <div class="rc-icon" style="background:var(--cat-db);"><i class="bi bi-table"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Karyotype Databases</span>
+                <p class="rc-desc">Collections for beetles, Polyneoptera, and amphibians — Blackmon lab, Texas A&amp;M</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="http://www.treeofsex.org//" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-db);"
+               data-title="Tree of Sex Database" data-desc="Collection of sex chromosome systems across many animal lineages">
+              <div class="rc-icon" style="background:var(--cat-db);"><i class="bi bi-gender-ambiguous"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Tree of Sex Database</span>
+                <p class="rc-desc">Sex chromosome systems across many animal lineages</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://alphafold.ebi.ac.uk/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-db);"
+               data-title="AlphaFold Protein Structure Database" data-desc="AI-predicted protein structures for nearly every known protein">
+              <div class="rc-icon" style="background:var(--cat-db);"><i class="bi bi-box"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">AlphaFold Protein Structure Database</span>
+                <p class="rc-desc">AI-predicted protein structures for nearly every known protein</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- TOOLS & WEBSITES                    -->
+        <!-- ═══════════════════════════════════ -->
+        <div class="cat-block" id="cat-tools">
+          <div class="cat-header">
+            <div class="cat-icon" style="background:var(--cat-tools);">
+              <i class="bi bi-tools"></i>
+            </div>
+            <h2>Useful Websites &amp; Tools</h2>
+            <span class="cat-count-badge" style="background:var(--cat-tools);">13</span>
+          </div>
+          <div class="res-grid">
+
+            <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="NCBI BLAST" data-desc="Online nucleotide and protein sequence identity and alignment tool">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-search"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">NCBI BLAST</span>
+                <p class="rc-desc">Online nucleotide and protein sequence identity and alignment</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://mafft.cbrc.jp/alignment/software/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="MAFFT Online" data-desc="Online multiple sequence alignment for phylogenetics">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-list-columns"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">MAFFT Online</span>
+                <p class="rc-desc">Online multiple sequence alignment for phylogenetics</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://nextstrain.org/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="Nextstrain" data-desc="Real-time tracking of pathogen evolution with interactive visualizations">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-globe-americas"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Nextstrain</span>
+                <p class="rc-desc">Real-time pathogen evolution tracking with interactive visualizations</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://ngphylogeny.fr/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="NGPhylogeny" data-desc="Automated workflow for building simple phylogenies online">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-diagram-2"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">NGPhylogeny</span>
+                <p class="rc-desc">Automated online workflow for building simple phylogenies</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://biorender.com/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="BioRender" data-desc="Professional science figure creation tool">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-vector-pen"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">BioRender</span>
+                <p class="rc-desc">Professional science figure and illustration creation</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://blog.phytools.org/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="Phytools Blog" data-desc="Blog by Liam Revell covering phylogenetic tools for comparative biology in R">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-pencil-square"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Phytools Blog</span>
+                <p class="rc-desc">Phylogenetic tools for comparative biology — Liam Revell's R blog</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="Taming the BEAST" data-desc="BEAST2 tutorial for Bayesian molecular evolution and phylogenetics">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-clock-history"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Taming the BEAST</span>
+                <p class="rc-desc">BEAST2 tutorial for Bayesian molecular evolution and phylogenetics</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://www.randymajors.org/countygmap" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="County Lines Map (Utah)" data-desc="Use lat/long coordinates to find county information for Utah">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-map"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">County Lines Map (Utah)</span>
+                <p class="rc-desc">Use lat/long coordinates to identify county for Utah field sites</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://bioicons.com/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="BioIcons" data-desc="Free open-source science icons for use in Inkscape or Adobe Illustrator">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-grid-1x2"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">BioIcons</span>
+                <p class="rc-desc">Free open-source science icons for vector graphics software</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://www.phylopic.org/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="PhyloPic" data-desc="Free silhouette images of animals, plants, and other life forms for reuse">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-image"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">PhyloPic</span>
+                <p class="rc-desc">Free silhouette images of animals, plants, and other life forms</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="http://ecoevojobs.net/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="EcoEvo Job Board" data-desc="Google Sheet with faculty and postdoc job opportunities in ecology and evolution">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-briefcase"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">EcoEvo Job Board</span>
+                <p class="rc-desc">Faculty and postdoc job listings in ecology and evolution</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="http://genevol.biology.duke.edu/?s=03" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="Genetics & Evolution Webtools" data-desc="Online tools for genetics and evolutionary analysis from Duke University">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-gear"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Genetics &amp; Evolution Webtools</span>
+                <p class="rc-desc">Online tools for genetics and evolutionary analysis — Duke University</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://www.alliancegenome.org/prototypes" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-tools);"
+               data-title="Alliance of Genome Resources" data-desc="Tools and prototypes from the Alliance of Genome Resources">
+              <div class="rc-icon" style="background:var(--cat-tools);"><i class="bi bi-layers"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Alliance of Genome Resources</span>
+                <p class="rc-desc">Tools and prototypes for model organism genome data</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- PROGRAMS                            -->
+        <!-- ═══════════════════════════════════ -->
+        <div class="cat-block" id="cat-programs">
+          <div class="cat-header">
+            <div class="cat-icon" style="background:var(--cat-programs);">
+              <i class="bi bi-terminal"></i>
+            </div>
+            <h2>Useful Programs</h2>
+            <span class="cat-count-badge" style="background:var(--cat-programs);">4</span>
+          </div>
+          <div class="res-grid">
+
+            <a href="https://www.r-project.org/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-programs);"
+               data-title="R Project" data-desc="The R statistical computing environment — download R here">
+              <div class="rc-icon" style="background:var(--cat-programs);"><i class="bi bi-download"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">R Project</span>
+                <p class="rc-desc">The R statistical computing environment</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="http://bamm-project.org/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-programs);"
+               data-title="BAMM" data-desc="Bayesian Analysis of Macroevolutionary Mixtures — program and documentation">
+              <div class="rc-icon" style="background:var(--cat-programs);"><i class="bi bi-cpu"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">BAMM</span>
+                <p class="rc-desc">Bayesian Analysis of Macroevolutionary Mixtures — program and docs</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://evobir.shinyapps.io/popgen_app/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-programs);"
+               data-title="Population Genetic Simulations" data-desc="Simple interactive population genetics simulations by Heath Blackmon (Texas A&M)">
+              <div class="rc-icon" style="background:var(--cat-programs);"><i class="bi bi-activity"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Population Genetic Simulations</span>
+                <p class="rc-desc">Interactive simulations by Heath Blackmon — Texas A&amp;M</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://evobir.shinyapps.io/brownian_motion/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-programs);"
+               data-title="Brownian Motion Simulations" data-desc="Interactive Brownian motion evolution simulations by Heath Blackmon (Texas A&M)">
+              <div class="rc-icon" style="background:var(--cat-programs);"><i class="bi bi-shuffle"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Brownian Motion Simulations</span>
+                <p class="rc-desc">Interactive Brownian motion simulations by Heath Blackmon — Texas A&amp;M</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- PAPERS & ARTICLES                   -->
+        <!-- ═══════════════════════════════════ -->
+        <div class="cat-block" id="cat-papers">
+          <div class="cat-header">
+            <div class="cat-icon" style="background:var(--cat-papers);">
+              <i class="bi bi-journal-text"></i>
+            </div>
+            <h2>Useful Papers &amp; Articles</h2>
+            <span class="cat-count-badge" style="background:var(--cat-papers);">6</span>
+          </div>
+          <div class="res-grid">
+
+            <a href="https://academic.oup.com/gbe/article/13/8/evab179/6337980#289039271" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-papers);"
+               data-title="DrosoPhyla" data-desc="Resources for Drosophilid phylogeny and systematics">
+              <div class="rc-icon" style="background:var(--cat-papers);"><i class="bi bi-file-earmark-text"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">DrosoPhyla</span>
+                <p class="rc-desc">Resources for Drosophilid phylogeny and systematics — <em>GBE</em></p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://academic.oup.com/mbe/article/38/12/5782/6361628#.YS_zhOm-5EM.twitter" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-papers);"
+               data-title="DEST: Drosophila Population Genomics" data-desc="New population genomics resource for Drosophila Evolution over Space and Time">
+              <div class="rc-icon" style="background:var(--cat-papers);"><i class="bi bi-file-earmark-text"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">DEST: <em>Drosophila</em> Population Genomics</span>
+                <p class="rc-desc">New population genomics resource — <em>MBE</em></p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://newscience.org/how-software-in-the-life-sciences-actually-works-and-doesnt-work/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-papers);"
+               data-title="How Software in the Life Sciences Actually Works" data-desc="Critical look at software reliability and reproducibility in biology">
+              <div class="rc-icon" style="background:var(--cat-papers);"><i class="bi bi-file-earmark-text"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">How Software in Life Sciences Actually Works</span>
+                <p class="rc-desc">Critical look at software reliability and reproducibility in biology</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://www.authorea.com/users/451658/articles/549866-snpfiltr-an-r-package-for-interactive-and-reproducible-snp-filtering" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-papers);"
+               data-title="SNPfiltR" data-desc="R package for interactive and reproducible SNP filtering">
+              <div class="rc-icon" style="background:var(--cat-papers);"><i class="bi bi-file-earmark-text"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">SNPfiltR</span>
+                <p class="rc-desc">R package for interactive and reproducible SNP filtering</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://itsfoss.com/online-linux-terminals/" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-papers);"
+               data-title="Best Online Linux Terminals" data-desc="Guide to online Linux terminals and bash editors for browser-based work">
+              <div class="rc-icon" style="background:var(--cat-papers);"><i class="bi bi-file-earmark-text"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Best Online Linux Terminals &amp; Bash Editors</span>
+                <p class="rc-desc">Guide to browser-based Linux terminals and bash editors</p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+            <a href="https://www.lifescied.org/doi/10.1187/cbe.10-11-0137" target="_blank" rel="noopener" class="res-card"
+               style="--card-accent:var(--cat-papers);"
+               data-title="Teaching Biology Through Statistics" data-desc="Application of statistical methods in genetics and zoology courses — CBE Life Sci Ed">
+              <div class="rc-icon" style="background:var(--cat-papers);"><i class="bi bi-file-earmark-text"></i></div>
+              <div class="rc-body">
+                <span class="rc-title">Teaching Biology Through Statistics</span>
+                <p class="rc-desc">Statistical methods in genetics and zoology courses — <em>CBE Life Sci Ed</em></p>
+              </div>
+              <i class="bi bi-box-arrow-up-right rc-ext"></i>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- No results state -->
+        <div class="no-results" id="noResults">
+          <i class="bi bi-search"></i>
+          <p style="font-size:1rem; font-weight:600; color:#888;">No resources match your search.</p>
+          <p style="font-size:0.85rem; color:#aaa;">Try a different term, or <button onclick="clearSearch()" style="background:none;border:none;color:var(--green-main);font-weight:600;cursor:pointer;padding:0;">clear the search</button>.</p>
         </div>
 
       </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
 
-    <!-- ======= About Us Section ======= -->
-	<p></p>     
-	<div>
-	<h2 class="section-title"> Resources (UNDER CONSTRUCTION ALWAYS) 
-	
-	</div>
-	<h4 class="section-title"> R Resources</p></h4>
-	<h5 class="subheading m-3">
-	R studio download <a href="https://www.rstudio.com/">here</a><br><br>
-	R Graph Gallery-useful resource for plotting nice figures in R <a href="https://www.r-graph-gallery.com/">here</a> <br><br>
-	Basic Stats and Visualization Tutorial R-Markdown <a href="resources/StatsandVis.html">here</a><br><br>
-	PCA and plotting in R. R-Markdown <a href="resources/PCA_Rmarkdown.html">here</a><br><br>
-	ggtreeExtra package write-up <a href="https://www.researchsquare.com/article/rs-155672/v1">here</a><br><br>
-	A quick and dirty code for mining gene data from NCBI GenBank with taxid information <a href="resources/Mining_data.html">here</a><br><br>
-	A tutorial on phylogenetic tree simulation for trait simulation, character mapping, etc. <a href="resources/Tree_Vis.html">here</a><br><br>
-	A quick tutorial on making an ultrametric dated phylogeny in R <a href="resources/Dating_Trees.html">here</a><br><br>
-	A very introductory approach to R for early undergraduates <a href="resources/First-Week-and-a-half-of-R-1.html">here</a><br><br>
-	A very introductory approach to subsetting data in R <a href="resources/Subsetting_data-1.html">here</a><br><br>
-	
-		</h5>
+  </main>
 
-	<h4 class="section-title"> Coding Resources</p></h4>
-	<h5 class="subheading m-3">
-	Codewars (Improve coding skills by training with others on code challenges) <a href="https://www.codewars.com/">here</a><br><br>
-	replit--online IDE for team coding <a href="https://replit.com/">here</a><br><br>
-	Sanbox.bio--interactive bioinformatics tutorials <a href="https://sandbox.bio/">here</a><br><br>
-	Rosalind--helpful for learning bioinformatics and programming <a href="http://rosalind.info/problems/locations/">here</a><br><br>
-	w3 schools--Helpful info and tutorials on coding websites <a href="http://w3schools.com/">here</a><br><br>	
-	From R to Python--Helpful resources and links compiled to assist in learning Python with R background <a href="https://github.com/Joscelinrocha/Learning-R-Resources/wiki/t.-From-R-to-Python-%F0%9F%90%8D">here</a><br><br></h5>
-
-	<h4 class="section-title"> Databases</p></h4>
-	<h5 class="subheading m-3">
-	NCBI GenBank-NIH sequence database <a href="https://www.ncbi.nlm.nih.gov/genbank/">here</a><br><br>
-	SRA (Sequence Read Archive)- largest publicly available repository of high throughput sequence data <a href="https://www.ncbi.nlm.nih.gov/sra">here</a><br><br>
-	Animal Genome Size Database- Collection of genome size data curated by T. Ryan Gregory at University of Guelph <a href="http://www.genomesize.com/">here</a><br><br>
-	Karyotype Databases- Collections of karyotypes for beetles, Polyneoptera, and amphibians, curated by Heath Blackmon at Texas A&M University <a href="http://coleoguy.github.io/karyotypes/">here</a><br><br>
-	Tree of Sex Database--Collections of sex chromosomes systems for many animals <a href="http://www.treeofsex.org//">here</a><br><br>
-	AlphaFold--Protein Structure Database<a href="https://alphafold.ebi.ac.uk/"> here</a><br><br>
-	</h5>
-
-	<h4 class="section-title"> Useful Websites and Tools</p></h4>
-	<h5 class="subheading m-3">
-	NCBI BLAST-Online nucleotide/protein sequence identity/alignment <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">here</a><br><br>
-	MAFFT Online-Online sequence alignments for phylogenetics <a href="https://mafft.cbrc.jp/alignment/software/">here</a><br><br>
-	Nextstrain- Real-time tracking of pathogen evolution <a href="https://nextstrain.org/">here</a><br><br>
-	NGPhylogeny--Automated workflow of simple phylogenies <a href="https://ngphylogeny.fr/">here</a><br><br>
-	Genetics & Evolution Webtools <a href="http://genevol.biology.duke.edu/?s=03">here</a><br><br>
-	Alliance of Genome Resources Tools and Prototypes <a href="https://www.alliancegenome.org/prototypes">here</a><br><br>
-	BioRender--Professional Science Figures <a href="https://biorender.com/">here</a><br><br>
-	Phytools (Phylogenetic Tools for Comparative Biology) Blog <a href="https://blog.phytools.org/">here</a><br><br>
-	Taming the BEAST-BEAST2 tutorial <a href="https://taming-the-beast.org/tutorials/Introduction-to-BEAST2/">here</a><br><br>
-	County lines map webiste--Use Lat/long info to find county information for Utah <a href="https://www.randymajors.org/countygmap">here</a><br><br>
-	BioIcons--A free library of open source icons for scientific illustrations using vector graphics software such as inkscape or Adobe Illustrator <a href="https://bioicons.com/">here</a><br><br>
-	PhyloPic--free silhouette images of animals, plans, and other life forms available for reuse <a href="https://www.phylopic.org/">here</a><br><br>
-	EcoEvo Job board--Google Sheet with faculty and post doc job opportunities <a href="http://ecoevojobs.net/">here</a><br><br>
-		
-	</h5>
-	<h4 class="section-title"> Useful Programs </p></h4>
-	<h5 class="subheading m-3">R-program <a href="https://www.r-project.org/">here</a><br><br>
-	
-	BAMM (Bayesian Analysis of Macroevolutionary Mixtures) program and documentation <a href="http://bamm-project.org/">here</a><br><br>
-	Simple population genetic simulations- by Heath Blackmon at Texas A&M University <a href="https://evobir.shinyapps.io/popgen_app/">here</a><br><br>
-	Brownian motion simulations- By Heath Blackmon at Texas A&M University <a href="https://evobir.shinyapps.io/brownian_motion/">here</a><br><br>
-	
-	
-	
-	</h5>
-	<h4 class="section-title"> Useful Papers and Articles</p></h4>
-	<h5 class="subheading m-3"> <b>ALWAYS ADDING</b> <br><br>
-	"DrosoPhyla: Resources for Drosophilid Phylogeny and Systematics"<a href="https://academic.oup.com/gbe/article/13/8/evab179/6337980#289039271"> here</a><br><br>
-	"Drosophila Evolution over Space and Time (DEST): A new population genomics resource"<a href="https://academic.oup.com/mbe/article/38/12/5782/6361628#.YS_zhOm-5EM.twitter"> here</a><br><br>
-	"How software in the Life Sciences actually works (and doesn't work)"<a href="https://newscience.org/how-software-in-the-life-sciences-actually-works-and-doesnt-work/"> here</a><br><br>
-	SNPfiltR: an R package for interactive and reproducible SNP filtering
-	<a href="https://www.authorea.com/users/451658/articles/549866-snpfiltr-an-r-package-for-interactive-and-reproducible-snp-filtering?commit=b77a4cab5c586d73bd2dd704d9e8ecf4ded555d6&s=03">
-	 here</a><br><br>
-	"Best Online Linux Terminals and Online Bash Editors"<a href="https://itsfoss.com/online-linux-terminals/"> here</a><br><br>
-	"Teaching Biology through Statistics: Application of Statistical Methods in Genetics and Zoology Courses"<a href="https://www.lifescied.org/doi/10.1187/cbe.10-11-0137"> here</a><br><br>
-	
-	</h5>
-	
-	</div>
-	
-	
-	  
-    
-
-		<!-- End About Us Section -->
-
-
-
-     
-    
-  </main><!-- End #main -->
-
-<!-- ======= Footer ======= -->
+  <!-- ======= Footer ======= -->
   <footer id="footer">
-
     <div class="footer-top">
       <div class="container">
         <div class="row">
-
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Hjelmen Lab</h3>
-            <p>
-              SB 242b <br>
-			  800 West University PKWY <br>
-              Orem, UT 84058<br>
-              United States <br><br>
-            </p>
+            <p>SB 242b<br>800 West University Pkwy<br>Orem, UT 84058<br>United States</p>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contact Info.</h4>
-          <strong>Office Number:</strong> SB 242b <br>
-		  <strong>Office Phone:</strong> +1 (801)-863-8084 <br>
-		  <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu"> Carl.Hjelmen@uvu.edu</a><br>
+            <h4>Contact</h4>
+            <strong>Office:</strong> SB 242b<br>
+            <strong>Phone:</strong> (801) 863-8084<br>
+            <strong>Email:</strong> <a href="mailto:Carl.Hjelmen@uvu.edu">Carl.Hjelmen@uvu.edu</a>
           </div>
-		  
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Profiles</h4>
             <ul>
-			<li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ">Google Scholar</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen?cp=shp">ResearchGate</a></li>
-			<li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact Me</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="http://scholar.google.com/citations?hl=en&user=2tTIMucAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.researchgate.net/profile/Carl_Hjelmen" target="_blank" rel="noopener">ResearchGate</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="assets/publications/CV.pdf">Curriculum Vitae</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-6 footer-links">
-
-
+            <h4>Quick Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="researchinterests.html">Research Interests</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="publications.html">Publications</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="gs_estimations.html">Genome Size Estimations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="container d-md-flex py-4">
-
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          &copy; <script>document.write(new Date().getFullYear())</script> <strong><span>Hjelmen Lab</span></strong> &mdash; Utah Valley University. All Rights Reserved.
         </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://twitter.com/cehjelmen09?ref_src=twsrc%5Etfw" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+		<a href="https://bsky.app/profile/cehjelmen09.bsky.social" target="_blank" rel="noopener" title="Bluesky"> <i class="fa-brands fa-bluesky"></i></a>  
+        <a href="https://www.instagram.com/carlhjelmen/" target="_blank" rel="noopener" title="Instagram" style="color:#fff; margin-left:8px;"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -278,13 +1105,52 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const searchInput = document.getElementById('searchInput');
+      const searchClear = document.getElementById('searchClear');
+      const resCount    = document.getElementById('resCount');
+      const noResults   = document.getElementById('noResults');
+      const allCards    = document.querySelectorAll('.res-card');
+      const allBlocks   = document.querySelectorAll('.cat-block');
 
+      searchInput.addEventListener('input', function() {
+        var q = searchInput.value.trim().toLowerCase();
+        searchClear.classList.toggle('visible', q.length > 0);
+        runSearch(q);
+      });
+
+      searchClear.addEventListener('click', function() {
+        searchInput.value = '';
+        searchClear.classList.remove('visible');
+        runSearch('');
+        searchInput.focus();
+      });
+
+      function runSearch(q) {
+        var visible = 0;
+        allCards.forEach(function(card) {
+          var title = (card.dataset.title || '').toLowerCase();
+          var desc  = (card.dataset.desc  || '').toLowerCase();
+          var match = !q || title.includes(q) || desc.includes(q);
+          card.classList.toggle('search-hidden', !match);
+          if (match) visible++;
+        });
+        allBlocks.forEach(function(block) {
+          var hasVisible = block.querySelectorAll('.res-card:not(.search-hidden)').length > 0;
+          block.classList.toggle('hidden', !hasVisible);
+        });
+        if (resCount) {
+          resCount.textContent = q ? (visible + ' resource' + (visible !== 1 ? 's' : '')) : '45 resources';
+        }
+        if (noResults) noResults.classList.toggle('visible', visible === 0);
+      }
+    });
+  </script>
+
+</body>
 </html>
