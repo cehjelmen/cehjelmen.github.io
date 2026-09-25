@@ -278,6 +278,165 @@
       border-radius: 4px;
       margin-bottom: 8px;
     }
+    /* ── Lab Awards & Achievements ── */
+    .awards-section { background: var(--green-pale); padding: 60px 0; }
+    .award-year-group { margin-bottom: 2rem; }
+    .award-year-header {
+      font-family: 'Lora', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--green-main);
+      border-bottom: 2px solid var(--green-border);
+      padding-bottom: 6px;
+      margin-bottom: 1rem;
+    }
+    .award-entry {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 10px 14px;
+      background: #fff;
+      border-left: 4px solid var(--green-light);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 8px;
+      transition: border-color 0.2s;
+    }
+    .award-entry:hover { border-left-color: var(--green-main); }
+    .award-icon {
+      width: 32px; height: 32px;
+      background: var(--green-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      color: var(--green-main);
+      font-size: 0.85rem;
+    }
+    .award-text { font-size: 0.9rem; color: #444; line-height: 1.6; }
+    .award-text strong { color: var(--green-dark); }
+    .award-month {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #fff;
+      background: var(--green-main);
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* ── Award filter bar ── */
+    .award-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1.75rem;
+      align-items: center;
+    }
+    .award-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 2px solid var(--green-border);
+      background: #fff;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s;
+      white-space: nowrap;
+    }
+    .award-filter-btn:hover {
+      border-color: var(--green-main);
+      color: var(--green-main);
+    }
+    .award-filter-btn.active {
+      background: var(--green-main);
+      border-color: var(--green-main);
+      color: #fff;
+    }
+    .award-filter-btn .af-count {
+      background: rgba(0,0,0,0.12);
+      border-radius: 10px;
+      padding: 0 6px;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+    .award-filter-btn.active .af-count { background: rgba(255,255,255,0.25); }
+
+    /* cat-tag pill shown on each entry when not filtering "all" */
+    .award-cat-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 4px;
+      display: none; /* hidden by default; shown when a filter is active */
+    }
+    .awards-section.filtered .award-cat-tag { display: inline-block; }
+    .tag-grad      { background: #e0f0e6; color: #1a5c2e; }
+    .tag-prize     { background: #fff3cd; color: #7a5200; }
+    .tag-grant     { background: #e8f0fb; color: #1a3a6b; }
+    .tag-pub       { background: #f3e8fb; color: #5a1a7a; }
+    .tag-faculty   { background: #fde8e8; color: #7a1a1a; }
+
+    /* hide year-group headers when all entries in that group are hidden */
+    .award-year-group.all-hidden { display: none; }
+
+    /* empty state message */
+    #award-empty {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .tamu-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid #ebebeb;
+      background: #fafafa;
+      margin-bottom: 8px;
+      transition: background 0.15s;
+    }
+    .tamu-row:hover { background: var(--green-pale); }
+    .tamu-row .tr-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--green-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--green-mid);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .tamu-row .tr-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--green-dark);
+      min-width: 150px;
+    }
+    .tamu-row .tr-project {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      flex: 1;
+    }
+    .tamu-row .tr-inst {
+      font-size: 0.75rem;
+      color: #888;
+      white-space: nowrap;
+      font-style: italic;
+    }
 
     /* ── Alumni section ─────────────────────────── */
     .alumni-section {
@@ -891,7 +1050,331 @@
 
       </div>
     </section>
+<!-- ======= Lab Awards & Achievements Section ======= -->
+  <!-- TO ADD A NEW ENTRY: copy an .award-entry block, update the icon, month tag, name, and text.
+       Icons: bi-trophy-fill = award/prize, bi-mortarboard-fill = degree/program,
+              bi-journal-text = publication, bi-award-fill = grant/fellowship -->
+  <section class="awards-section">
+    <div class="container">
 
+      <div class="section-label">
+        <h2>Lab Awards &amp; Achievements</h2>
+        <div class="sl-line"></div>
+      </div>
+
+      <!-- ── Filter bar ──────────────────────────────────────────────────
+           TO ADD A NEW CATEGORY: add a button here with data-filter="yourcat"
+           and add data-cat="yourcat" to the matching award-entry divs below.
+           Categories: all | grad | prize | grant | pub | faculty
+      ──────────────────────────────────────────────────────────────────── -->
+      <div class="award-filters" id="awardFilters">
+        <button class="award-filter-btn active" data-filter="all" onclick="filterAwards('all',this)">
+          <i class="bi bi-list-ul"></i> All <span class="af-count" id="cnt-all"></span>
+        </button>
+        <button class="award-filter-btn" data-filter="grad" onclick="filterAwards('grad',this)">
+          <i class="bi bi-mortarboard-fill"></i> Grad School <span class="af-count" id="cnt-grad"></span>
+        </button>
+        <button class="award-filter-btn" data-filter="prize" onclick="filterAwards('prize',this)">
+          <i class="bi bi-trophy-fill"></i> Talk / Poster Award <span class="af-count" id="cnt-prize"></span>
+        </button>
+        <button class="award-filter-btn" data-filter="grant" onclick="filterAwards('grant',this)">
+          <i class="bi bi-award-fill"></i> Grant / Fellowship <span class="af-count" id="cnt-grant"></span>
+        </button>
+        <button class="award-filter-btn" data-filter="pub" onclick="filterAwards('pub',this)">
+          <i class="bi bi-journal-text"></i> Publication <span class="af-count" id="cnt-pub"></span>
+        </button>
+        <button class="award-filter-btn" data-filter="faculty" onclick="filterAwards('faculty',this)">
+          <i class="bi bi-person-badge-fill"></i> Faculty Award <span class="af-count" id="cnt-faculty"></span>
+        </button>
+      </div>
+
+      <div id="award-empty">No entries match that filter.</div>
+
+      <!-- ── 2026 ── -->
+      <div class="award-year-group">
+        <div class="award-year-header">2026</div>
+
+        <div class="award-entry" data-cat="grad" data-person="cyrus-nielsen">
+          <div class="award-icon"><img src="assets/img/grad-icon.svg" alt="Graduate" style="width:1em; height:1em; color:#275D38;"></div>
+          <span class="award-month">Oct 2026</span>
+          <span class="award-cat-tag tag-grad">Grad School</span>
+          <div class="award-text" data-cat="grad" data-person="cyrus-nielsen"><strong>Cyrus Nielsen</strong> starts graduate program in Germany (Friedrich-Schiller-Universität Jena)</div>
+        </div>
+
+        <div class="award-entry" data-cat="grad" data-person="bailey-jannuzzi">
+          <div class="award-icon"><img src="assets/img/grad-icon.svg" alt="Graduate" style="width:1em; height:1em; color:#275D38;"></div>
+          <span class="award-month">Aug 2026</span>
+          <span class="award-cat-tag tag-grad">Grad School</span>
+          <div class="award-text" data-cat="grad" data-person="bailey-jannuzzi"><strong>Bailey Jannuzzi</strong> starts Ph.D. program at William &amp; Mary</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="bailey-jannuzzi">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Jun 2026</span>
+          <span class="award-cat-tag tag-prize">Talk Award</span>
+          <div class="award-text" data-cat="prize" data-person="bailey-jannuzzi"><strong>Bailey Jannuzzi</strong> wins Best Undergraduate Talk at the Annual North American Forensic Entomology Association Meeting &mdash; Grand Junction, CO</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="bailey-jannuzzi">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Apr 2026</span>
+          <span class="award-cat-tag tag-prize">Student Award</span>
+          <div class="award-text" data-cat="prize" data-person="bailey-jannuzzi"><strong>Bailey Jannuzzi</strong> wins UVU College of Science Outstanding Student Award for Biology</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="cyrus-nielsen">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Apr 2026</span>
+          <span class="award-cat-tag tag-prize">Student Award</span>
+          <div class="award-text" data-cat="prize" data-person="cyrus-nielsen"><strong>Cyrus Nielsen</strong> wins UVU College of Science Outstanding Student Award for Biology</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="cyrus-nielsen">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Apr 2026</span>
+          <span class="award-cat-tag tag-prize">Valedictorian</span>
+          <div class="award-text" data-cat="prize" data-person="cyrus-nielsen"><strong>Cyrus Nielsen</strong> awarded Valedictorian Status for the UVU College of Science</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="cyrus-nielsen">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Apr 2026</span>
+          <span class="award-cat-tag tag-prize">Honors Award</span>
+          <div class="award-text" data-cat="prize" data-person="cyrus-nielsen"><strong>Cyrus Nielsen</strong> wins UVU Honors Program Summit Award &mdash; Project with the most immediate and potential impact</div>
+        </div>
+
+      </div>
+
+      <!-- ── 2025 ── -->
+      <div class="award-year-group">
+        <div class="award-year-header">2025</div>
+
+        <div class="award-entry" data-cat="prize" data-person="cyrus-nielsen">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Nov 2025</span>
+          <span class="award-cat-tag tag-prize">Talk Award</span>
+          <div class="award-text" data-cat="prize" data-person="cyrus-nielsen"><strong>Cyrus Nielsen</strong> wins 1st Place Talk Award at the Annual National Entomological Society of America Meeting &mdash; Portland, OR</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="bailey-jannuzzi">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Nov 2025</span>
+          <span class="award-cat-tag tag-prize">Talk Award</span>
+          <div class="award-text" data-cat="prize" data-person="bailey-jannuzzi"><strong>Bailey Jannuzzi</strong> wins 2nd Place Talk Award at the Annual National Entomological Society of America Meeting &mdash; Portland, OR</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="haylee-beck">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Nov 2025</span>
+          <span class="award-cat-tag tag-prize">Poster Award</span>
+          <div class="award-text" data-cat="prize" data-person="haylee-beck"><strong>Haylee Beck</strong> wins 1st Place Student Poster Award at the Annual National Entomological Society of America Meeting &mdash; Portland, OR</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="cyrus-nielsen">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Nov 2025</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="cyrus-nielsen"><strong>Cyrus Nielsen</strong> awarded UVU College of Science Scholarly Activities Committee (SAC) travel award to attend the Annual National Entomological Society of America Meeting &mdash; Portland, OR</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="bailey-jannuzzi">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Nov 2025</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="bailey-jannuzzi"><strong>Bailey Jannuzzi</strong> wins UVU Undergraduate Research, Scholarly, and Creative Activity Dissemination Grant to attend the Annual National Entomological Society of America Meeting &mdash; Portland, OR</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="haylee-beck">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Nov 2025</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="haylee-beck"><strong>Haylee Beck</strong> wins UVU Undergraduate Research, Scholarly, and Creative Activity Dissemination Grant to attend the Annual National Entomological Society of America Meeting &mdash; Portland, OR</div>
+        </div>
+
+        <div class="award-entry" data-cat="pub" data-person="remington-motte">
+          <div class="award-icon"><i class="bi bi-journal-text"></i></div>
+          <span class="award-month">Sep 2025</span>
+          <span class="award-cat-tag tag-pub">Publication</span>
+          <div class="award-text" data-cat="pub" data-person="remington-motte"><strong>Remington Motte</strong> publishes first-author peer-reviewed paper from work done at UVU</div>
+        </div>
+
+        <div class="award-entry" data-cat="grad" data-person="olivia-frary">
+          <div class="award-icon"><img src="assets/img/grad-icon.svg" alt="Graduate" style="width:1em; height:1em; color:#275D38;"></div>
+          <span class="award-month">Aug 2025</span>
+          <span class="award-cat-tag tag-grad">Grad School</span>
+          <div class="award-text" data-cat="grad" data-person="olivia-frary"><strong>Olivia Frary</strong> starts Ph.D. program at University of Rochester</div>
+        </div>
+
+        <div class="award-entry" data-cat="grad" data-person="barbara-jetton">
+          <div class="award-icon"><img src="assets/img/grad-icon.svg" alt="Graduate" style="width:1em; height:1em; color:#275D38;"></div>
+          <span class="award-month">Aug 2025</span>
+          <span class="award-cat-tag tag-grad">Grad School</span>
+          <div class="award-text" data-cat="grad" data-person="barbara-jetton"><strong>Barbara Jetton</strong> starts Ph.D. program at University of Utah</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="marissa-ohran">
+          <div class="award-icon"><img src="assets/img/grad-icon.svg" alt="Graduate" style="width:1em; height:1em; color:#275D38;"></div>
+          <span class="award-month">Aug 2025</span>
+          <span class="award-cat-tag tag-grant">Fellowship</span>
+          <div class="award-text" data-cat="grant" data-person="marissa-ohran"><strong>Marissa Ohran</strong> awarded an NSF RaMP Postbaccalaureate Fellowship for work at Georgia Southern University</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="olivia-frary">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Apr 2025</span>
+          <span class="award-cat-tag tag-prize">Student Award</span>
+          <div class="award-text" data-cat="prize" data-person="olivia-frary"><strong>Olivia Frary</strong> wins UVU College of Science Outstanding Student Award for Biology</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="barbara-jetton">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Apr 2025</span>
+          <span class="award-cat-tag tag-prize">Student Award</span>
+          <div class="award-text" data-cat="prize" data-person="barbara-jetton"><strong>Barbara Jetton</strong> wins UVU College of Science Outstanding Student Award for Biology</div>
+        </div>
+
+        <div class="award-entry" data-cat="faculty" data-person="dr-hjelmen">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Apr 2025</span>
+          <span class="award-cat-tag tag-faculty">Faculty Award</span>
+          <div class="award-text" data-cat="faculty" data-person="dr-hjelmen"><strong>Dr. Hjelmen</strong> awarded UVU College of Science Dean's Distinguished Faculty Scholarship Award</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="dr-hjelmen">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">May 2025</span>
+          <span class="award-cat-tag tag-grant">Research Grant</span>
+          <div class="award-text" data-cat="grant" data-person="dr-hjelmen"><strong>Dr. Hjelmen</strong> awarded a UVU Grants for Engaged Learning 2-year research award to fund bioinformatic and ecology work on blow flies with students, pay hourly, and to bring students to NAFEA and Entomological Society of America meetings in 2026</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="dr-hjelmen">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">May 2025</span>
+          <span class="award-cat-tag tag-grant">Research Grant</span>
+          <div class="award-text" data-cat="grant" data-person="dr-hjelmen"><strong>Dr. Hjelmen</strong> awarded a UVU Capitol Reef Field Station grant to aid in student-driven field work on blow flies across the Colorado Plateau</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="bailey-jannuzzi">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Jan 2025</span>
+          <span class="award-cat-tag tag-grant">Research Grant</span>
+          <div class="award-text" data-cat="grant" data-person="bailey-jannuzzi"><strong>Bailey Jannuzzi</strong> awarded UVU College of Science Scholarly Activities Committee (SAC) research award to do molecular and bioinformatic work on blow fly gut contents</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="bailey-jannuzzi">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Jan 2025</span>
+          <span class="award-cat-tag tag-grant">Research Grant</span>
+          <div class="award-text" data-cat="grant" data-person="bailey-jannuzzi"><strong>Bailey Jannuzzi</strong> awarded UVU Undergraduate Research, Scholarly, and Creative Activity research grant to do molecular and bioinformatic work on blow fly gut contents</div>
+        </div>
+
+      </div>
+
+      <!-- ── 2024 ── -->
+      <div class="award-year-group">
+        <div class="award-year-header">2024</div>
+
+        <div class="award-entry" data-cat="grant" data-person="haylee-beck">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Nov 2024</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="haylee-beck"><strong>Haylee Beck</strong> wins UVU Undergraduate Research, Scholarly, and Creative Activity Dissemination Grant to attend the Annual National Entomological Society of America Meeting &mdash; Phoenix, AZ</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="olivia-frary">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Nov 2024</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="olivia-frary"><strong>Olivia Frary</strong> wins UVU Undergraduate Research, Scholarly, and Creative Activity Dissemination Grant to attend the Annual National Entomological Society of America Meeting &mdash; Phoenix, AZ</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="barbara-jetton">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Nov 2024</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="barbara-jetton"><strong>Barbara Jetton</strong> wins UVU Undergraduate Research, Scholarly, and Creative Activity Dissemination Grant to attend the Annual National Entomological Society of America Meeting &mdash; Phoenix, AZ</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="audrey-french">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Nov 2024</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="audrey-french"><strong>Audrey French</strong> wins UVU Undergraduate Research, Scholarly, and Creative Activity Dissemination Grant to attend the Annual National Entomological Society of America Meeting &mdash; Phoenix, AZ</div>
+        </div>
+
+        <div class="award-entry" data-cat="grad" data-person="remington-motte">
+          <div class="award-icon"><img src="assets/img/grad-icon.svg" alt="Graduate" style="width:1em; height:1em; color:#275D38;"></div>
+          <span class="award-month">Aug 2024</span>
+          <span class="award-cat-tag tag-grad">Grad School</span>
+          <div class="award-text" data-cat="grad" data-person="remington-motte"><strong>Remington Motte</strong> starts Ph.D. program at University of Arkansas</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="haylee-beck">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Jun 2024</span>
+          <span class="award-cat-tag tag-grant">Research Grant</span>
+          <div class="award-text" data-cat="grant" data-person="haylee-beck"><strong>Haylee Beck</strong> awarded UVU College of Science Scholarly Activities Committee (SAC) research award to perform field work in Grand Gulch, UT</div>
+        </div>
+
+      </div>
+
+      <!-- ── 2023 ── -->
+      <div class="award-year-group">
+        <div class="award-year-header">2023</div>
+
+        <div class="award-entry" data-cat="grant" data-person="remington-motte">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Nov 2023</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="remington-motte"><strong>Remington Motte</strong> wins UVU Undergraduate Research, Scholarly, and Creative Activity Dissemination Grant to attend the Annual National Entomological Society of America Meeting &mdash; National Harbor, MD</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="remington-motte">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Nov 2023</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="remington-motte"><strong>Remington Motte</strong> awarded UVU College of Science Scholarly Activities Committee (SAC) travel award to attend the Annual National Entomological Society of America Meeting &mdash; National Harbor, MD</div>
+        </div>
+
+        <div class="award-entry" data-cat="prize" data-person="remington-motte">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Nov 2023</span>
+          <span class="award-cat-tag tag-prize">Invited Talk</span>
+          <div class="award-text" data-cat="prize" data-person="remington-motte"><strong>Remington Motte</strong> invited as a speaker for a special symposium at the Annual National Entomological Society of America Meeting &mdash; National Harbor, MD</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="remington-motte">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Apr 2023</span>
+          <span class="award-cat-tag tag-grant">Travel Grant</span>
+          <div class="award-text" data-cat="grant" data-person="remington-motte"><strong>Remington Motte</strong> awarded UVU College of Science Scholarly Activities Committee (SAC) travel award to attend the Pacific Branch Entomological Society of America Meeting &mdash; Seattle, WA</div>
+        </div>
+
+      </div>
+
+      <!-- ── 2022 ── -->
+      <div class="award-year-group">
+        <div class="award-year-header">2022</div>
+
+        <div class="award-entry" data-cat="prize" data-person="marissa-ohran">
+          <div class="award-icon"><i class="bi bi-trophy-fill"></i></div>
+          <span class="award-month">Nov 2022</span>
+          <span class="award-cat-tag tag-prize">Poster Award</span>
+          <div class="award-text" data-cat="prize" data-person="marissa-ohran"><strong>Marissa Ohran</strong> wins 2nd Place Student Poster Award at the Annual National Entomological Society of America Meeting &mdash; Vancouver, BC</div>
+        </div>
+
+        <div class="award-entry" data-cat="grant" data-person="dr-hjelmen">
+          <div class="award-icon"><i class="bi bi-award-fill"></i></div>
+          <span class="award-month">Jul 2022</span>
+          <span class="award-cat-tag tag-grant">Research Grant</span>
+          <div class="award-text" data-cat="grant" data-person="dr-hjelmen"><strong>Dr. Hjelmen</strong> awarded a UVU Grants for Engaged Learning award to bring students to the 2022 Entomological Society of America Meeting and to update the department's entomological outreach supplies</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- ======= End Awards Section ======= -->
   </main>
 
   <!-- ======= Footer ======= -->
@@ -953,5 +1436,55 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // ── Award filter ─────────────────────────────────────────────────────
+    // Called by onclick on each filter button.
+    // Hides/shows .award-entry divs by data-cat attribute.
+    // Also hides year-group headers when all their entries are hidden.
+
+    function filterAwards(cat, btn) {
+      // Update button active state
+      document.querySelectorAll('.award-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const section   = document.querySelector('.awards-section');
+      const entries   = document.querySelectorAll('.award-entry');
+      const groups    = document.querySelectorAll('.award-year-group');
+      const emptyMsg  = document.getElementById('award-empty');
+
+      // Toggle "filtered" class on section (controls cat-tag visibility)
+      section.classList.toggle('filtered', cat !== 'all');
+
+      // Show/hide entries
+      entries.forEach(e => {
+        const match = cat === 'all' || e.dataset.cat === cat;
+        e.style.display = match ? '' : 'none';
+      });
+
+      // Hide year-group if all its entries are hidden
+      groups.forEach(g => {
+        const visible = [...g.querySelectorAll('.award-entry')]
+          .some(e => e.style.display !== 'none');
+        g.classList.toggle('all-hidden', !visible);
+      });
+
+      // Show empty state if nothing visible
+      const anyVisible = [...entries].some(e => e.style.display !== 'none');
+      emptyMsg.style.display = anyVisible ? 'none' : 'block';
+    }
+
+    // ── Populate counts on filter buttons ────────────────────────────────
+    (function setCounts() {
+      const entries = document.querySelectorAll('.award-entry[data-cat]');
+      const cats = ['grad','prize','grant','pub','faculty'];
+      document.getElementById('cnt-all').textContent = entries.length;
+      cats.forEach(cat => {
+        const n = [...entries].filter(e => e.dataset.cat === cat).length;
+        const el = document.getElementById('cnt-' + cat);
+        if (el) el.textContent = n;
+      });
+    })();
+  </script>
 </body>
 </html>
